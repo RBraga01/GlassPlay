@@ -1,21 +1,22 @@
 # GlassPlay — instructions for coding agents
 
-**Product:** Simple, discoverable seasonal **experiences for AR smart glasses**. Prioritize a strong, honest product page and a curated, independently verifiable release path. Keep the root README short and understandable to non-developers.
+Build a **simple, visual collection of interactive experiences for AR smart glasses**. The root README should be a short storefront rather than a development log. Keep evidence and rights documentation in experience folders.
 
-## Current work
+## Nevermore state (2026-10-21)
 
-- `experiences/nevermore/app/` is a **source-only curated copy** of production code and logic tests. Do not call it a runnable release.
-- `experiences/nevermore/export-manifest.json` pins the original source commit and blob IDs.
-- `experiences/nevermore/ASSETS_PENDING.md` tracks withheld media, licenses, hardware and deploy gates.
-- `catalog/experiences.json` is discovery metadata; future festivities are still ideas.
+- `experiences/nevermore/app/`: 23 curated, byte-identical source files from `RBraga01/Nevermore` commit `81df295`, checked by `export-manifest.json` and CI.
+- This directory is **not a runnable package**: 20-event media and offline Vosk model are not copied.
+- The complete `v1.0.0-rc.1` ZIP, checksums and two demo videos exist only as **private draft GitHub Release** assets in Nevermore.
+- Host/Simulator PASS, real Prism **DEVICE-UNVERIFIED**.
+- Meshy status: **USER-ATTESTED-MESHY-PAID-ACCOUNT**, no independent account inspection. Do not regress this back to an unresolved request, but do not claim independent verification.
+- Public source/art license and use/distribution permission for proprietary Raven Framework **remain outstanding**.
 
-## Hard boundaries
+## Rules
 
-1. Never mirror the private Nevermore repository, archive, source media, raw renders, entire LFS history or credentials. Export only reviewed, explicitly selected paths.
-2. Preserve source-file integrity while staging; if changing runtime code, clearly separate new changes from the verbatim export and test them.
-3. Do not distribute MP4/WAV/BLEND/GLB, offline Vosk weights or Raven Framework until permission/attribution checks and packaging gates pass.
-4. Physical Prism remains **DEVICE-UNVERIFIED**. Simulator results are not physical-device results.
-5. Do not invent install links, supported devices or published versions.
-6. Keep the root README and Nevermore overview user-facing. Engineering details belong in `app/README.md`, `ASSETS_PENDING.md` and `docs/`.
-7. Change status consistently in `README.md`, experience page and `catalog/experiences.json` after evidence exists.
-8. No unused platform abstractions; extract reusable code only when two experiences share an actual need.
+1. Never mirror Nevermore private history, archives, raw source media, tests from unrelated experiments, the LFS store or credentials. Curate by explicit release allowlist.
+2. Keep byte-identical source exports traceable; changes to Python runtime need separate engineering validation.
+3. Do not publicize private-draft videos/ZIP or include MP4/WAV/model assets here until their release rights and publication decisions are explicit.
+4. Never claim physical Prism validation without device test evidence.
+5. No invented install links or release statuses. Update root README, experience page and catalogue together.
+6. No speculative general launcher or complex architecture; add shared components when real second use exists.
+7. Do not create a GitHub Pages site or workflow until expressly authorized; its strategy is being designed separately.

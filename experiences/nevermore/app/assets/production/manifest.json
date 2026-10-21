@@ -59,7 +59,7 @@
       "audio": "production/audio/shadow.wav",
       "duration_ms": 2300,
       "frame_count": 56,
-      "video_sha256": "e84a992ef5f2c79da7ebaa31bde2e88941645899dcdb79059c22036e90684a2e",
+      "video_sha256": "fd772f9a2d3b272d75808512a2fc92027fdaad429e928e480444163bcbe93f55",
       "audio_sha256": "f0f4c4e19a6e4d12975111bc26ac2e1227ce716bec48179e10220c30328b4b0d"
     },
     "glitch": {
@@ -67,7 +67,7 @@
       "audio": "production/audio/glitch.wav",
       "duration_ms": 2600,
       "frame_count": 63,
-      "video_sha256": "3e9a44aca54393aa59200bc9bdbb828db981fe3354cf38fe9d62d70f1283e0e4",
+      "video_sha256": "97828c6286bb73cb7760a8c5eb12b6af86cff880534ad76fea48da4b50139af7",
       "audio_sha256": "b1d38cb024f1855a0f68b8de245093830b4d7e55b12506cb74acd6b3a2198511"
     },
     "ghost": {

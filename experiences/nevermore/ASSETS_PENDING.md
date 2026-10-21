@@ -1,26 +1,27 @@
-# Nevermore — what's held back
+# Nevermore — distribution gates
 
-The **source code is staged**, but **media and deployment are not approved for distribution**.
+**Source preview in GlassPlay:** 23 verbatim source/manifest/test files, updated to Nevermore commit `81df295`. **No audiovisual media or SDK is present here.**
 
-| Component | In GlassPlay? | Gate |
-| --- | --- | --- |
-| Production Python runtime (original, unmodified) | **Yes** | Source review / integration validation |
-| Logic-only test subset | **Yes** | Runs without clips or device |
-| Production and Trick/Treat JSON scene indexes | **Yes** | Indexes only; not media |
-| 640 × 640 H.264 encounter videos | **No** | Confirm redistribution rights, select final assets, package |
-| WAV soundtracks / authored speech | **No** | Verify provenance, attribution and media rights |
-| Raven Dive clip and final mix | **No** | Verify exact approved source and rights |
-| Vosk offline speech recognition model | **No** | Package under applicable Apache-2.0 terms and notices, verify size/runtime |
-| Blender/GLB/FBX sources, raw recordings and research renders | **No** | Not needed for end users; keep in private research |
-| Raven Framework | **No** | Obtain independently; obey Raven licensing |
-| Raven Prism deployment app ID / key | **No** | Provision via Raven's approved process, never commit secrets |
+**Complete release candidate in Nevermore:** Private GitHub **draft** `v1.0.0-rc.1` contains the ~55 MB Python ZIP, checksum, two new simulator videos and validation JSON. It has **not been published**.
 
-## Release decisions still needed
+| Item | Actual status |
+| --- | --- |
+| Curated 20-event runtime media and model | **Packaged and checked in the private RC ZIP; not copied to GlassPlay** |
+| Windows-host / Simulator Room testing | **PASS** — 79 application tests in clean export; 87 in private repo, 20 events and new captures |
+| Meshy-derived production character assets | **USER-ATTESTED-MESHY-PAID-ACCOUNT** — owner declaration recorded; account documents not independently inspected |
+| Code and authored-art public license | **Owner decision still required** — no automatic MIT/open license |
+| Raven Framework 1.0.6 | Proprietary dependency **excluded from the package**; confirm authorization for public distribution/use |
+| Prism deployment IDs/keys | Not embedded or published; authorized provisioning required |
+| Real Raven Prism validation | **DEVICE-UNVERIFIED** — display, speakers, microphone, frame delivery and thermals |
+| Live speech reliability across users/noise | Not established; recorded voice test passed through actual Vosk pipeline |
+| Blender/GLB/FBX source, raw audio, archives and private history | **Excluded** from production export and GlassPlay |
 
-1. Confirm media/model redistribution permissions, especially any Meshy-derived assets, and prepare `ASSET_LICENSES.md`.
-2. Export **only** the final approved 20-event media set and its required voice model; check manifests, hashes, names, frame rate and playback.
-3. Confirm the Raven Framework installation/deployment route and configure app identity securely.
-4. Validate display, sound, mic, performance, battery/thermals on a physical Prism; keep **DEVICE-UNVERIFIED** until tested.
-5. Make a clean, reproducible user package and only then publish an install link and release tag.
+## Next release decisions
 
-Source origin is recorded in [export-manifest.json](export-manifest.json). **Do not copy the private repository's history, archives, raw renders or entire LFS object store.**
+1. Choose the license/permissions for original code and artwork; retain third-party notices and Meshy owner-attestation wording.
+2. Confirm with Raven the permitted framework use and Prism deployment path.
+3. If releasing a **Windows / Simulator preview**, label its scope explicitly and verify installation with a separately authorized SDK. This does not require claiming physical Prism compatibility.
+4. For **Prism compatibility**, run device acceptance tests; keep `DEVICE-UNVERIFIED` until then.
+5. Publish only approved demo media, credits, downloads and checksums; then set a real install URL in the GlassPlay catalogue.
+
+The [source manifest](export-manifest.json) pins every copied file. Do **not** mirror the private history or export the large research archive.

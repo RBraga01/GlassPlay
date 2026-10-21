@@ -1,10 +1,12 @@
 # Nevermore — curated source preview
 
-This folder contains the **original production Python runtime**, two media index manifests and **selected pure-logic tests**. The code is copied verbatim from an identified source commit. Research history, rendered clips, raw media, offline speech model and third-party frameworks are **not included**.
+**Synchronized to the Nevermore production release candidate `1.0.0-rc.1`.**
 
-**This is not an installable build.** Running `main.py` without the approved media and separately installed Raven Framework will fail. Do not interpret the presence of `manifest.json` as media being distributed.
+This directory holds **23 selected upstream files**: production Python, two original media catalogue manifests, and five test files (four logic suites plus the discovery isolation fixture). The new `assets/production/manifest.json` tracks updated approved video hashes for Shadow and Glitch. The runtime Python code itself has not changed since the earlier GlassPlay export.
 
-## Run the logic-only checks
+> **Not a standalone runnable build.** The separately installed Raven Framework, the approved MP4/WAV media and the Vosk model are absent. The full package is still a **private draft in Nevermore**.
+
+## Logic-only checks
 
 Requires Python 3.10+ and pytest. From this `app/` directory:
 
@@ -13,15 +15,11 @@ python -m pip install pytest
 python -m pytest -q tests/test_audio.py tests/test_director.py tests/test_events.py tests/test_scheduler.py
 ```
 
-These checks do **not** exercise playback, voice capture, the physical device or the complete production suite. When media, licenses and Raven deployment support are ready, installation instructions will be provided here.
+These checks don't test audio/video playback, voice capture, the SDK or hardware.
 
-## Provenance and missing dependencies
+## For maintainers
 
-- [Export inventory](../export-manifest.json): source commit and original Git blob SHAs of every copied file.
-- [Media and device gates](../ASSETS_PENDING.md): what is deliberately excluded.
-- `assets/production/manifest.json` and `assets/trick_or_treat/manifest.json`: original indexes preserved for traceability; referenced MP4/WAV files are absent.
-- `main.py`: still expects Raven Framework and its deployment configuration; no app credentials are embedded.
-- Voice uses Vosk, but the model weights are **not** included here.
-- No standalone source license has been granted in this export. Code and media licensing must be explicitly decided before a public release.
-
-The source code remains organized under `nevermore/` so the original runtime paths are not artificially rewritten.
+- [Verbatim export inventory](../export-manifest.json) — upstream commit and per-file Git object IDs.
+- [Rights, assets and hardware gates](../ASSETS_PENDING.md).
+- Do not add intermediate renders, archived research, private blobs or credentials.
+- No public source license is implied by this preview.

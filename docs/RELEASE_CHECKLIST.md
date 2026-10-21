@@ -1,16 +1,17 @@
 # GlassPlay release checklist
 
-Every experience must pass these gates before being called **released**.
+For an experience to be publicly **downloadable**, verify:
 
-- [ ] A minimal curated, traceable source snapshot; no research archive or private Git history.
-- [ ] No credentials, sensitive files, forbidden source media or third-party framework redistributed.
-- [ ] Dependencies, install steps, version, device and operating-system requirements documented and tested.
-- [ ] Runtime and relevant integration tests pass (not just the logic-only subset).
-- [ ] Final audio/video files, offline models and attribution rights verified and documented.
-- [ ] Simulator verification clearly separated from physical-device verification.
-- [ ] Physical device tested before calling it device-verified (display, audio, mic, performance, thermals as applicable).
-- [ ] Start/stop/disarm, privacy, troubleshooting, and safe exit documented.
-- [ ] Final install package/release URL actually works.
-- [ ] README, experience page, catalogue status and install link updated together.
+- [x] Curated source snapshot, with upstream provenance and no private Git history.
+- [x] Current Nevermore Windows / Simulator candidate built as a separate ZIP and hash file in the private development repository (`v1.0.0-rc.1` **draft**).
+- [x] Private candidate tested: 87 private tests, 79 application tests in clean export, current 20-event audiovisual checks.
+- [x] Private production pack excludes original Meshy source models, research archive, developer credentials and separately licensed Raven SDK.
+- [x] Meshy production sources have **owner-attested paid-account rights**; retain the limits of that declaration.
+- [ ] Select and document a public code and artwork distribution license (no license has been granted by this skeleton).
+- [ ] Confirm permissions for public distribution/use alongside the proprietary Raven Framework.
+- [ ] Decide whether the next public offering is a **Windows/Simulator preview** or a **Prism installation**.
+- [ ] Test the public-facing instructions, provenance, license notices and checksums on a clean machine.
+- [ ] Obtain Raven Prism device evidence before promising physical-device support (DISPLAY / MIC / SPEAKER / PERF / THERMALS).
+- [ ] Approve and publish any media, release link and site assets; only then update `install_url` and claim availability.
 
-**Nevermore (2026-10-21):** curated source staged; **media absent**, Meshy rights pending confirmation, Raven deployment authorization and physical-device tests outstanding. **No installable release.**
+**Current GlassPlay status:** source preview only. The full `1.0.0-rc.1` is a **private draft**, not a release available to users.

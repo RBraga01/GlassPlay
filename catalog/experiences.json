@@ -5,9 +5,14 @@
       "id": "nevermore",
       "name": "Nevermore",
       "theme": "Halloween",
-      "summary": "An opt-in Halloween haunting for AR smart glasses: 20 authored encounters, offline voice trigger and immediate DISARM.",
+      "summary": "Twenty authored haunting encounters for AR smart glasses, offline voice invocation and instant DISARM.",
       "status": "source_preview_only",
       "directory": "experiences/nevermore",
+      "candidate": {
+        "version": "1.0.0-rc.1",
+        "availability": "private_draft_only",
+        "validation": "windows_and_raven_simulator_pass"
+      },
       "targets": [
         {
           "name": "Raven Prism",

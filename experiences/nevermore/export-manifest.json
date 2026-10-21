@@ -3,7 +3,7 @@
   "export": "GlassPlay Nevermore curated source preview",
   "source": {
     "repository": "RBraga01/Nevermore",
-    "commit": "bf5b8eb2469c63eedc72adc89c40e41e91627b1f",
+    "commit": "81df295f6825189bfba05288aca76595b4c59437",
     "branch_at_export": "main"
   },
   "target_directory": "experiences/nevermore/app",
@@ -112,7 +112,7 @@
     {
       "path": "app/assets/production/manifest.json",
       "source_path": "assets/production/manifest.json",
-      "source_git_blob_sha": "29da7a252ede127486945ad2cb966ed39f634df1",
+      "source_git_blob_sha": "8017a0b226de9cec194547b7efcc4d2e937084e8",
       "bytes": 3970
     },
     {
@@ -170,5 +170,15 @@
     "Two JSON media indexes are metadata only; no runtime videos, WAV or offline model are shipped.",
     "No media/public release rights asserted.",
     "Do not imply real-hardware verification."
-  ]
+  ],
+  "latest_candidate": {
+    "version": "1.0.0-rc.1",
+    "release_visibility": "private_draft",
+    "host_validation": "windows_and_raven_simulator_pass",
+    "physical_prism": "device_unverified",
+    "package_in_glassplay": false,
+    "public_code_and_art_license": "not_selected",
+    "raven_sdk_distribution_permission": "pending"
+  },
+  "updated_note": "Runtime Python code and logic tests unchanged since prior export; only production media manifest updated with new approved character-derived clip hashes. No MP4, WAV, model, SDK or archive is imported."
 }
