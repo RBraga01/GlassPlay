@@ -7,11 +7,8 @@
 5. Put code and tests alongside the experience. Only extract code into `shared/` after real reuse.
 6. Publish an install link **only after** [the release checklist](RELEASE_CHECKLIST.md) passes.
 
-Catalogue statuses currently used:
-- `concept`: idea only, no runnable application.
-- `source_preview_only`: curated source exists but no distributable package.
-- `in_development`: active work, not installable.
-- `pilot`: a limited, explicitly tested installable build.
-- `released`: available package, with hardware/support limits identified.
+Catalogue v2 uses these exact product states: `Concept`, `In development`, `Preview`, `Pilot`, `Released`. Availability remains separate: Nevermore's Preview candidate is `private_draft_only`; this does not imply a public download.
 
-Declare devices separately from validation: `simulator_only`, `device_verified` or `not_tested`. An `install_url` is `null` unless a real package exists.
+Declare device validation separately: `host_validated`, `device_unverified` or `device_validated`. Install/release URLs remain null until a real authorized public package exists. The schema rejects released private drafts, concepts with product pages/downloads, duplicate IDs, unsafe paths and unapproved preview URLs.
+
+Provide a cover under public/brand, an experience directory and attribution. Concepts automatically appear on the homepage. When a real experience exists, add its authored route and set `page`; use the shared layout and media policy rather than a new engine. Run `npm run check:catalogue`, `npm test`, `npm run build` and `npm run check:site`. See catalog/schema.mjs and the template for the full contract.

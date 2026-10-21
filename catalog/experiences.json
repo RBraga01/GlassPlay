@@ -1,55 +1,37 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "experiences": [
     {
-      "id": "nevermore",
-      "name": "Nevermore",
-      "theme": "Halloween",
-      "summary": "Twenty authored haunting encounters for AR smart glasses, offline voice invocation and instant DISARM.",
-      "status": "source_preview_only",
-      "directory": "experiences/nevermore",
-      "candidate": {
-        "version": "1.0.0-rc.1",
-        "availability": "private_draft_only",
-        "validation": "windows_and_raven_simulator_pass"
-      },
+      "id": "nevermore", "name": "Nevermore", "theme": "Halloween", "category": "Ambient haunting",
+      "summary": "Arm a little darkness. Meet the Midnight Host, summon a raven, and discover what happens when Halloween comes looking for you.",
+      "status": "Preview", "directory": "experiences/nevermore", "page": "experiences/nevermore/",
+      "cover": "brand/nevermore-poster.svg",
+      "preview": {"poster": "brand/nevermore-poster.svg", "video": null, "publication": "held"},
+      "candidate": {"version": "1.0.0-rc.1", "availability": "private_draft_only", "source_commit": "81df295f6825189bfba05288aca76595b4c59437"},
       "targets": [
-        {
-          "name": "Raven Prism",
-          "validation": "simulator_only"
-        }
+        {"name": "Windows + Raven Simulator 1.0.6", "validation": "host_validated", "label": "Preview tested"},
+        {"name": "Raven Prism", "validation": "device_unverified", "label": "Physical testing pending"}
       ],
-      "install_url": null
+      "install_url": null, "release_url": null,
+      "attribution": ["credits/#nevermore"], "license_status": "owner_decision_pending"
     },
     {
-      "id": "christmas",
-      "name": "Christmas",
-      "theme": "Christmas / winter",
-      "summary": "Reserved for a future seasonal experience; no app exists yet.",
-      "status": "concept",
-      "directory": "experiences/christmas",
-      "targets": [],
-      "install_url": null
+      "id": "christmas", "name": "Christmas", "theme": "Winter", "category": "Seasonal concept",
+      "summary": "A little wonder for the longest nights.", "status": "Concept", "directory": "experiences/christmas", "page": null,
+      "cover": "brand/winter.svg", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     },
     {
-      "id": "st-patricks",
-      "name": "St. Patrick's",
-      "theme": "St. Patrick's Day",
-      "summary": "Reserved for a future seasonal experience; no app exists yet.",
-      "status": "concept",
-      "directory": "experiences/st-patricks",
-      "targets": [],
-      "install_url": null
+      "id": "easter", "name": "Easter", "theme": "Spring", "category": "Seasonal concept",
+      "summary": "Something unexpected, just waiting to be found.", "status": "Concept", "directory": "experiences/easter", "page": null,
+      "cover": "brand/spring.svg", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     },
     {
-      "id": "easter",
-      "name": "Easter",
-      "theme": "Easter / spring",
-      "summary": "Reserved for a future seasonal experience; no app exists yet.",
-      "status": "concept",
-      "directory": "experiences/easter",
-      "targets": [],
-      "install_url": null
+      "id": "st-patricks", "name": "St. Patrick's Day", "theme": "A little luck", "category": "Seasonal concept",
+      "summary": "See where a little mischief takes you.", "status": "Concept", "directory": "experiences/st-patricks", "page": null,
+      "cover": "brand/luck.svg", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     }
   ]
 }

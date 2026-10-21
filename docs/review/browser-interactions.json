@@ -1,0 +1,41 @@
+{
+  "firstTab": "Skip to content",
+  "skipTarget": {
+    "hash": "#main",
+    "active": "main"
+  },
+  "discoveryNavigates": true,
+  "keyboardDisclosure": true,
+  "initialMedia": {
+    "paused": true,
+    "autoplay": false,
+    "controls": true,
+    "preload": "none",
+    "muted": false
+  },
+  "playing": {
+    "time": 0.210234,
+    "paused": false,
+    "ready": 4,
+    "duration": 26.416667,
+    "tracks": [
+      {
+        "kind": "captions",
+        "mode": "showing",
+        "cues": 11
+      }
+    ]
+  },
+  "cleanEnd": {
+    "ended": true,
+    "paused": true,
+    "loop": false
+  },
+  "mediaFailureMessage": "Video could not load. The scene description below is still available. Reload the page to try again.",
+  "teaser": {
+    "muted": true,
+    "paused": true,
+    "autoplay": false
+  },
+  "teaserPlayed": true
+}

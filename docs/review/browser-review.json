@@ -1,0 +1,16 @@
+{
+  "screens_checked": 15,
+  "widths": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "no_horizontal_overflow": true,
+  "all_images_loaded": true,
+  "no_external_resource_requests": true,
+  "no_autoplay": true,
+  "errors": [],
+  "reduced_motion": true
+}

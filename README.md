@@ -28,6 +28,8 @@ Meet the Midnight Host, choose Trick or Treat, hear the raven and discover 20 un
 
 ---
 
-[For developers](docs/ADD_EXPERIENCE.md) · [Release requirements](docs/RELEASE_CHECKLIST.md)
+[Run the website](docs/DEVELOPMENT.md) · [Add an experience](docs/ADD_EXPERIENCE.md) · [Publication requirements](docs/DEPLOYMENT.md)
 
 GlassPlay is an independent collection for **augmented-reality glasses**, not a VR store. Device support is verified per experience.
+
+The Astro website is implemented for `/GlassPlay/`. It is not yet publicly deployed. The private review includes authentic approved Nevermore media; the default build uses original title artwork until media publication is authorized. [Implementation and validation](docs/IMPLEMENTATION.md).

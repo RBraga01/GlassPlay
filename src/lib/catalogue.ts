@@ -1,0 +1,11 @@
+import data from '../../catalog/experiences.json';
+import { parseCatalogue } from '../../catalog/schema.mjs';
+export const catalogue = parseCatalogue(data);
+export const nevermore = catalogue.experiences.find(item => item.id === 'nevermore')!;
+export const concepts = catalogue.experiences.filter(item => item.status === 'Concept');
+export const review = import.meta.env.GLASSPLAY_REVIEW === '1';
+export const hasMedia = review || import.meta.env.GLASSPLAY_PUBLIC_MEDIA === '1';
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+export const url = (path = '') => `${base}/${path.replace(/^\//, '')}`;
+export const media = (name: string) => url(`media/nevermore/${name}`);
+export const canonical = (path = '') => `https://rbraga01.github.io${url(path)}`;

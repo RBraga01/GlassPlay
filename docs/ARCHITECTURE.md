@@ -26,6 +26,12 @@ GlassPlay
 
 Development repositories may contain prototypes, intermediate assets, research history, and private notes. GlassPlay releases must be minimal, attributable, reproducible exports from approved source snapshots. Nothing in this skeleton automatically imports Nevermore.
 
+## Website and publication boundary
+
+Astro7 renders static HTML from catalog/experiences.json. Pages are homepage, Nevermore, credits/privacy and404. TypeScript, CSS and small native-video coordination need no UI framework or backend. `/GlassPlay/` is applied to every internal path and production canonical; sitemap and robots match that base.
+
+The default build contains original title/concept artwork. Approved runtime art and Simulator footage remain under ignored .private/. Local review and authorized public-media promotion use distinct output paths and explicit hash-verified policy. Publication workflows are dormant until owner approval and hosting protections are in place. See DEPLOYMENT.md.
+
 ## Future options, not current features
 
-A launcher or discovery UI, shared session controls, reusable playback, and additional hardware adapters are possible future work. They are **not** part of the current repository.
+A universal launcher, shared session controls, reusable runtime playback and additional hardware adapters remain future possibilities. The website provides discovery only; it does not execute the experiences.
