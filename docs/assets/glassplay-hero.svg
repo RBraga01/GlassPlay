@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">GlassPlay</title><desc id="desc">GlassPlay. Small experiences. Big moments. AR smart glasses.</desc>
+<defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0A111D"/><stop offset=".57" stop-color="#111A32"/><stop offset="1" stop-color="#221638"/></linearGradient>
+<radialGradient id="glow"><stop offset="0" stop-color="#607FFF" stop-opacity=".45"/><stop offset="1" stop-color="#607FFF" stop-opacity="0"/></radialGradient>
+<linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A9FCDE"/><stop offset="1" stop-color="#B4A6FF"/></linearGradient>
+</defs>
+<rect width="1200" height="360" rx="24" fill="url(#bg)"/>
+<circle cx="966" cy="162" r="251" fill="url(#glow)"/>
+<g fill="#CAD9FF" opacity=".6"><circle cx="763" cy="66" r="2"/><circle cx="885" cy="277" r="2"/><circle cx="1112" cy="88" r="2"/><circle cx="1028" cy="314" r="1.5"/><circle cx="742" cy="256" r="1.5"/><circle cx="1157" cy="263" r="2"/></g>
+<g transform="translate(824 102)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M-46 21 L0 42 Q36 10 78 21" stroke="#B0A3FF" stroke-width="7" opacity=".65"/>
+<rect x="0" y="42" width="143" height="105" rx="45" stroke="url(#accent)" stroke-width="7" transform="rotate(-8 71 94)"/>
+<rect x="163" y="42" width="143" height="105" rx="45" stroke="url(#accent)" stroke-width="7" transform="rotate(8 235 94)"/>
+<path d="M143 74 Q153 57 163 74" stroke="url(#accent)" stroke-width="7"/>
+<path d="M306 48 L347 29" stroke="#B0A3FF" stroke-width="7" opacity=".65"/>
+<path d="M58 95 Q70 74 99 77" stroke="#F9DC97" stroke-width="3" opacity=".75"/>
+<path d="M202 93 Q225 76 249 85" stroke="#F9DC97" stroke-width="3" opacity=".75"/>
+<circle cx="97" cy="96" r="6" fill="#A9FCDE" stroke="none"/>
+<circle cx="222" cy="94" r="6" fill="#F9DC97" stroke="none"/>
+</g>
+<text x="74" y="93" fill="#A9FCDE" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" letter-spacing="5">AR SMART GLASSES EXPERIENCES</text>
+<text x="71" y="205" fill="#FFFFFF" font-family="Arial,Helvetica,sans-serif" font-size="94" font-weight="700" letter-spacing="-4">GlassPlay</text>
+<text x="76" y="263" fill="#CFD8EF" font-family="Arial,Helvetica,sans-serif" font-size="29">A little magic, right before your eyes.</text>
+<line x1="76" y1="304" x2="395" y2="304" stroke="#A9FCDE" stroke-width="3" opacity=".85"/>
+</svg>

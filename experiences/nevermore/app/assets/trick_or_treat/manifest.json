@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "fps": 24,
+  "resolution": [640, 640],
+  "scenes": {
+    "trick_or_treat": {"video": "video/trick_or_treat.mp4", "audio": "audio/trick_or_treat.wav", "duration_ms": 5500, "frame_count": 132},
+    "trick_raven_box": {"video": "video/trick_raven_box.mp4", "audio": "audio/trick_raven_box.wav", "duration_ms": 3000, "frame_count": 72},
+    "trick_spider": {"video": "video/trick_spider.mp4", "audio": "audio/trick_spider.wav", "duration_ms": 2700, "frame_count": 65},
+    "trick_behind_you": {"video": "video/trick_behind_you.mp4", "audio": "audio/trick_behind_you.wav", "duration_ms": 2900, "frame_count": 70},
+    "treat_candy": {"video": "video/treat_candy.mp4", "audio": "audio/treat_candy.wav", "duration_ms": 3300, "frame_count": 80},
+    "treat_ghost": {"video": "video/treat_ghost.mp4", "audio": "audio/treat_ghost.wav", "duration_ms": 3300, "frame_count": 80},
+    "treat_pumpkin": {"video": "video/treat_pumpkin.mp4", "audio": "audio/treat_pumpkin.wav", "duration_ms": 3100, "frame_count": 75},
+    "treat_badge": {"video": "video/treat_badge.mp4", "audio": "audio/treat_badge.wav", "duration_ms": 2800, "frame_count": 68}
+  }
+}

@@ -1,23 +1,17 @@
 # Add an experience
 
-An experience is a named, independently documented AR smart-glasses activity. Its theme can be seasonal or permanent.
+1. Pick a short, memorable name and a lowercase directory slug.
+2. Copy `templates/experience/` to `experiences/<slug>/`.
+3. Explain what users will see, how to start/stop, privacy and compatibility — or state **concept only**.
+4. Add it to [the catalogue](../catalog/experiences.json) and update the root README.
+5. Put code and tests alongside the experience. Only extract code into `shared/` after real reuse.
+6. Publish an install link **only after** [the release checklist](RELEASE_CHECKLIST.md) passes.
 
-## Steps
+Catalogue statuses currently used:
+- `concept`: idea only, no runnable application.
+- `source_preview_only`: curated source exists but no distributable package.
+- `in_development`: active work, not installable.
+- `pilot`: a limited, explicitly tested installable build.
+- `released`: available package, with hardware/support limits identified.
 
-1. Choose a memorable lowercase kebab-case slug (e.g., `christmas`) and an explicit experience name.
-2. Copy the starter from `templates/experience/` into `experiences/<slug>/`; replace every template placeholder.
-3. Write a concise README: what the user sees, controls, privacy, installation, supported hardware, limitations and current status.
-4. Add/update the entry in `catalog/experiences.json`. Keep `id` equal to the directory slug and `install_url: null` until an actual install/release page exists.
-5. Add the experience to the root README.
-6. When code/assets exist, place their build/test docs alongside them. Extract shared code only after a second real use.
-7. Do not advertise a download until the applicable [release checklist](RELEASE_CHECKLIST.md) is complete.
-
-## Catalogue fields
-
-- `schema_version` (top level): currently `1`.
-- `id`, `name`, `theme`, `summary`, `directory`.
-- `status`: `concept` (idea only), `in_development`, `pilot_candidate_export_pending`, `pilot` (package exists, limited validation), or `released`.
-- `targets`: array of `{ "name": "...", "validation": "simulator_only|device_verified|not_tested" }`. Document version and proof in the experience README.
-- `install_url`: URL to a real approved install source, otherwise `null`.
-
-For `concept`, keep `targets: []` and `install_url: null`. A released experience must also have a verified install route and explicit device support limits.
+Declare devices separately from validation: `simulator_only`, `device_verified` or `not_tested`. An `install_url` is `null` unless a real package exists.

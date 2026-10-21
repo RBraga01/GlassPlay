@@ -1,0 +1,2 @@
+# Framework is installed separately from the pinned source in installation.md.
+vosk==0.3.45

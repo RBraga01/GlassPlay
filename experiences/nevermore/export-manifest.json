@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "export": "GlassPlay Nevermore curated source preview",
+  "source": {
+    "repository": "RBraga01/Nevermore",
+    "commit": "bf5b8eb2469c63eedc72adc89c40e41e91627b1f",
+    "branch_at_export": "main"
+  },
+  "target_directory": "experiences/nevermore/app",
+  "status": "source_preview_only",
+  "runnable": false,
+  "media_included": false,
+  "framework_included": false,
+  "voice_model_included": false,
+  "files": [
+    {
+      "path": "app/main.py",
+      "source_path": "main.py",
+      "source_git_blob_sha": "341ec4c3571681c569f1deb9f33c20df412d57c2",
+      "bytes": 451
+    },
+    {
+      "path": "app/requirements.txt",
+      "source_path": "requirements.txt",
+      "source_git_blob_sha": "3a9505e1027936888a818984efe31857108e30a7",
+      "bytes": 92
+    },
+    {
+      "path": "app/nevermore/__init__.py",
+      "source_path": "nevermore/__init__.py",
+      "source_git_blob_sha": "59f43c4cec829317875261ed68a0d4cd48bb8c87",
+      "bytes": 308
+    },
+    {
+      "path": "app/nevermore/app.py",
+      "source_path": "nevermore/app.py",
+      "source_git_blob_sha": "f0ee3f20ac386a88229f5ddb5986d08514e8d56b",
+      "bytes": 16594
+    },
+    {
+      "path": "app/nevermore/audio.py",
+      "source_path": "nevermore/audio.py",
+      "source_git_blob_sha": "e3d19727d2fc7a91255fb747cf6007bac8635734",
+      "bytes": 5119
+    },
+    {
+      "path": "app/nevermore/audio_playback.py",
+      "source_path": "nevermore/audio_playback.py",
+      "source_git_blob_sha": "cbc741ea9d361a417385517d6f4f4be80050aeee",
+      "bytes": 3468
+    },
+    {
+      "path": "app/nevermore/choices.py",
+      "source_path": "nevermore/choices.py",
+      "source_git_blob_sha": "048b2a6e71bc4ede7978293f86198d7f729a652c",
+      "bytes": 1742
+    },
+    {
+      "path": "app/nevermore/director.py",
+      "source_path": "nevermore/director.py",
+      "source_git_blob_sha": "bb8f82254a62223335b1e870df3b93e9b45e4e54",
+      "bytes": 9373
+    },
+    {
+      "path": "app/nevermore/discoveries.py",
+      "source_path": "nevermore/discoveries.py",
+      "source_git_blob_sha": "942b9b583f9915c593a298834909ada0f525bb51",
+      "bytes": 2755
+    },
+    {
+      "path": "app/nevermore/events.py",
+      "source_path": "nevermore/events.py",
+      "source_git_blob_sha": "69467499aa786b0f28f50a672f4c2877f764beb6",
+      "bytes": 5766
+    },
+    {
+      "path": "app/nevermore/production_media.py",
+      "source_path": "nevermore/production_media.py",
+      "source_git_blob_sha": "faf2d433ce86a3c0edff3d532c95e4b3ed0fcd70",
+      "bytes": 1313
+    },
+    {
+      "path": "app/nevermore/scenes.py",
+      "source_path": "nevermore/scenes.py",
+      "source_git_blob_sha": "fcc1f59037ea4ca175f08ecbcaea02fbecf32dad",
+      "bytes": 7408
+    },
+    {
+      "path": "app/nevermore/scheduler.py",
+      "source_path": "nevermore/scheduler.py",
+      "source_git_blob_sha": "b60e36963d8a0be233677497f5da2bced27b3e01",
+      "bytes": 1524
+    },
+    {
+      "path": "app/nevermore/trick_or_treat_media.py",
+      "source_path": "nevermore/trick_or_treat_media.py",
+      "source_git_blob_sha": "92e407b80ce5c6855d2879207d424b763ce29b16",
+      "bytes": 1905
+    },
+    {
+      "path": "app/nevermore/triggers.py",
+      "source_path": "nevermore/triggers.py",
+      "source_git_blob_sha": "1699d759de928b61cde93aa56940403814080225",
+      "bytes": 1408
+    },
+    {
+      "path": "app/nevermore/voice.py",
+      "source_path": "nevermore/voice.py",
+      "source_git_blob_sha": "cad3103c7298c123ce95d4a4fc47247b122b7e32",
+      "bytes": 5622
+    },
+    {
+      "path": "app/assets/production/manifest.json",
+      "source_path": "assets/production/manifest.json",
+      "source_git_blob_sha": "29da7a252ede127486945ad2cb966ed39f634df1",
+      "bytes": 3970
+    },
+    {
+      "path": "app/assets/trick_or_treat/manifest.json",
+      "source_path": "assets/trick_or_treat/manifest.json",
+      "source_git_blob_sha": "762341fb5fce0be8d4fa7703cac3277d85da5244",
+      "bytes": 1163
+    },
+    {
+      "path": "app/tests/conftest.py",
+      "source_path": "tests/conftest.py",
+      "source_git_blob_sha": "e0b3367426ab9324609fdf5b39a1e8e642ff50fe",
+      "bytes": 232
+    },
+    {
+      "path": "app/tests/test_audio.py",
+      "source_path": "tests/test_audio.py",
+      "source_git_blob_sha": "cb38b7c3eeeb7e1bf1ae7cce64850513f2b3de92",
+      "bytes": 836
+    },
+    {
+      "path": "app/tests/test_director.py",
+      "source_path": "tests/test_director.py",
+      "source_git_blob_sha": "1578131b8d2e3f39cce1a0ef807ed5b155f0dc50",
+      "bytes": 6527
+    },
+    {
+      "path": "app/tests/test_events.py",
+      "source_path": "tests/test_events.py",
+      "source_git_blob_sha": "b370637d593a2ca5d86b3c505f1b07b9f328e698",
+      "bytes": 2800
+    },
+    {
+      "path": "app/tests/test_scheduler.py",
+      "source_path": "tests/test_scheduler.py",
+      "source_git_blob_sha": "f5c655eda64aee60ace5b52cde0fde2d7123155d",
+      "bytes": 605
+    }
+  ],
+  "excluded": [
+    "archive/",
+    "docs/prefinal/",
+    "tools/",
+    "assets/production/video/",
+    "assets/production/audio/",
+    "assets/trick_or_treat/video/",
+    "assets/trick_or_treat/audio/",
+    "assets/raven/video/",
+    "assets/voice/vosk-model-small-en-us-0.15/",
+    "Blender/source models",
+    "private data and credentials"
+  ],
+  "notes": [
+    "Verbatim source and minimal logic-only tests.",
+    "Two JSON media indexes are metadata only; no runtime videos, WAV or offline model are shipped.",
+    "No media/public release rights asserted.",
+    "Do not imply real-hardware verification."
+  ]
+}

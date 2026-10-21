@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "fps": 24,
+  "resolution": [
+    640,
+    640
+  ],
+  "scenes": {
+    "raven_sweep": {
+      "video": "production/video/raven_sweep.mp4",
+      "audio": "production/audio/raven_sweep.wav",
+      "duration_ms": 4000,
+      "frame_count": 96,
+      "video_sha256": "f9f2eed7582085b5e9b07c33bc0bf7574505736462b944a3119dfb7a2b705f0f",
+      "audio_sha256": "4c9f7dc6f1087708588574aa86358006e7065bd4baf99c140be23ab838398b5b"
+    },
+    "raven_perch": {
+      "video": "production/video/raven_perch.mp4",
+      "audio": "production/audio/raven_perch.wav",
+      "duration_ms": 5500,
+      "frame_count": 132,
+      "video_sha256": "f6846321021b68377d6cb2f413fa842f61624c0b5247e8ef22d235636c4622e6",
+      "audio_sha256": "14d7d40b320cbdb33f4a8a41a9a49b1581c70dc5fbc474701d5bf1e6f86b721e"
+    },
+    "raven_shadow": {
+      "video": "production/video/raven_shadow.mp4",
+      "audio": "production/audio/raven_shadow.wav",
+      "duration_ms": 1500,
+      "frame_count": 36,
+      "video_sha256": "b31d1730d305f86162b2dd72b1958bcbba6fbf387ec8ede5bf2edbf894004bb0",
+      "audio_sha256": "1a032e0dd2700fa516a711e20392ea7420f947894098f507d81f690196c023cf"
+    },
+    "raven_duet": {
+      "video": "production/video/raven_duet.mp4",
+      "audio": "production/audio/raven_duet.wav",
+      "duration_ms": 5000,
+      "frame_count": 120,
+      "video_sha256": "c4408b530ed0d2a5a0b26aedfd5386f0f4a5d0e230fe483d03d4e76ea28b80df",
+      "audio_sha256": "4f46f2fd8c8cd4dfad65ef7c6eea98cf24a61d7d98802b9bab0204aed3525bff"
+    },
+    "eyes": {
+      "video": "production/video/eyes.mp4",
+      "audio": "production/audio/eyes.wav",
+      "duration_ms": 3000,
+      "frame_count": 72,
+      "video_sha256": "44e0d7fe114750f5b3afe911ae8b26563288e767baeb90348c739c1407142b49",
+      "audio_sha256": "13a5995108903db9fba7a9d858072cbbee85e30507cb48f691fdf8ca6269b00a"
+    },
+    "nevermore": {
+      "video": "production/video/nevermore.mp4",
+      "audio": "production/audio/nevermore.wav",
+      "duration_ms": 3300,
+      "frame_count": 80,
+      "video_sha256": "fe0758809a4468f3b09733322b97bb62efa441b076b78bf54b616175c5130f92",
+      "audio_sha256": "6945ff0c30a408b3fd01911b8626e7bd336f4ada5270a8e94738b6dc3d8ee0f5"
+    },
+    "shadow": {
+      "video": "production/video/shadow.mp4",
+      "audio": "production/audio/shadow.wav",
+      "duration_ms": 2300,
+      "frame_count": 56,
+      "video_sha256": "e84a992ef5f2c79da7ebaa31bde2e88941645899dcdb79059c22036e90684a2e",
+      "audio_sha256": "f0f4c4e19a6e4d12975111bc26ac2e1227ce716bec48179e10220c30328b4b0d"
+    },
+    "glitch": {
+      "video": "production/video/glitch.mp4",
+      "audio": "production/audio/glitch.wav",
+      "duration_ms": 2600,
+      "frame_count": 63,
+      "video_sha256": "3e9a44aca54393aa59200bc9bdbb828db981fe3354cf38fe9d62d70f1283e0e4",
+      "audio_sha256": "b1d38cb024f1855a0f68b8de245093830b4d7e55b12506cb74acd6b3a2198511"
+    },
+    "ghost": {
+      "video": "trick_or_treat/video/treat_ghost.mp4",
+      "audio": "trick_or_treat/audio/treat_ghost.wav",
+      "duration_ms": 3300,
+      "frame_count": 80,
+      "approved_alias_of": "treat_ghost"
+    },
+    "spider": {
+      "video": "trick_or_treat/video/trick_spider.mp4",
+      "audio": "trick_or_treat/audio/trick_spider.wav",
+      "duration_ms": 2700,
+      "frame_count": 65,
+      "approved_alias_of": "trick_spider"
+    },
+    "pumpkin": {
+      "video": "trick_or_treat/video/treat_pumpkin.mp4",
+      "audio": "trick_or_treat/audio/treat_pumpkin.wav",
+      "duration_ms": 3100,
+      "frame_count": 75,
+      "approved_alias_of": "treat_pumpkin"
+    },
+    "raven_dive": {
+      "video": "raven/video/raven_dive.mp4",
+      "audio": "production/audio/raven_dive.wav",
+      "duration_ms": 3000,
+      "frame_count": 72,
+      "video_sha256": "fc5b704d9b0bcdac15cd3a052aa766c13d918fdc830b43c5f660c97c8b788503",
+      "audio_sha256": "8ca9996c4e8c742e55c53a9cbd80baae758b03c135f6e18028cb12f14e5b1c62"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+name: Nevermore source checks
+
+on:
+  push:
+    paths:
+      - 'experiences/nevermore/app/**'
+      - 'experiences/nevermore/export-manifest.json'
+      - 'experiences/nevermore/verify_export.py'
+      - '.github/workflows/nevermore-source.yml'
+  pull_request:
+    paths:
+      - 'experiences/nevermore/app/**'
+      - 'experiences/nevermore/export-manifest.json'
+      - 'experiences/nevermore/verify_export.py'
+      - '.github/workflows/nevermore-source.yml'
+
+jobs:
+  source-only:
+    name: Source integrity + logic tests (not device/media)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify curated source integrity
+        run: python experiences/nevermore/verify_export.py
+      - name: Test experience logic only
+        working-directory: experiences/nevermore/app
+        run: |
+          python -m pip install pytest
+          python -m pytest -q tests/test_audio.py tests/test_director.py tests/test_events.py tests/test_scheduler.py

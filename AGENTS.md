@@ -1,24 +1,21 @@
-# GlassPlay — repository guidance
+# GlassPlay — instructions for coding agents
 
-GlassPlay is a curated **collection of AR smart-glasses experiences**, not a mirror of existing development repositories.
+**Product:** Simple, discoverable seasonal **experiences for AR smart glasses**. Prioritize a strong, honest product page and a curated, independently verifiable release path. Keep the root README short and understandable to non-developers.
 
-## Source of truth
+## Current work
 
-- `README.md`: public-facing catalogue and current status.
-- `catalog/experiences.json`: machine-readable index.
-- `experiences/<slug>/README.md`: experience status and instructions.
-- `docs/RELEASE_CHECKLIST.md`: explicit gates before a downloadable release.
+- `experiences/nevermore/app/` is a **source-only curated copy** of production code and logic tests. Do not call it a runnable release.
+- `experiences/nevermore/export-manifest.json` pins the original source commit and blob IDs.
+- `experiences/nevermore/ASSETS_PENDING.md` tracks withheld media, licenses, hardware and deploy gates.
+- `catalog/experiences.json` is discovery metadata; future festivities are still ideas.
 
-## Non-negotiable boundaries
+## Hard boundaries
 
-1. Do not copy or mirror `RBraga01/Nevermore` (or another private research repository) wholesale. Copy only audited, explicitly selected release files when instructed; keep private Git history, archives, experiments, raw source assets and credentials out.
-2. Do not present concept directories as released products. Keep catalogue status consistent with evidence.
-3. Never claim Prism hardware compatibility until tested on physical hardware. Simulator evidence must be labelled as simulator evidence.
-4. Never redistribute Raven Framework or third-party media/models without verified permissions and notices. No invented legal approvals.
-5. Keep experiences independent at first. Introduce `shared/` and `platforms/` code only to support real integrations rather than speculative abstractions.
-6. No hardcoded app ID/key, access tokens, API keys or other secrets. Never record microphone samples or transcripts by default.
-7. Maintain the project's clear user-facing naming and searchable AR/smart glasses descriptions.
-
-## When adding or changing an experience
-
-Update the experience README, `catalog/experiences.json`, and root README together. Follow `docs/ADD_EXPERIENCE.md`. Before publishing assets or binaries follow `docs/RELEASE_CHECKLIST.md`.
+1. Never mirror the private Nevermore repository, archive, source media, raw renders, entire LFS history or credentials. Export only reviewed, explicitly selected paths.
+2. Preserve source-file integrity while staging; if changing runtime code, clearly separate new changes from the verbatim export and test them.
+3. Do not distribute MP4/WAV/BLEND/GLB, offline Vosk weights or Raven Framework until permission/attribution checks and packaging gates pass.
+4. Physical Prism remains **DEVICE-UNVERIFIED**. Simulator results are not physical-device results.
+5. Do not invent install links, supported devices or published versions.
+6. Keep the root README and Nevermore overview user-facing. Engineering details belong in `app/README.md`, `ASSETS_PENDING.md` and `docs/`.
+7. Change status consistently in `README.md`, experience page and `catalog/experiences.json` after evidence exists.
+8. No unused platform abstractions; extract reusable code only when two experiences share an actual need.

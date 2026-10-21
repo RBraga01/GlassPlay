@@ -1,29 +1,32 @@
+![Nevermore — a Halloween experience for AR glasses](cover.svg)
+
 # Nevermore
+**A Halloween haunting for AR smart glasses.**
 
-**Halloween | AR smart glasses | Pilot/MVP candidate — export pending**
+*Silence → presence → encounter → silence.*
 
-> *Silence → presence → encounter → silence.*
+An opt-in experience made for Raven Prism: a Midnight Host invites you to choose **Trick or Treat**. Then the unexpected begins — a raven passes by, a presence appears, or the world goes strangely quiet.
 
-An opt-in haunting experience developed for **Raven Prism**. After ARM, an authored Midnight Host encounter leads into a paced ambient session; users can invoke the raven with a local offline voice keyword and can DISARM immediately.
+## The experience
 
-## Current validated scope
+- **20 authored encounters** with animated scenes and sound.
+- **Say “Raven”** to summon a raven encounter. Recognition runs locally, offline, only while armed and idle.
+- **DISCOVERIES** keep a small journal of what you have seen.
+- **DISARM** ends the experience immediately.
 
-- 20 authored audiovisual event types and an event director.
-- Midnight Host / Trick-or-Treat sequence, raven encounters, discoveries and cancellation.
-- Local, offline foreground keyword trigger (“Raven”), active only while armed and idle.
-- Software tested in raw and Raven Simulator 1.0.6 Room; the **physical Prism is DEVICE-UNVERIFIED**.
+## How you interact
 
-## Availability
+`ARM` → `TRICK OR TREAT` → `SAY RAVEN` → `DISARM`
 
-**No runnable release has been exported into GlassPlay.** The original development/source repository is [RBraga01/Nevermore](https://github.com/RBraga01/Nevermore) (**private**). This folder documents the experience and reserves its future curated distribution location; it is not an installation guide yet.
+<small>The above is the intended in-app interaction, **not** an install command.</small>
 
-Do **not** copy the private repo, archive, renders, raw assets or Git history into GlassPlay. A future export must contain only approved runtime files and distributable media, with independently verified license and deployment permissions.
+## Can I install it?
 
-## Release blockers
+**Not yet from GlassPlay.** The production Python source has been curated into [app/](app/README.md) for review, but the videos, audio and offline voice model have **not** been distributed here.
 
-- Physical Prism: display, audio/mic, resources/thermals unverified.
-- Raven deployment app identity/entitlements require authorized provisioning.
-- Media licensing/attribution review, notably rights associated with Meshy-derived assets.
-- Create and verify curated, end-user-facing package and installation documentation.
+**Verified:** Raven Simulator 1.0.6 (software).  
+**Not verified:** physical Raven Prism display, speakers, microphone, performance and thermals.
 
-See [release requirements](../../docs/RELEASE_CHECKLIST.md).
+A downloadable pilot requires release-ready media, checked permissions and hardware/deployment validation. See [what remains](ASSETS_PENDING.md).
+
+[← Back to GlassPlay](../../README.md)
