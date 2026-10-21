@@ -20,6 +20,8 @@ The [machine-readable result](lighthouse-summary.json) records the exact measure
 
 The build measured here is the public title-art fallback. Private media review was exercised separately in the browser; no Lighthouse score is claimed for private gameplay media. A deployed-site measurement will be needed after an authorized launch.
 
+GitHub independently measured the implementation in [quality run 39682749686](https://github.com/RBraga01/GlassPlay/actions/runs/39682749686): **98/100/100/100 for both pages**. [CI summary](lighthouse-ci-summary.json) is copied directly from that run's artifact. All five applicable workflows passed for implementation commit `dd8253cf94c497270217e02804929036785708ce`; the following documentation-only commit preserves the evidence without changing build inputs.
+
 ## Browser behavior
 
 [Viewport checks](browser-review.json) cover 15 page/width combinations, including both media states: 320, 390, 768, 1024 and 1440 pixels. Image loading, overflow, local-only resource requests, no autoplay and reduced motion passed. One 320px title overflow was found and fixed before recording these results.

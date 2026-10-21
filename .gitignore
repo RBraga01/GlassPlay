@@ -18,7 +18,8 @@ build/
 reports/
 output/
 .playwright-cli/
-.impeccable/
+.impeccable/*
+!.impeccable/design.json
 *.log
 .DS_Store
 Thumbs.db

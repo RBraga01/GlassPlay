@@ -2,7 +2,7 @@
 
 Prepared 2026-10-21 from the owner's **GlassPlay Full Product, Website & Release Implementation** brief.
 
-**Implementation ready for review. Public launch held.** The feature branch is `feat/glassplay-product-site`. Neither repository's `main`, visibility, Pages settings nor the private Nevermore release has been changed by this implementation.
+**Implementation ready for review. Public launch held.** The feature branch is `feat/glassplay-product-site`; [PR #1](https://github.com/RBraga01/GlassPlay/pull/1) contains the implementation. Neither repository's remote `main`, visibility, Pages settings nor the private Nevermore release has been changed by this implementation.
 
 ## Delivered
 
@@ -42,6 +42,8 @@ The private bundle SHA-256 is `8e97462e7998cf53037bdacad3871d14601d1d316693f7f15
 - Lighthouse: actual mobile measurements on homepage and Nevermore, three runs each. Scores and browser details are recorded in [review evidence](review/README.md), not inferred from successful compilation.
 - Nevermore: 87 upstream tests, 79 tests in each complete package, 16 curated logic tests; both archives' 95 payloads and 20-event media decode pass. See [release baseline](release/BASELINE.md) for scope, commands and limitations.
 - npm production dependency audit: zero reported vulnerabilities at implementation time. This is not a blanket security certification.
+
+The complete implementation commit `dd8253cf94c497270217e02804929036785708ce` passed all five applicable GitHub CI workflows: website, catalogue, source logic/integrity, release integrity and Lighthouse. Remote mobile Lighthouse measured **98/100/100/100 on both pages**. A final documentation-only commit records this evidence and the actual design tokens; it does not change the tested application or website build inputs. Pages did not run.
 
 Visual review used normal desktop/mobile captures, then an independent reviewer. The responsive title and two small typography/icon findings were corrected. Evidence contains only original site title artwork; screenshots with private Nevermore media stay local.
 
