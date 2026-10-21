@@ -1,0 +1,10 @@
+{
+  "id": "replace-with-slug",
+  "name": "<Experience name>",
+  "theme": "<Theme>",
+  "summary": "Concept placeholder only; no build is available.",
+  "status": "concept",
+  "directory": "experiences/replace-with-slug",
+  "targets": [],
+  "install_url": null
+}

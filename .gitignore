@@ -1,0 +1,23 @@
+# Local tools and secrets
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+.next/
+dist/
+build/
+*.log
+.DS_Store
+Thumbs.db
+
+# Work-in-progress source media and private render outputs
+**/renders/
+**/raw-captures/
+**/private/

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "experiences": [
+    {
+      "id": "nevermore",
+      "name": "Nevermore",
+      "theme": "Halloween",
+      "summary": "An opt-in haunted experience with authored encounters, a raven and local offline voice invocation.",
+      "status": "pilot_candidate_export_pending",
+      "directory": "experiences/nevermore",
+      "targets": [
+        {
+          "name": "Raven Prism",
+          "validation": "simulator_only"
+        }
+      ],
+      "install_url": null
+    },
+    {
+      "id": "christmas",
+      "name": "Christmas",
+      "theme": "Christmas / winter",
+      "summary": "Reserved for a future seasonal experience; no app exists yet.",
+      "status": "concept",
+      "directory": "experiences/christmas",
+      "targets": [],
+      "install_url": null
+    },
+    {
+      "id": "st-patricks",
+      "name": "St. Patrick's",
+      "theme": "St. Patrick's Day",
+      "summary": "Reserved for a future seasonal experience; no app exists yet.",
+      "status": "concept",
+      "directory": "experiences/st-patricks",
+      "targets": [],
+      "install_url": null
+    },
+    {
+      "id": "easter",
+      "name": "Easter",
+      "theme": "Easter / spring",
+      "summary": "Reserved for a future seasonal experience; no app exists yet.",
+      "status": "concept",
+      "directory": "experiences/easter",
+      "targets": [],
+      "install_url": null
+    }
+  ]
+}
