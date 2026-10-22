@@ -16,6 +16,8 @@ const cards = [
   // [file, width, height, text column width, wordmark px, tagline px, object-position]
   ['glassplay-social.png', 1200, 630, 340, 88, 26, '50% 40%'],
   ['glassplay-banner.png', 1672, 941, 470, 124, 34, '50% 50%'],
+  // GitHub repository social preview (Settings > Social preview; 1280x640, under 1 MB).
+  ['github-social-preview.png', 1280, 640, 360, 94, 28, '50% 40%'],
 ];
 
 const html = ([, width, height, column, mark, tag, position]) => `<!doctype html><html><head><style>
