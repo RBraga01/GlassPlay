@@ -3,8 +3,8 @@
   "export": "GlassPlay Nevermore curated source preview",
   "source": {
     "repository": "RBraga01/Nevermore",
-    "commit": "81df295f6825189bfba05288aca76595b4c59437",
-    "branch_at_export": "main"
+    "commit": "b4980cfc7c6c93838892d966c61284bfd0740214",
+    "branch_at_export": "release/rc2-raven-handoff"
   },
   "target_directory": "experiences/nevermore/app",
   "status": "source_preview_only",
@@ -34,8 +34,8 @@
     {
       "path": "app/nevermore/app.py",
       "source_path": "nevermore/app.py",
-      "source_git_blob_sha": "f0ee3f20ac386a88229f5ddb5986d08514e8d56b",
-      "bytes": 16594
+      "source_git_blob_sha": "6f9e170bed4c5c88572d2c3b885f09b011096868",
+      "bytes": 16873
     },
     {
       "path": "app/nevermore/audio.py",
@@ -168,17 +168,19 @@
   "notes": [
     "Verbatim source and minimal logic-only tests.",
     "Two JSON media indexes are metadata only; no runtime videos, WAV or offline model are shipped.",
-    "No media/public release rights asserted.",
+    "Licensing: Nevermore code MIT; Nevermore artwork/media All Rights Reserved (see Nevermore ASSET_LICENSES.md).",
     "Do not imply real-hardware verification."
   ],
   "latest_candidate": {
-    "version": "1.0.0-rc.1",
+    "version": "1.0.0-rc.2",
     "release_visibility": "private_draft",
     "host_validation": "windows_and_raven_simulator_pass",
     "physical_prism": "device_unverified",
     "package_in_glassplay": false,
-    "public_code_and_art_license": "not_selected",
-    "raven_sdk_distribution_permission": "pending"
+    "public_code_license": "MIT",
+    "artwork_and_media_license": "all_rights_reserved_except_upstream",
+    "raven_framework": "external_not_included_not_relicensed",
+    "public_download": "held_pending_raven_deployment_guidance"
   },
-  "updated_note": "Runtime Python code and logic tests unchanged since prior export; only production media manifest updated with new approved character-derived clip hashes. No MP4, WAV, model, SDK or archive is imported."
+  "updated_note": "Synced to rc.2: only nevermore/app.py changed (legacy procedural sound bank built lazily). No MP4, WAV, model, SDK or archive is imported."
 }

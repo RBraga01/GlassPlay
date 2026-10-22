@@ -16,6 +16,11 @@ import sys
 import zipfile
 
 
+RELEASE_METADATA = "releases/nevermore-rc2.json"
+VERSION = "1.0.0-rc.2"
+PAYLOAD_FILES = 98
+
+
 class VerificationError(ValueError):
     """An integrity or release-policy invariant was violated."""
 
@@ -112,7 +117,7 @@ def verify_source(root, metadata, source_repo=None):
 
 def verify_metadata(metadata, catalogue, source_repo=None):
     require(metadata["schema_version"] == 1, "Unsupported metadata schema")
-    require(metadata["version"] == "1.0.0-rc.1", "Unexpected release version")
+    require(metadata["version"] == VERSION, "Unexpected release version")
     require(metadata["publication"]["public_url"] is None
             and metadata["publication"]["authorized"] is False, "Candidate is not public")
     require(metadata["device_validation"]["physical_prism"] == "DEVICE-UNVERIFIED",
@@ -120,8 +125,9 @@ def verify_metadata(metadata, catalogue, source_repo=None):
     require(metadata["rights"]["meshy"]["status"] == "USER-ATTESTED-MESHY-PAID-ACCOUNT"
             and metadata["rights"]["meshy"]["independently_verified"] is False,
             "Meshy must preserve the exact owner attestation status")
-    require(metadata["rights"]["raven_framework"]["bundled"] is False,
-            "Proprietary SDK must remain external")
+    require(metadata["rights"]["raven_framework"]["bundled"] is False
+            and metadata["rights"]["raven_framework"].get("relicensed") is False,
+            "Raven Framework must remain external and not relicensed")
     require(metadata["catalogue"] == catalogue and len(catalogue) == 20,
             "Release catalogue differs from approved source manifests")
     media = rows_by_path(metadata["runtime_files"], "runtime")
@@ -138,7 +144,7 @@ def verify_metadata(metadata, catalogue, source_repo=None):
                 and re.fullmatch(r"[0-9a-f]{64}", artifact["manifest_sha256"]) is not None,
                 f"Invalid archive hash: {artifact_id}")
         files = rows_by_path(artifact["files"], f"{artifact_id} payload")
-        require(len(files) == artifact["payload_files"] == 95, "Unexpected payload count")
+        require(len(files) == artifact["payload_files"] == PAYLOAD_FILES, "Unexpected payload count")
         require(set(metadata["package_source_paths"]) == set(files) - {".gitignore", ".gitattributes", "CREDITS.json"},
                 "Every non-generated package payload needs an upstream source path")
         for source_path in metadata["package_source_paths"].values():
@@ -146,7 +152,8 @@ def verify_metadata(metadata, catalogue, source_repo=None):
         require(set(media).issubset(files), f"Runtime missing from {artifact_id}")
         for path, pin in media.items():
             require(files[path] == pin, f"Runtime differs across candidates: {path}")
-        required_docs = {"RIGHTS.md", "THIRD_PARTY_NOTICES.md", "CREDITS.json", "RELEASE_NOTES.md",
+        required_docs = {"LICENSE", "ASSET_LICENSES.md", "RAVEN_FRAMEWORK.md", "RIGHTS.md",
+                         "THIRD_PARTY_NOTICES.md", "CREDITS.json", "RELEASE_NOTES.md",
                          "docs/installation.md", "assets/voice/LICENSE-APACHE-2.0.txt"}
         require(required_docs.issubset(files), f"Missing release documentation: {artifact_id}")
         for name in files:
@@ -193,7 +200,7 @@ def verify_archive(path, artifact, catalogue, source_repo=None, source_paths=Non
         require(sha256(manifest_bytes) == artifact["manifest_sha256"], "Release manifest hash mismatch")
         manifest = json.loads(manifest_bytes)
         require(manifest["source_commit"] == artifact["source_commit"], "Artifact source revision mismatch")
-        require(manifest["version"] == "1.0.0-rc.1" and manifest["physical_device"] == "DEVICE-UNVERIFIED",
+        require(manifest["version"] == VERSION and manifest["physical_device"] == "DEVICE-UNVERIFIED",
                 "Unexpected version/device declaration")
         require(manifest["catalogue"] == catalogue, "Artifact catalogue mismatch")
         require(rows_by_path(manifest["files"], "manifest") == pinned, "Payload manifest differs from pinned evidence")
@@ -235,7 +242,7 @@ def main(argv=None):
     args = parser.parse_args(argv)
     root = Path(__file__).resolve().parents[1]
     try:
-        metadata = load_json(root / "releases/nevermore-rc1.json")
+        metadata = load_json(root / RELEASE_METADATA)
         catalogue = verify_source(root, metadata, args.source_repo)
         verify_metadata(metadata, catalogue, args.source_repo)
         archive_result = (verify_archive(args.archive, metadata["artifacts"][args.artifact], catalogue,

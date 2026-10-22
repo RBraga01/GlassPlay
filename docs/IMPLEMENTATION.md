@@ -26,7 +26,7 @@ See [DEVELOPMENT](DEVELOPMENT.md) for commands and [media preparation](media/REA
 | Owner media review | `.private/site/`, preview `/GlassPlay/` | Includes 19 verified private derivatives; never upload as Pages |
 | Promotional film | `.private/media/nevermore/promo.mp4` | Actual approved production animation and labelled Windows Simulator Room montage |
 | Media bundle | `.private/nevermore-web-media.zip` | All 19 current files and bundle size/hash pinned in [manifest](media/manifest.json) |
-| Refreshed application | `E:/raven/releases/glassplay-ready/Nevermore-1.0.0-rc.1.zip` | Verified complete package; not a website source asset or public URL |
+| Release candidate | `E:/raven/nevermore-release/Nevermore-1.0.0-rc.2.zip` (private draft `v1.0.0-rc.2`) | Verified complete package; not a website source asset or public URL |
 
 The current private bundle SHA-256 is recorded in the media manifest; new artwork supersedes the original bundle. The refreshed application SHA-256 is `d4fecf4cbafcc5c3c0060c4dcc7066434152bd5527466141937f76a17bec5179`.
 

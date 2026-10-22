@@ -23,7 +23,7 @@ class ReleaseVerificationTests(unittest.TestCase):
         self.payload = b"approved runtime bytes"
         self.row = {"path": "main.py", "bytes": len(self.payload),
                     "sha256": hashlib.sha256(self.payload).hexdigest()}
-        self.manifest = {"source_commit": "1" * 40, "version": "1.0.0-rc.1",
+        self.manifest = {"source_commit": "1" * 40, "version": VERIFY.VERSION,
                          "physical_device": "DEVICE-UNVERIFIED", "catalogue": {}, "files": [self.row]}
 
     def archive(self, entries=None, manifest=None):

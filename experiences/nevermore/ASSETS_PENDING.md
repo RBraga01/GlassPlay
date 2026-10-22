@@ -1,27 +1,22 @@
 # Nevermore — distribution gates
 
-**Source preview in GlassPlay:** 23 verbatim source/manifest/test files, updated to Nevermore commit `81df295`. **No audiovisual media or SDK is present here.**
+**Source preview in GlassPlay:** 23 verbatim source/manifest/test files from Nevermore commit `b4980cf` (rc.2). **No audiovisual media or SDK is present here.**
 
-**Complete release candidate in Nevermore:** Private GitHub **draft** `v1.0.0-rc.1` contains the ~55 MB Python ZIP, checksum, two new simulator videos and validation JSON. It has **not been published**.
+**Complete release candidate in Nevermore:** private GitHub **draft** `v1.0.0-rc.2` with the ~55 MB Python ZIP, checksum, two simulator videos, validation JSON and Raven handoff. It has **not been published**.
 
-| Item | Actual status |
+| Item | Status |
 | --- | --- |
-| Curated 20-event runtime media and model | **Packaged and checked in the private RC ZIP; not copied to GlassPlay** |
-| Windows-host / Simulator Room testing | **PASS** — 79 application tests in clean export; 87 in private repo, 20 events and new captures |
-| Meshy-derived production character assets | **USER-ATTESTED-MESHY-PAID-ACCOUNT** — owner declaration recorded; account documents not independently inspected |
-| Code and authored-art public license | **Owner decision still required** — no automatic MIT/open license |
-| Raven Framework 1.0.6 | Proprietary dependency **excluded from the package**; confirm authorization for public distribution/use |
-| Prism deployment IDs/keys | Not embedded or published; authorized provisioning required |
-| Real Raven Prism validation | **DEVICE-UNVERIFIED** — display, speakers, microphone, frame delivery and thermals |
-| Live speech reliability across users/noise | Not established; recorded voice test passed through actual Vosk pipeline |
-| Blender/GLB/FBX source, raw audio, archives and private history | **Excluded** from production export and GlassPlay |
+| Curated 20-event runtime media and model | **Ready**: packaged and verified in the private rc.2 ZIP; not copied to GlassPlay |
+| Windows-host / Simulator Room testing | **Ready**: 80 application tests in the extracted package; 91 in the private repo; 20 events and Room captures |
+| Code license | **Ready**: MIT |
+| Artwork / media | **Ready**: Nevermore-specific assets All Rights Reserved; upstream CC0 and Apache-2.0 kept |
+| Meshy provenance | **Ready**: owner-attested paid-account generation; Guardian/Bride/Chest remixes of Meshy Community CC0 models (links recorded) |
+| Raven Framework | External dependency, not included or relicensed; verified with 1.0.6 |
+| Raven public Framework/deployment process | **External, pending Raven** |
+| Prism app identity / entitlements | **External, pending Raven**; nothing embedded |
+| Real Raven Prism validation | **DEVICE-UNVERIFIED** |
+| Blender/GLB/FBX source, raw audio, archives and private history | **Excluded** from the package and GlassPlay |
 
-## Next release decisions
+When Raven publishes its process: update Nevermore's `RAVEN_FRAMEWORK.md`, test on device, then approve the application download and set `install_url` / `release_url` in the catalogue.
 
-1. Choose the license/permissions for original code and artwork; retain third-party notices and Meshy owner-attestation wording.
-2. Confirm with Raven the permitted framework use and Prism deployment path.
-3. If releasing a **Windows / Simulator preview**, label its scope explicitly and verify installation with a separately authorized SDK. This does not require claiming physical Prism compatibility.
-4. For **Prism compatibility**, run device acceptance tests; keep `DEVICE-UNVERIFIED` until then.
-5. Publish only approved demo media, credits, downloads and checksums; then set a real install URL in the GlassPlay catalogue.
-
-The [source manifest](export-manifest.json) pins every copied file. Do **not** mirror the private history or export the large research archive.
+The [source manifest](export-manifest.json) pins every copied file. Do **not** mirror the private history or export the research archive.

@@ -1,58 +1,48 @@
 # Nevermore Windows / Simulator candidate
 
-This guide applies to the internally prepared **1.0.0-rc.1 application package**.
-Public download remains disabled. `experiences/nevermore/app` is a source preview
-without runtime assets and cannot be installed as the full experience.
+This guide applies to the privately prepared **1.0.0-rc.2 application package**
+(private draft `v1.0.0-rc.2` in the Nevermore repository). Public download
+remains disabled. `experiences/nevermore/app` is a source preview without
+runtime assets and cannot be installed as the full experience.
 
 ## Requirements
 
-- Windows host with Python 3.10 or newer, audio output and an authorized Raven
-  Framework 1.0.6 installation at commit
+- Windows host with Python 3.10 or newer and audio output.
+- Raven Framework, obtained separately. Nevermore does not include or relicense
+  it; the package's `RAVEN_FRAMEWORK.md` is the single place describing how to
+  obtain and deploy it. Verified compatibility: 1.0.6 at
   `791afd896cc646636ef906f5bf06c09c8fbb430a`.
-- A microphone and Windows microphone permission for the optional spoken
-  “Raven” interaction. On-screen controls remain available without it.
-- Python packages required by the separately installed SDK, plus
-  `vosk==0.3.45` from the candidate's `requirements.txt`.
+- A microphone for the optional spoken “Raven” interaction. On-screen controls
+  remain available without it.
 
-The SDK is proprietary and external. Obtain applicable permission from Raven
-Resonance before installing or distributing an application that depends on it.
 The candidate includes the small English Vosk model and its Apache-2.0 notice;
 no model download, Git LFS or Blender installation is needed to run it.
-Installation may need internet access for Python dependencies; gameplay uses the
-local model and media after installation.
 
-## Internal installation and launch
+## Install and launch
 
-Check the supplied ZIP before extraction using its matching `.sha256` file:
+Check the ZIP before extraction:
 
 ```powershell
-(Get-FileHash -LiteralPath ./Nevermore-1.0.0-rc.1.zip -Algorithm SHA256).Hash.ToLower()
-Get-Content -LiteralPath ./Nevermore-1.0.0-rc.1.sha256
+(Get-FileHash -LiteralPath ./Nevermore-1.0.0-rc.2.zip -Algorithm SHA256).Hash.ToLower()
+Get-Content -LiteralPath ./Nevermore-1.0.0-rc.2.sha256
 ```
 
-For the refreshed candidate, the expected hash is
-`d4fecf4cbafcc5c3c0060c4dcc7066434152bd5527466141937f76a17bec5179`.
-Extract it into a fresh directory and open PowerShell inside its `Nevermore`
-folder. Replace the SDK path with the authorized local installation:
+Expected: `21f946888e59623f5b19539c76042379ceda9cfd1cdc01e14d25a00502f95edc`.
+Extract into a fresh directory and open PowerShell inside `Nevermore`:
 
 ```powershell
 python -m venv .venv
-.venv/Scripts/python.exe -m pip install -e C:/path/to/authorized/raven-framework
+# Install Raven Framework into .venv as described in RAVEN_FRAMEWORK.md
 .venv/Scripts/python.exe -m pip install -r requirements.txt
 .venv/Scripts/python.exe main.py
 ```
 
-The experience opens disarmed. Select **ARM** to start, interact with **Trick or
-Treat**, and say **Raven** when armed and idle to request a raven encounter.
-Use **DISARM** or **Escape** to stop. Voice listening pauses during playback.
-`python main.py --demo` enables the faster demonstration/review mode.
+The experience opens disarmed. Select **ARM**, answer **Trick or Treat**, and
+say **Raven** when armed and idle. **DISARM** or **Escape** stops everything.
+`python main.py --demo` enables the faster review mode;
+`python main.py --reset-discoveries` resets the local discovery journal.
 
-Discoveries are stored in `%LOCALAPPDATA%/Nevermore/discoveries.json` on Windows.
-`NEVERMORE_DATA_DIR` overrides that directory for tests.
-`python main.py --reset-discoveries` resets the discovery journal.
-Normal gameplay does not save microphone recordings or transcripts.
-
-## Verify an extracted candidate
+## Verify
 
 ```powershell
 .venv/Scripts/python.exe -m pip install pytest
@@ -60,52 +50,34 @@ Normal gameplay does not save microphone recordings or transcripts.
 .venv/Scripts/python.exe tools/verify_release.py
 ```
 
-The package verifier checks all 95 payload hashes and decodes the 20 video/audio
-events. The GlassPlay verifier additionally checks the ZIP's exact file set,
-checksum, manifest hash, source revision and unsafe/duplicate entries without
-extracting it. Run this from GlassPlay using Python 3.11 or newer:
+The package verifier checks all 98 payload hashes and decodes the 20 events.
+From GlassPlay (Python 3.11+), the release verifier checks the ZIP's exact file
+set, checksum, manifest hash and upstream Git objects without extracting it:
 
 ```powershell
 python scripts/verify-release.py
-python scripts/verify-release.py --source-repo E:/raven/Nevermore-main --archive E:/raven/releases/glassplay-ready/Nevermore-1.0.0-rc.1.zip
-python scripts/verify-release.py --source-repo E:/raven/Nevermore-main --archive E:/raven/releases/public-ready/Nevermore-1.0.0-rc.1.zip --artifact private_draft
+python scripts/verify-release.py --source-repo E:/raven/Nevermore-main --archive E:/raven/nevermore-release/Nevermore-1.0.0-rc.2.zip --artifact private_draft
 python -m unittest discover -s tests -p test_verify_release.py
 ```
 
-Without private inputs, CI verifies only committed source and release metadata.
-It explicitly reports upstream object/archive checks as `NOT_RUN`. Media decode
-requires the extracted package's existing `tools/verify_release.py` and its
-dependencies; the metadata check never substitutes for it.
+Without private inputs, CI verifies committed source and metadata only and
+reports upstream/archive checks as `NOT_RUN`.
 
-## Rebuild with the existing packager
+## Rebuild
 
-Use a clean, authorized Nevermore checkout at
-`81df295f6825189bfba05288aca76595b4c59437`, with the runtime/model LFS payloads
-available and its dependencies installed. Choose an output directory that does
-not exist and is outside the source checkout:
+From a clean Nevermore checkout at `b4980cfc7c6c93838892d966c61284bfd0740214`
+with LFS payloads available, write to a new directory outside the checkout:
 
 ```powershell
-git rev-parse HEAD
-git status --short
-python tools/package_public.py E:/raven/releases/new-candidate/Nevermore-1.0.0-rc.1
+python tools/package_public.py E:/raven/nevermore-release/new/Nevermore-1.0.0-rc.2
 ```
 
-The existing allowlist selects runtime Python, 34 unique runtime media files,
-the offline voice model, application tests, public documentation and notices.
-It excludes private history, experimental archives, original Meshy models,
-authoring scenes, credentials, journals and the SDK. The packager writes a
-`RELEASE_MANIFEST.json`, ZIP and adjacent SHA-256 file and never publishes them.
+ZIP timestamps and checkout line endings mean a rebuilt archive's checksum can
+differ; compare payload hashes and provenance, and never copy an earlier
+checksum onto a rebuilt file.
 
-Verify the new package with its included verifier and application tests. Record
-its new checksum before making any metadata change. ZIP timestamps and Windows
-line endings mean the whole-archive checksum is not guaranteed identical across
-rebuilds. Compare payload hashes and source provenance; do not copy an earlier
-ZIP checksum onto a rebuilt file. Generated manifests and credits must be
-reviewed whenever source/licensing metadata changes.
+## Limits
 
-## Installation limits
-
-The current verification used the existing pinned SDK environment. A fresh
-Windows machine and physical Prism provisioning/display/speaker/microphone/
-performance have not been tested. **DEVICE-UNVERIFIED** remains the device status.
-No macOS/Linux support certification or standalone executable is supplied.
+Physical Prism provisioning, display, speaker, microphone, performance and
+thermals are **DEVICE-UNVERIFIED**. Raven's official third-party deployment
+process is pending on Raven's side. No standalone executable is supplied.

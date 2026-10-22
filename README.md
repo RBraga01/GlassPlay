@@ -16,7 +16,7 @@ Meet the Midnight Host, choose Trick or Treat, hear the raven and discover 20 un
 
 **20 encounters** · **Offline voice** · **Instant DISARM**
 
-**Release candidate:** `1.0.0-rc.1` passed Windows-host / Raven Simulator checks. The package is still a **private draft**, not a GlassPlay download. Physical Raven Prism remains **unverified**.
+**Release candidate:** `1.0.0-rc.2` is verified on Windows / Raven Simulator and packaged as a **private draft**. The public download is held until Raven publishes its third-party deployment process. Physical Raven Prism remains **DEVICE-UNVERIFIED**.
 
 [Discover Nevermore](experiences/nevermore/README.md) · [Technical source preview](experiences/nevermore/app/README.md)
 

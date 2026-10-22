@@ -4,7 +4,7 @@ const httpsUrl = z.url().refine(v => v.startsWith('https://'), 'Use HTTPS');
 const experience = z.object({
   id: z.string().regex(/^[a-z][a-z0-9-]*$/),
   name: z.string().min(1), theme: z.string().min(1), category: z.string().min(1), summary: z.string().min(1),
-  status: z.enum(['Concept', 'In development', 'Preview', 'Pilot', 'Released']),
+  status: z.enum(['Concept', 'In development', 'Preview', 'Release candidate', 'Pilot', 'Released']),
   directory: localPath, page: localPath.nullable(), cover: localPath,
   preview: z.object({poster: localPath, video: httpsUrl.nullable(), publication: z.enum(['held','approved'])}).strict().nullable(),
   candidate: z.object({version: z.string().min(1), availability: z.enum(['private_draft_only','public']), source_commit: z.string().regex(/^[a-f0-9]{40}$/)}).strict().nullable(),

@@ -4,16 +4,16 @@
     {
       "id": "nevermore", "name": "Nevermore", "theme": "Halloween", "category": "Ambient haunting",
       "summary": "Arm a little darkness. Meet the Midnight Host, summon a raven, and discover what happens when Halloween comes looking for you.",
-      "status": "Preview", "directory": "experiences/nevermore", "page": "experiences/nevermore/",
+      "status": "Release candidate", "directory": "experiences/nevermore", "page": "experiences/nevermore/",
       "cover": "brand/nevermore-poster.webp",
       "preview": {"poster": "brand/nevermore-poster.webp", "video": null, "publication": "held"},
-      "candidate": {"version": "1.0.0-rc.1", "availability": "private_draft_only", "source_commit": "81df295f6825189bfba05288aca76595b4c59437"},
+      "candidate": {"version": "1.0.0-rc.2", "availability": "private_draft_only", "source_commit": "b4980cfc7c6c93838892d966c61284bfd0740214"},
       "targets": [
-        {"name": "Windows + Raven Simulator 1.0.6", "validation": "host_validated", "label": "Preview tested"},
+        {"name": "Windows + Raven Simulator 1.0.6", "validation": "host_validated", "label": "Verified"},
         {"name": "Raven Prism", "validation": "device_unverified", "label": "Physical testing pending"}
       ],
       "install_url": null, "release_url": null,
-      "attribution": ["credits/#nevermore"], "license_status": "owner_decision_pending"
+      "attribution": ["credits/#nevermore"], "license_status": "cleared"
     },
     {
       "id": "christmas", "name": "Christmas", "theme": "Winter", "category": "Seasonal concept",
