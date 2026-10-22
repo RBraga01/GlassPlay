@@ -1,5 +1,25 @@
 # Nevermore integration baseline
 
+## Current candidate: 1.0.0-rc.2
+
+Verified on 22 October 2026; machine-readable evidence in
+[`releases/nevermore-rc2.json`](../../releases/nevermore-rc2.json).
+
+| Item | Verified state |
+| --- | --- |
+| Integrated Nevermore source | `b4980cfc7c6c93838892d966c61284bfd0740214` (in Nevermore `main`) |
+| Package | `Nevermore-1.0.0-rc.2.zip`, 54,802,288 bytes, SHA-256 `21f946888e59623f5b19539c76042379ceda9cfd1cdc01e14d25a00502f95edc`; 98 pinned payload files |
+| Distribution | Private GitHub **draft** release `v1.0.0-rc.2` in Nevermore (ZIP, checksum, two Room videos, validation JSON, Raven handoff) |
+| Curated source | 23 files, byte-identical to upstream Git objects |
+| Licensing | Code MIT; Nevermore artwork/media All Rights Reserved; CC0/Apache-2.0 upstream terms kept |
+| Raven Framework | External, not included or relicensed; verified with 1.0.6 / `791afd896cc646636ef906f5bf06c09c8fbb430a` |
+| Physical Raven Prism | **DEVICE-UNVERIFIED** |
+
+Verify with `python scripts/verify-release.py --source-repo <Nevermore checkout> --archive <rc.2 ZIP> --artifact private_draft`.
+The sections below record the earlier rc.1 baseline for history.
+
+## Earlier baseline: 1.0.0-rc.1
+
 Verified on 21 October 2026. Machine-readable evidence, individual source SHA-256s,
 all runtime SHA-256s and both complete package file lists are in
 [`releases/nevermore-rc1.json`](../../releases/nevermore-rc1.json).
