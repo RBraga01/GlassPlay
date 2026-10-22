@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "status": "PRIVATE_REVIEW_ONLY",
-  "public_distribution_approved": false,
+  "status": "APPROVED_FOR_WEBSITE",
+  "public_distribution_approved": true,
   "source_repository": "https://github.com/RBraga01/Nevermore",
   "source_revision": "81df295f6825189bfba05288aca76595b4c59437",
   "release": "v1.0.0-rc.1",
   "device_validation": "Windows Host / Raven Simulator validated; physical Prism DEVICE-UNVERIFIED",
-  "output_directory": ".private/media/nevermore",
+  "output_directory": "media-bundles/nevermore-web-media.zip (website bundle); .private/media/nevermore (local staging)",
   "sources": [
     {
       "id": "room_product",
@@ -229,7 +229,7 @@
     "teaser": "No audio stream",
     "captions": "captions.vtt",
     "text_alternative": "transcript.md",
-    "listening_review": "Pending owner review; no human listening approval is claimed."
+    "listening_review": "Owner approved the website videos on 2026-10-22"
   },
   "editorial_rules": [
     "Only the listed current production files were read.",
@@ -246,7 +246,7 @@
     "independent_account_inspection": false,
     "public_media_license": "Owner decision pending",
     "raven_framework_distribution": "Permission decision pending",
-    "publication": "Owner approval required"
+    "publication": "Owner approved website publication of these 19 files on 2026-10-22"
   },
   "attribution_reference_repository": "RBraga01/Nevermore",
   "attribution_references": [
@@ -487,7 +487,7 @@
     }
   ],
   "bundle": {
-    "path": ".private/nevermore-web-media.zip",
+    "path": "media-bundles/nevermore-web-media.zip",
     "sha256": "850a4fab3d9b5c8b98a80befe52921765ca567c257a808af5a8001739fad7288",
     "bytes": 2183299
   },
@@ -555,7 +555,7 @@
         "plate_sha256": "08cd4040170ed95da61bfc882e403037636b70f6f76d69315c3aafe837cb143a"
       }
     ],
-    "composition_review": "Pending owner visual approval",
+    "composition_review": "Owner approved the website visuals on 2026-10-22",
     "private_source_directory": ".private/art-source/nevermore",
     "operations": [
       "Source MP4 decode at exact approved frame",
@@ -571,7 +571,7 @@
       "C:/Windows/Fonts/SourceSansPro-Regular.ttf",
       "C:/Windows/Fonts/SourceSansPro-Semibold.ttf"
     ],
-    "publication": "Private repository owner review only. Public media approval remains false.",
+    "publication": "Approved for the public GlassPlay website; repository remains private.",
     "script_sha256": "670d1afa5e1b3159a50b86abc76702ecad8ba8cc6957eb6cdfa6b2679f13058b",
     "deliverables": [
       {

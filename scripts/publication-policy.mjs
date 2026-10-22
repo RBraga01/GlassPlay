@@ -25,6 +25,17 @@ export function publicHttpsUrl(value) {
   return url.href;
 }
 
+/** A private-repository bundle: flat ZIP under media-bundles/, verified by SHA-256. */
+export function committedBundle(root, bundlePath, expectedHash) {
+  requireValue(typeof bundlePath === 'string' && /^media-bundles\/[A-Za-z0-9][A-Za-z0-9._-]*\.zip$/.test(bundlePath),
+    'Committed media bundles must be flat ZIP files under media-bundles/.');
+  const full = path.join(root, bundlePath);
+  requireValue(existsSync(full) && lstatSync(full).isFile() && !lstatSync(full).isSymbolicLink(),
+    `Committed media bundle is missing or indirect: ${bundlePath}`);
+  requireValue(sha(readFileSync(full)) === expectedHash, 'Committed media bundle SHA-256 differs from approval.');
+  return full;
+}
+
 export function publicationInputs(options = {}) {
   const root = path.resolve(options.root ?? ROOT);
   const policy = options.policy ?? json(path.join(root, 'config/publication.json'));
@@ -60,7 +71,10 @@ export function assertMediaApproval(inputs) {
     'Promotional media needs its own owner approval and reference.');
   requireValue(HASH.test(policy.media.manifest_sha256) && policy.media.manifest_sha256 === manifestHash,
     'Owner media approval must name the exact committed media manifest SHA-256.');
-  publicHttpsUrl(policy.media.bundle_url);
+  requireValue((policy.media.bundle_url == null) !== (policy.media.bundle_path == null),
+    'Approved media needs exactly one source: bundle_url or a committed bundle_path.');
+  if (policy.media.bundle_url != null) publicHttpsUrl(policy.media.bundle_url);
+  else committedBundle(inputs.root, policy.media.bundle_path, policy.media.bundle_sha256);
   requireValue(HASH.test(policy.media.bundle_sha256) && policy.media.bundle_sha256 === manifest.bundle?.sha256,
     'Approved media bundle hash must match the committed manifest.');
   return mediaAssets(manifest);

@@ -80,12 +80,16 @@ The intended Oct 28 introduction can present GlassPlay, an accurately labelled i
 
 The owner must approve the final visual result, hosting destination, exact site revision and each promotional-media hash after the relevant rights review. Record website approval in `site` and promotional-media approval in `media` independently. Keep `application.approved=false`, `install_url=null` and `release_url=null` for this launch. A decision about publishing application source, its license, the ZIP or application SDK distribution can follow separately. Promotional use still needs its own applicable artwork/audio/SDK permissions. The date does not grant approval: all three approval scopes currently remain `false`, and physical Prism remains `DEVICE-UNVERIFIED`.
 
+## Launch record
+
+On 2026-10-22 the owner confirmed GitHub Pro, approved the website and its 19-file media bundle, and asked for Pages publication while the repository stays private. The bundle is committed as `media-bundles/nevermore-web-media.zip` (`bundle_path`), so the build needs no public download host or credentials. Application downloads remain unapproved. Physical Prism remains `DEVICE-UNVERIFIED`.
+
 ## Owner launch procedure for the prepared GitHub Pages route
 
 Complete these steps only after the owner authorizes public deployment:
 
 1. Review the exact website, attribution, approved asset hashes and publication decisions in `config/publication.json`. Approve the website and its content explicitly. The Nevermore application download, code license, artwork/media rights and Raven Framework distribution permission are separate decisions; a website approval must not silently enable a download.
-2. For a media release, configure the owner-approved HTTPS media bundle, bundle SHA-256 and exact per-file allowlist through a reviewed change. The production build may fetch only that authorized bundle and must verify its contents before adding them to `dist/`. Record its provenance and authorization. Internal staged files and private draft assets do not gain publication permission by existing locally or by passing tests.
+2. For a media release, configure the owner-approved media bundle (a public HTTPS `bundle_url`, or a ZIP committed to this private repository under `media-bundles/` as `bundle_path` — exactly one), bundle SHA-256 and exact per-file allowlist through a reviewed change. The production build may fetch only that authorized bundle and must verify its contents before adding them to `dist/`. Record its provenance and authorization. Internal staged files and private draft assets do not gain publication permission by existing locally or by passing tests.
 3. Run the commands above against the default build, followed by `npm run check:publication`. The publication check must enforce the committed policy and fail while approval or asset permission is missing.
 4. Confirm private-repository Pages eligibility with the owner. Configure Pages to use GitHub Actions. This is a manual owner-authorized setup; no workflow enables Pages.
 5. Protect `main` so website changes require reviewed pull requests and passing checks. Create the `github-pages` environment before enabling publication. Restrict deployment to `main` (or protected branches with `main` protected). Add required reviewers and disable bypass where the plan supports them. If stronger approval rules are required but unavailable, resolve that owner decision first.

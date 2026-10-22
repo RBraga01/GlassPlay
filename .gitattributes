@@ -3,3 +3,5 @@ experiences/nevermore/app/** -text
 *.png binary
 *.webp binary
 *.woff2 binary
+*.zip binary
+*.mp4 binary
