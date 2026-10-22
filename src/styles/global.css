@@ -56,4 +56,16 @@
   @media(max-width:1100px){.home-hero{min-height:560px}.hero-copy{padding-block:48px 64px}}
   @media(max-width:959px){.home-hero{display:block;min-height:0;overflow:visible;background:none}.home-hero::before{display:none}.hero-art{position:relative;inset:auto;display:block}.hero-art img{height:auto;max-height:min(46vh,440px);object-position:60% 30%;mask-image:linear-gradient(180deg,#000 80%,transparent 100%)}.hero-copy{padding-block:0 56px;margin-top:-24px}.wordmark{font-size:clamp(3.4rem,9vw,5.6rem)}.hero-copy h1,.hero-summary{max-width:560px}}
   @media(max-width:760px){.hero-art img{max-height:none;aspect-ratio:1100/783;mask-image:linear-gradient(180deg,#000 78%,transparent 100%)}.hero-copy{padding-block:0 52px;margin-top:-28px}.hero-copy h1{gap:10px}.wordmark{font-size:clamp(3.1rem,15vw,4.4rem)}.hero-tagline{font-size:1.12rem}.hero-kicker{margin-top:22px;font-size:.72rem}.hero-summary{font-size:.94rem;max-width:390px}.hero-copy .button{margin-top:22px}.season-grid{gap:12px}.season-info{padding-top:16px}.season p{max-width:46ch}.experience-section h2{font-size:4rem}.about-section{gap:25px}}
+  /* Season concept banners: art behind, copy on the softly lit left side (same treatment as the hero). */
+  .season-list{display:grid;gap:28px}
+  .season-banner{position:relative;isolation:isolate;display:flex;align-items:center;aspect-ratio:21/9;overflow:hidden;border:1px solid var(--line);border-radius:6px;padding:0;background:#141a3a}
+  .season-art{position:absolute;inset:0;z-index:-2}
+  .season-art img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+  .season-banner::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(10,17,40,.86) 0%,rgba(10,17,40,.68) 30%,rgba(10,17,40,0) 54%)}
+  .season-banner .season-info{padding:0 0 0 clamp(24px,4.5vw,64px);max-width:min(42%,440px)}
+  .season-banner h3{font-family:var(--sans);font-size:clamp(1.9rem,3.4vw,3rem);font-weight:700;letter-spacing:-.045em;margin-bottom:12px;text-shadow:0 2px 18px rgba(10,17,40,.6)}
+  .season-banner .season-info .small-label{font-size:.7rem;color:#cfe8ff}
+  .season-banner p{color:#dfe5f5;font-size:1rem;margin-top:14px;max-width:30ch;text-shadow:0 1px 12px rgba(10,17,40,.7)}
+  @media(max-width:1100px){.season-banner::before{background:linear-gradient(90deg,rgba(10,17,40,.9) 0%,rgba(10,17,40,.78) 34%,rgba(10,17,40,.3) 52%,rgba(10,17,40,0) 64%)}}
+  @media(max-width:760px){.season-list{gap:36px}.season-banner{display:block;aspect-ratio:auto;overflow:visible;border:0;border-radius:0;background:none}.season-banner::before{display:none}.season-art{position:relative;inset:auto;display:block}.season-art img{height:auto;aspect-ratio:1112/780;border-radius:6px}.season-banner .season-info{padding:16px 0 0;max-width:none}.season-banner h3{font-size:1.9rem;margin-bottom:8px}.season-banner p{font-size:.94rem;margin-top:10px;max-width:46ch}}
 }

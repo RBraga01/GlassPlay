@@ -18,19 +18,19 @@
     {
       "id": "christmas", "name": "Christmas", "theme": "Winter", "category": "Seasonal concept",
       "summary": "A little wonder for the longest nights.", "status": "Concept", "directory": "experiences/christmas", "page": null,
-      "cover": "brand/winter.svg", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "cover": "brand/season-christmas-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
       "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     },
     {
       "id": "easter", "name": "Easter", "theme": "Spring", "category": "Seasonal concept",
       "summary": "Something unexpected, just waiting to be found.", "status": "Concept", "directory": "experiences/easter", "page": null,
-      "cover": "brand/spring.svg", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "cover": "brand/season-easter-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
       "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     },
     {
       "id": "st-patricks", "name": "St. Patrick's Day", "theme": "A little luck", "category": "Seasonal concept",
       "summary": "See where a little mischief takes you.", "status": "Concept", "directory": "experiences/st-patricks", "page": null,
-      "cover": "brand/luck.svg", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "cover": "brand/season-st-patricks-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
       "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     }
   ]
