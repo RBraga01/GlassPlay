@@ -79,16 +79,16 @@
       "file": "public/brand/glassplay-social.png",
       "width": 1200,
       "height": 630,
-      "bytes": 1025888,
-      "sha256": "c2af7bca2dac53bb442b148d5a77f0fe0a892c25ca956681a8a08481914b2624",
+      "bytes": 1025315,
+      "sha256": "e841f2da860b06869ff0112efd50a608d429cb177d06d023cfa4157690e3fb29",
       "use": "Open Graph / Twitter card for GlassPlay pages"
     },
     {
       "file": "docs/assets/glassplay-hero.webp",
       "width": 1672,
       "height": 941,
-      "bytes": 191214,
-      "sha256": "269c76f14de8e23d3c67f3d8da69a53006d308b9d1ad7bdd05b576162be30450",
+      "bytes": 190892,
+      "sha256": "5b807365ce13ba154d6312f54be1937ab385ba24775781222347112857d3420b",
       "use": "README banner"
     }
   ]
