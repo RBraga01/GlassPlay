@@ -3,8 +3,8 @@ name: Catalogue consistency
 on:
   push:
     paths: ['catalog/**', 'config/**', 'experiences/**/export-manifest.json', 'experiences/**/release-manifest.json', 'scripts/check-catalogue.*', 'scripts/catalogue*', 'package*.json', '.github/workflows/catalogue.yml']
+  # Required check on main: run for every pull request so it always reports.
   pull_request:
-    paths: ['catalog/**', 'config/**', 'experiences/**/export-manifest.json', 'experiences/**/release-manifest.json', 'scripts/check-catalogue.*', 'scripts/catalogue*', 'package*.json', '.github/workflows/catalogue.yml']
   workflow_dispatch:
 
 permissions:

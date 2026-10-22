@@ -3,8 +3,8 @@ name: Release integrity
 on:
   push:
     paths: ['experiences/nevermore/**', 'releases/**', 'docs/media/manifest.json', 'catalog/**', 'config/**', 'scripts/verify-release.py', 'scripts/ready-media.py', 'tests/*.py', '.gitattributes', '.github/workflows/release-integrity.yml']
+  # Required check on main: run for every pull request so it always reports.
   pull_request:
-    paths: ['experiences/nevermore/**', 'releases/**', 'docs/media/manifest.json', 'catalog/**', 'config/**', 'scripts/verify-release.py', 'scripts/ready-media.py', 'tests/*.py', '.gitattributes', '.github/workflows/release-integrity.yml']
   workflow_dispatch:
 
 permissions:

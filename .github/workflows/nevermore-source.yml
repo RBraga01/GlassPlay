@@ -8,13 +8,8 @@ on:
       - 'experiences/nevermore/verify_export.py'
       - '.github/workflows/nevermore-source.yml'
       - '.gitattributes'
+  # Required check on main: run for every pull request so it always reports.
   pull_request:
-    paths:
-      - 'experiences/nevermore/app/**'
-      - 'experiences/nevermore/export-manifest.json'
-      - 'experiences/nevermore/verify_export.py'
-      - '.github/workflows/nevermore-source.yml'
-      - '.gitattributes'
 
 permissions:
   contents: read
