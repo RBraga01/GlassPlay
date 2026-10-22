@@ -1,11 +1,11 @@
 # Nevermore release readiness
 
-**Website revision awaiting owner visual approval; application release held.**
-The refreshed Windows/Simulator candidate is built and locally verified. The
-owner's PR #1 review at `17ed373` requires revised rendered artwork and renewed
-review of the actual media experience; the earlier visual "ship" assessment
-does not authorize a launch. Public application downloads, private demonstration
-media and website publication remain withheld. Technical verification does not
+**Website launched; application release held.**
+The GlassPlay website is live at <https://rbraga01.github.io/GlassPlay/>, published
+from this private repository on 2026-10-22 with the owner-approved Nevermore
+images and videos (PR #2, `533192b`; owner copy corrections in PR #3, `fe6993a`).
+The Windows/Simulator application candidate is built and locally verified, but
+public application downloads remain withheld. Technical verification does not
 grant distribution rights.
 
 The exact candidate, test evidence and original draft are documented in
@@ -14,46 +14,44 @@ internal installation, verification and the existing reproducible packaging
 procedure. [Release metadata](../../releases/nevermore-rc1.json) provides individual
 hashes for all 34 runtime files and every packaged payload.
 
-## Decisions requiring owner authority
+## Owner decisions
 
-| Decision | Current state | Required recorded outcome |
+| Decision | Current state | Record |
 | --- | --- | --- |
-| Website launch from private source | Not authorized; owner visual changes requested | Approve the final website, exact revision, working public profile/contact route and hosting destination; keep GlassPlay source private |
-| Specific promotional media | Not authorized | Approve the exact rendered art/audio, demonstrations and website derivatives after applicable rights review, with file hashes and notices; original models stay excluded |
-| Hosting route | Private-repository GitHub Pages eligibility unconfirmed | Confirm personal GitHub Pro, or approve Cloudflare Pages/private Git integration, or a separate public repository containing approved static artifacts only; see [deployment plan](../DEPLOYMENT.md) |
+| Website launch from private source | **Approved and live** (2026-10-22) | `config/publication.json` `site.approved=true`; GlassPlay source stays private |
+| Website promotional media | **Approved and live** (2026-10-22) | 19 files pinned by `docs/media/manifest.json` and `media-bundles/nevermore-web-media.zip`; original models stay excluded |
+| Hosting route | **GitHub Pages from the private repository** (owner has GitHub Pro) | Pages via GitHub Actions; `github-pages` environment limited to `main`; protected `main`; see [deployment](../DEPLOYMENT.md) |
 | Application source code license | No license selected; separate from website launch | Choose distribution terms only if publishing application code; proprietary/source-available terms and a chosen open-source license are distinct options |
 | Application artwork/runtime terms and SDK permissions | Application release held; Raven Framework remains an external proprietary dependency | Resolve the application-specific code/art terms and applicable written SDK conditions before public application distribution |
 | Public candidate ZIP/downloads | Not authorized | Approve the exact candidate and release destination separately; keep application approval false and download URLs absent for the website introduction |
 
 No MIT, CC0, Creative Commons or other license has been imposed on the owner's
-code or artwork. Approval of a private pull request, successful CI or an internal
-build is not publication authorization. Updating the existing GitHub draft to
-the refreshed candidate remains a release action for the approved delivery step;
-neither asset has been uploaded or exposed by this implementation.
+code or artwork. Website approval covers the website and its 19 media files only;
+it does not authorize application downloads. The candidate ZIP and the private
+draft demonstration videos have not been uploaded or exposed.
 
 Physical Prism testing is a separate validation requirement before making a
 physical-device support claim. It does not prevent preparing a Windows/Simulator
 preview with appropriate rights and accurate labeling. No additional Meshy
 account confirmation is requested.
 
-The site-first path supports the intended Oct 28 Raven introduction without
-publishing application source or the candidate ZIP. Website and exact promotional
-media permissions can be approved independently of the application release.
-They remain `false` in `config/publication.json` today, along with
-`application.approved=false`; the date is not permission to publish. Any SDK
-terms applicable to promotional footage still need to be addressed in that
-media decision. The available public destination is the owner's
+The live website supports the Oct 28 Raven introduction without publishing
+application source or the candidate ZIP. `config/publication.json` records
+`site.approved=true` and `media.approved=true`, with `application.approved=false`
+and no install or release URLs. The public contact destination is the owner's
 [GitHub profile](https://github.com/RBraga01); visitor navigation must not point
-to private repositories. Source publication or an open-source license is not a
-prerequisite for this website path.
+to private repositories.
 
-Private review quality must measure `npm run build:review` with
-`node scripts/measure-quality.mjs --review`, including the staged videos. Its
-separate reports record exact output/media hashes and intentional `noindex`
-SEO failure without altering the score or ≥95 target. Navigation measurements
-do not prove playback. Final rendered art, desktop/mobile screenshots, browser
-playback/accessibility evidence, owner visual approval and checks of the approved
-public output remain required. See [deployment verification](../DEPLOYMENT.md).
+Launch verification on the live URL (2026-10-22): all routes return 200 and an
+unknown path returns 404; the 19 live media files match their approved SHA-256
+hashes; mobile (375 px) layout has no horizontal scroll or broken images;
+the promo video plays with controls and captions and is not autoplayed; live
+mobile Lighthouse scored home 98/100/100/100 and Nevermore 97/100/100/100.
+
+Publishing is automatic: while `PAGES_PUBLICATION_APPROVED=true`, every merge
+into protected `main` that touches site inputs rebuilds, re-checks and
+redeploys the site. Set the variable to `false` to stop future deployments; that
+does not take down the current site.
 
 ## Existing rights evidence and notices
 
@@ -100,11 +98,10 @@ test commands are preserved in the installation guide.
 
 ## Approval handoff
 
-For the website introduction, record site and exact promotional-media approval,
-the selected private-source hosting route and the final owner visual decision.
-Promote only the approved media through the checked manifest/bundle flow, verify
-the resulting default public build, and publish only to the authorized site
-destination. Keep application approval false and both candidate URLs `null`.
+The website introduction is complete. Changing published media requires a new
+owner approval, a new bundle and manifest hash in `config/publication.json`, and
+the same checked build. Keep application approval false and both candidate URLs
+`null` until the application decision below.
 
 For a later application release, record the code/art terms, applicable SDK
 conditions and package scope separately. Update notices if needed, rebuild with
