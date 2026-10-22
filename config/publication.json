@@ -1,15 +1,16 @@
 {
   "site": {
-    "approved": false,
-    "approval_reference": null,
-    "pages_eligibility_confirmed": false
+    "approved": true,
+    "approval_reference": "Owner (RBraga01) approval, 2026-10-22: GitHub Pro confirmed; activate Pages; approved site videos and images may be published; repository stays private.",
+    "pages_eligibility_confirmed": true
   },
   "media": {
-    "approved": false,
-    "approval_reference": null,
-    "manifest_sha256": null,
+    "approved": true,
+    "approval_reference": "Owner (RBraga01) approval, 2026-10-22: GitHub Pro confirmed; activate Pages; approved site videos and images may be published; repository stays private.",
+    "manifest_sha256": "2a975ff6c8a7a0c84a3841613c27979c65e179e625583780909a1501fb5b8ebe",
     "bundle_url": null,
-    "bundle_sha256": null
+    "bundle_path": "media-bundles/nevermore-web-media.zip",
+    "bundle_sha256": "850a4fab3d9b5c8b98a80befe52921765ca567c257a808af5a8001739fad7288"
   },
   "application": {
     "approved": false,

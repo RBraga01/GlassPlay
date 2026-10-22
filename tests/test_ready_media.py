@@ -57,6 +57,37 @@ class ReadyMediaTests(unittest.TestCase):
         self.assertFalse((self.root / "public").exists())
         self.assertEqual(READY.prepare(self.root, lambda *_: self.fail("Verified cache must not download"))[2], "verified_cache")
 
+    def use_committed_bundle(self, name="media-bundles/approved.zip"):
+        target = self.root / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(self.archive, target)
+        del self.policy["media"]["bundle_url"]
+        self.policy["media"]["bundle_path"] = name
+        self.save()
+
+    def test_committed_bundle_stages_without_network(self):
+        self.use_committed_bundle()
+        destination, count, state = READY.prepare(self.root, lambda *_: self.fail("Committed bundle must not download"))
+        self.assertEqual((count, state), (1, "downloaded_and_verified"))
+        self.assertEqual((destination / "promo.mp4").read_bytes(), self.payload)
+
+    def test_committed_bundle_hash_and_location_are_enforced(self):
+        self.use_committed_bundle()
+        (self.root / "media-bundles/approved.zip").write_bytes(b"tampered")
+        with self.assertRaises(ValueError):
+            READY.prepare(self.root, self.fetch)
+        self.policy["media"]["bundle_path"] = "../outside.zip"
+        self.save()
+        with self.assertRaises(ValueError):
+            READY.prepare(self.root, self.fetch)
+
+    def test_bundle_url_and_path_are_mutually_exclusive(self):
+        self.use_committed_bundle()
+        self.policy["media"]["bundle_url"] = "https://example.com/media.zip"
+        self.save()
+        with self.assertRaises(ValueError):
+            READY.prepare(self.root, self.fetch)
+
     def test_approval_in_wrong_scope_never_fetches(self):
         self.policy["site"]["approved"] = True
         self.policy["media"]["approved"] = False

@@ -149,3 +149,21 @@ test('unsafe protocols and credential-bearing bundle URLs fail closed', () => {
     assert.throws(() => publicHttpsUrl(url));
   }
 });
+
+test('a committed private-repository bundle replaces the public URL only when its hash matches', t => {
+  const { root, put, policy, options } = fixture(t, { media: true });
+  const bundle = Buffer.from('approved bundle bytes');
+  put('media-bundles/approved.zip', bundle);
+  const manifest = JSON.parse(options.manifestBytes.toString('utf8'));
+  manifest.bundle.sha256 = sha(bundle);
+  const manifestBytes = Buffer.from(JSON.stringify(manifest));
+  put('dist/glassplay-build.json', JSON.stringify({ schema_version: 1, review: false, media_approved: true, media_manifest_sha256: sha(manifestBytes) }));
+  const media = { ...policy.media, bundle_url: null, bundle_path: 'media-bundles/approved.zip', bundle_sha256: sha(bundle), manifest_sha256: sha(manifestBytes) };
+  const run = override => assertBuildBoundary('dist', 'public', { ...options, manifestBytes, policy: { ...policy, media: { ...media, ...override } } });
+  assert.equal(run({}).media_files, 1);
+  assert.throws(() => run({ bundle_url: 'https://example.com/approved.zip' }), /exactly one source/);
+  assert.throws(() => run({ bundle_path: '../escape.zip' }), /media-bundles/);
+  put('media-bundles/approved.zip', 'tampered');
+  assert.throws(() => run({}), /differs from approval/);
+  assert.ok(root);
+});

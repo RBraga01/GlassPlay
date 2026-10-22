@@ -62,6 +62,25 @@ def public_https_url(value, resolve_dns=False):
     return value
 
 
+BUNDLE_PATH = re.compile(r"media-bundles/[A-Za-z0-9][A-Za-z0-9._-]*\.zip\Z")
+
+
+def committed_bundle(root, relative):
+    """A bundle committed to this private repository; its hash is verified later."""
+    require(isinstance(relative, str) and BUNDLE_PATH.fullmatch(relative),
+            "Committed media bundles must be flat ZIP files under media-bundles/")
+    path = root / relative
+    require(path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(root.resolve()),
+            "Committed media bundle is missing or indirect")
+    return path
+
+
+def copy_committed(source, destination, expected_bytes):
+    require(source.stat().st_size == expected_bytes, "Committed bundle size differs from manifest")
+    with source.open("rb") as reader, destination.open("xb") as output:
+        shutil.copyfileobj(reader, output, length=64 * 1024)
+
+
 def approved_manifest(root):
     policy = json.loads((root / "config/publication.json").read_text(encoding="utf-8"))
     payload = (root / "docs/media/manifest.json").read_bytes()
@@ -70,7 +89,12 @@ def approved_manifest(root):
     require(media.get("approved") is True and isinstance(media.get("approval_reference"), str)
             and media["approval_reference"].strip(), "Promotional media approval and its owner reference are required")
     require(media.get("manifest_sha256") == sha(payload), "Approval does not name the exact media manifest")
-    public_https_url(media.get("bundle_url"))
+    require((media.get("bundle_url") is None) != (media.get("bundle_path") is None),
+            "Approved media needs exactly one source: bundle_url or a committed bundle_path")
+    if media.get("bundle_url") is not None:
+        public_https_url(media["bundle_url"])
+    else:
+        committed_bundle(root, media["bundle_path"])
     require(isinstance(media.get("bundle_sha256"), str) and HASH.fullmatch(media["bundle_sha256"])
             and media["bundle_sha256"] == manifest.get("bundle", {}).get("sha256"),
             "Approved bundle SHA-256 must match the committed manifest")
@@ -176,7 +200,10 @@ def prepare(root, fetch=download):
     with tempfile.TemporaryDirectory(prefix="verify-", dir=staging) as temporary:
         work = Path(temporary)
         archive_path = work / "bundle.zip"
-        fetch(media["bundle_url"], archive_path, manifest["bundle"]["bytes"])
+        if media.get("bundle_path") is not None:
+            copy_committed(committed_bundle(root, media["bundle_path"]), archive_path, manifest["bundle"]["bytes"])
+        else:
+            fetch(media["bundle_url"], archive_path, manifest["bundle"]["bytes"])
         verify_bundle(archive_path, media, manifest, assets)
         extracted = work / "files"
         extracted.mkdir()
