@@ -31,22 +31,29 @@
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
   body:not(.nevermore) h1,body:not(.nevermore) .seasons-section h2,body:not(.nevermore) .about-section h2{font-family:var(--sans);font-weight:600;letter-spacing:-.055em}
-  .home-hero{display:grid;grid-template-columns:1fr 1.12fr;gap:0;align-items:center;padding-block:76px 88px;isolation:isolate}
-  .hero-copy{position:relative;z-index:1}
-  .hero-copy h1{font-size:clamp(3.2rem,5.4vw,5rem);line-height:1.08}
+  /* Home hero: full-width illustration; the text occupies the softly lit wall on the left. */
+  .home-hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:clamp(560px,52vw,880px);overflow:hidden;background:#141a3a}
+  .hero-art{position:absolute;inset:0;z-index:-2}
+  .hero-art img{width:100%;height:100%;object-fit:cover;object-position:60% 18%}
+  .home-hero::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(10,17,40,.8) 0%,rgba(10,17,40,.56) 30%,rgba(10,17,40,0) 50%),linear-gradient(0deg,var(--bg) 0%,rgba(10,17,29,0) 16%)}
+  .hero-copy{position:relative;padding-block:64px 88px;--copy-space:calc(34vw - max(56px,(100vw - 1328px) / 2))}
+  .hero-copy h1{display:flex;flex-direction:column;gap:clamp(10px,1.2vw,18px);max-width:var(--copy-space)}
+  .wordmark{font-size:clamp(3.6rem,calc(var(--copy-space) / 4.6),7.4rem);font-weight:700;letter-spacing:-.06em;line-height:.95;text-shadow:0 4px 30px rgba(10,17,40,.35)}
+  .wordmark>span{background:linear-gradient(90deg,#7fd6ff 0%,#a6b8ff 45%,#c7a8ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-tagline{font-size:clamp(1.15rem,1.75vw,1.65rem);font-weight:500;letter-spacing:-.02em;line-height:1.3;text-shadow:0 2px 16px rgba(10,17,40,.6)}
+  .hero-kicker{margin-top:30px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#cfe8ff}
+  .hero-summary{font-size:1rem;color:#dfe5f5;max-width:min(380px,calc(var(--copy-space) * .8));margin-top:10px;text-shadow:0 1px 12px rgba(10,17,40,.7)}
+  .hero-copy .button{margin-top:28px;box-shadow:0 10px 34px rgba(124,108,255,.35)}
   .hero-copy h1 span,.seasons-section h2 span,.about-section h2 span{color:var(--accent)}
-  .hero-summary{font-size:1rem;color:var(--muted);max-width:400px;margin-top:28px}
-  .hero-summary strong{font-weight:500;color:var(--text);display:block;margin-bottom:8px}
-  .hero-copy .button{margin-top:26px}
-  .hero-footnote{color:var(--muted);font-size:.74rem;margin-top:23px;max-width:300px}
-  .glasses-art{min-width:0;margin-left:-5%;margin-right:-5%;position:relative}
-  .glasses-art img{width:100%;height:auto;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,#000 62%,transparent 100%)}
+  .hero-copy h1 .wordmark{color:var(--text)}.hero-copy h1 .wordmark>span{color:transparent}
+  .hero-copy h1 .hero-tagline{color:var(--text)}
   .experience-section h2{font-size:clamp(3.8rem,7vw,6rem);color:#e5d5ed}
   .section-intro .experience-tagline{font-size:1rem;margin-top:12px;color:#c6bacb}
   .season{border-top:1px solid var(--line);padding-block:12px 20px}
   .season h3{font-family:var(--sans);font-size:1.5rem;font-weight:600}
   .about-section{align-items:start}.about-links{display:flex;gap:28px;flex-wrap:wrap}.creator-link{margin-top:24px}
   .site-footer nav a{min-height:28px}
-  @media(max-width:1100px){.home-hero{grid-template-columns:1fr 1fr;padding-block:56px 72px}.hero-copy h1{font-size:clamp(3rem,5.5vw,4rem)}.glasses-art{margin-left:-8%;margin-right:-5%}}
-  @media(max-width:760px){.home-hero{grid-template-columns:1fr;padding-block:40px 50px;gap:14px}.hero-copy h1{font-size:clamp(2.8rem,9.9vw,4.6rem);max-width:560px}.hero-summary{margin-top:22px;max-width:390px;font-size:.94rem}.hero-footnote{max-width:100%;font-size:.7rem}.glasses-art{margin:0 -12px}.season-grid{gap:12px}.season-info{padding-top:16px}.season p{max-width:46ch}.experience-section h2{font-size:4rem}.about-section{gap:25px}}
+  @media(max-width:1100px){.home-hero{min-height:560px}.hero-copy{padding-block:48px 64px}}
+  @media(max-width:959px){.home-hero{display:block;min-height:0;overflow:visible;background:none}.home-hero::before{display:none}.hero-art{position:relative;inset:auto;display:block}.hero-art img{height:auto;max-height:52vh;object-position:60% 30%;mask-image:linear-gradient(180deg,#000 80%,transparent 100%)}.hero-copy{padding-block:0 56px;margin-top:-24px}.wordmark{font-size:clamp(3.4rem,9vw,5.6rem)}.hero-copy h1,.hero-summary{max-width:560px}}
+  @media(max-width:760px){.hero-art img{max-height:none;aspect-ratio:1100/783;mask-image:linear-gradient(180deg,#000 78%,transparent 100%)}.hero-copy{padding-block:0 52px;margin-top:-28px}.hero-copy h1{gap:10px}.wordmark{font-size:clamp(3.1rem,15vw,4.4rem)}.hero-tagline{font-size:1.12rem}.hero-kicker{margin-top:22px;font-size:.72rem}.hero-summary{font-size:.94rem;max-width:390px}.hero-copy .button{margin-top:22px}.season-grid{gap:12px}.season-info{padding-top:16px}.season p{max-width:46ch}.experience-section h2{font-size:4rem}.about-section{gap:25px}}
 }

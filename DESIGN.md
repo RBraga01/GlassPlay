@@ -67,7 +67,7 @@ components:
 
 The owner's PR #1 review on 2026-10-22 supersedes the rejected mint/editorial direction. The original `docs/assets/glassplay-hero.svg` is the palette and category reference: dark navy, atmospheric blue/violet light, recognizable smart glasses. The SVG is retained as historical reference, not as the current README hero.
 
-GlassPlay is season-neutral. The new main image is a Blender/Cycles render of original conceptual glasses, explicitly labelled as illustration, not physical Prism footage or a hardware product claim. Nevermore has its own dark supernatural composition made from approved production frames.
+**Hero & brand evolution (2026-10-22).** The owner approved a brighter direction: *the playful side of smart glasses*: little unexpected moments around a pair of brand-neutral glasses at dusk (raven and feather, ghost, jack-o'-lantern, lantern-bearer, star, target, floating island). The home hero, README banner and social card all derive from that owner-supplied artwork with its baked-in text removed; the name "GlassPlay" (white "Glass", blue-to-violet "Play") and the tagline are live HTML on the site. Seasonal details sit among non-seasonal ones, so the permanent identity stays season-neutral. Sources and processing: `docs/assets/glassplay-hero-provenance.json`. The illustration is not physical Prism footage or a hardware claim. Nevermore keeps its own dark supernatural composition made from approved production frames.
 
 ## Colors
 
