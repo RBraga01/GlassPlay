@@ -1,8 +1,8 @@
 # Website build and controlled publication
 
-Prepared GitHub Pages target: `https://rbraga01.github.io/GlassPlay/`. Astro uses `site: https://rbraga01.github.io` and `base: /GlassPlay`, including internal links, assets and canonical URLs, as described in the [official Astro Pages guide](https://docs.astro.build/en/guides/deploy/github/). The source repository stays **private**. A public website does not require public application source or an application release.
+Live GitHub Pages site: `https://rbraga01.github.io/GlassPlay/` (launched 2026-10-22). Astro uses `site: https://rbraga01.github.io` and `base: /GlassPlay`, including internal links, assets and canonical URLs, as described in the [official Astro Pages guide](https://docs.astro.build/en/guides/deploy/github/). The source repository stays **private**. A public website does not require public application source or an application release.
 
-The implementation brief authorizes preparing the website and deployment workflow. It does not authorize public launch. The normal build and pull request checks work while launch decisions remain pending. No workflow changes repository visibility, fetches private Nevermore release assets, or enables Pages automatically.
+The owner approved the website launch and its media on 2026-10-22; see the launch record below. No workflow changes repository visibility, fetches private Nevermore release assets, or changes Pages settings.
 
 ## Local verification
 
@@ -54,7 +54,7 @@ Integrity CI does not have private release ZIPs or the complete Nevermore reposi
 
 ## Private source, public site: owner hosting choice
 
-The repository is personal and private. The baseline account API inspection returned `plan: null`, and the Pages endpoint returned HTTP 404. These responses do **not** establish account eligibility. The owner chooses a hosting route and public URL without opening GlassPlay's source. No account, hosting settings, repository visibility or deployment has been changed by this review.
+The repository is personal and private. **Chosen route (2026-10-22): GitHub Pages from this private repository**, after the owner confirmed GitHub Pro. The alternatives below are kept for reference only.
 
 | Route | Source and public output | Decision and implementation needed |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ For the public artifacts repository option, transfer only the checked `dist/` co
 
 The intended Oct 28 introduction can present GlassPlay, an accurately labelled independent Nevermore Windows/Simulator demo, approved promotional visuals, credits and the working [RBraga01 public profile](https://github.com/RBraga01). The profile is the available public contact destination; no email address or separate contact site has been provided. It does not imply Raven endorsement or physical Prism testing.
 
-The owner must approve the final visual result, hosting destination, exact site revision and each promotional-media hash after the relevant rights review. Record website approval in `site` and promotional-media approval in `media` independently. Keep `application.approved=false`, `install_url=null` and `release_url=null` for this launch. A decision about publishing application source, its license, the ZIP or application SDK distribution can follow separately. Promotional use still needs its own applicable artwork/audio/SDK permissions. The date does not grant approval: all three approval scopes currently remain `false`, and physical Prism remains `DEVICE-UNVERIFIED`.
+The owner must approve the final visual result, hosting destination, exact site revision and each promotional-media hash after the relevant rights review. Record website approval in `site` and promotional-media approval in `media` independently. Keep `application.approved=false`, `install_url=null` and `release_url=null` for this launch. A decision about publishing application source, its license, the ZIP or application SDK distribution can follow separately. Promotional use still needs its own applicable artwork/audio/SDK permissions. Current state: `site` and `media` are approved (2026-10-22); `application` remains `false`, and physical Prism remains `DEVICE-UNVERIFIED`.
 
 ## Launch record
 
