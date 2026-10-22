@@ -17,6 +17,7 @@ const icons = [
   ['glassplay-icon.png', 512, 0.70, 2.5],
   ['apple-touch-icon.png', 180, 0.70, 2.7],
   ['favicon.png', 64, 0.92, 3.9],  // larger and bolder so it reads in a browser tab
+  ['favicon-32.png', 32, 0.94, 4.4],  // native tab size: no browser downscaling
 ];
 
 const html = ([, size, share, stroke]) => {

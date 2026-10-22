@@ -128,6 +128,15 @@
       "sha256": "1e387cf86d99563fe380948d96337ec6afc58fc5919a3799952e83844a51af77",
       "render": "scripts/art/glassplay_icons.mjs",
       "method": "The header brand mark (src/components/Logo.astro path) in the blue-to-violet 'Play' gradient on the hero's navy/violet night, rendered as vector by headless Chrome."
+    },
+    {
+      "file": "public/brand/favicon-32.png",
+      "width": 32,
+      "height": 32,
+      "bytes": 1772,
+      "sha256": "eb94ffcba5fec92ecbb644e2d25530993a120a4ceeccddb0a3dc0b5a4ddc271c",
+      "render": "scripts/art/glassplay_icons.mjs",
+      "method": "Native 32 px tab favicon of the header brand mark."
     }
   ],
   "superseded_exports": [
