@@ -1,0 +1,261 @@
+{
+  "measured_at": "2026-10-22T07:12:45.421Z",
+  "source_revision": "17ed37365cf33380eb8abe81aa2fc4d038f10702",
+  "working_tree_dirty": true,
+  "build": {
+    "mode": "public",
+    "directory": "dist",
+    "marker": {
+      "schema_version": 1,
+      "review": false,
+      "media_approved": false,
+      "media_manifest_sha256": null
+    },
+    "marker_sha256": "6b50a98c73b75fd638a5ad18f956fa5853ff570325d82afab860b54d80dad79b",
+    "tree_sha256": "2cc612fe10199eb1e984088623179ab2f0ec9b8caede7554b37263e19ad1fdfa",
+    "file_count": 26,
+    "media_present": false,
+    "media_file_count": 0,
+    "video_file_count": 0,
+    "media_bytes": 0,
+    "media_files": [],
+    "pages": [
+      {
+        "id": "home",
+        "html_sha256": "73256bfaf0658ee18d70111f315015c72ef744f966b84fae5e98a28d746ad34b",
+        "noindex": false,
+        "robots_meta": [
+          "<meta name=\"robots\" content=\"index, follow\">"
+        ],
+        "video_sources": []
+      },
+      {
+        "id": "nevermore",
+        "html_sha256": "7333e1d37aeb4af221c5c8fb2c3e4bc22f5f5f10795d30652682f1eb58545cc6",
+        "noindex": false,
+        "robots_meta": [
+          "<meta name=\"robots\" content=\"index, follow\">"
+        ],
+        "video_sources": []
+      }
+    ]
+  },
+  "node": "v24.15.0",
+  "platform": "win32",
+  "profile": "Lighthouse default mobile emulation with simulated throttling",
+  "runs_per_page": 3,
+  "evaluation": "Median performance score; minimum accessibility, best-practices and SEO scores across three runs.",
+  "scope": "Default public build; publication approval is a separate gate.",
+  "media_measurement_scope": "Navigation load only. Presence and references do not prove playback; intentional playback and media transfer require separate browser evidence.",
+  "thresholds": {
+    "performance": 90,
+    "accessibility": 95,
+    "best-practices": 95,
+    "seo": 95
+  },
+  "pages": [
+    {
+      "id": "home",
+      "path": "/GlassPlay/",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "indexing_audit": {
+            "id": "is-crawlable",
+            "score": 1,
+            "title": "Page isn’t blocked from indexing",
+            "details": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "source",
+                  "valueType": "code",
+                  "label": "Blocking Directive Source"
+                }
+              ],
+              "items": []
+            }
+          },
+          "failed_seo_audits": [],
+          "media_requests": [],
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "report": "home-1.report.html"
+        },
+        {
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "indexing_audit": {
+            "id": "is-crawlable",
+            "score": 1,
+            "title": "Page isn’t blocked from indexing",
+            "details": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "source",
+                  "valueType": "code",
+                  "label": "Blocking Directive Source"
+                }
+              ],
+              "items": []
+            }
+          },
+          "failed_seo_audits": [],
+          "media_requests": [],
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "report": "home-2.report.html"
+        },
+        {
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "indexing_audit": {
+            "id": "is-crawlable",
+            "score": 1,
+            "title": "Page isn’t blocked from indexing",
+            "details": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "source",
+                  "valueType": "code",
+                  "label": "Blocking Directive Source"
+                }
+              ],
+              "items": []
+            }
+          },
+          "failed_seo_audits": [],
+          "media_requests": [],
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "report": "home-3.report.html"
+        }
+      ]
+    },
+    {
+      "id": "nevermore",
+      "path": "/GlassPlay/experiences/nevermore/",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "indexing_audit": {
+            "id": "is-crawlable",
+            "score": 1,
+            "title": "Page isn’t blocked from indexing",
+            "details": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "source",
+                  "valueType": "code",
+                  "label": "Blocking Directive Source"
+                }
+              ],
+              "items": []
+            }
+          },
+          "failed_seo_audits": [],
+          "media_requests": [],
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "report": "nevermore-1.report.html"
+        },
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "indexing_audit": {
+            "id": "is-crawlable",
+            "score": 1,
+            "title": "Page isn’t blocked from indexing",
+            "details": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "source",
+                  "valueType": "code",
+                  "label": "Blocking Directive Source"
+                }
+              ],
+              "items": []
+            }
+          },
+          "failed_seo_audits": [],
+          "media_requests": [],
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "report": "nevermore-2.report.html"
+        },
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "indexing_audit": {
+            "id": "is-crawlable",
+            "score": 1,
+            "title": "Page isn’t blocked from indexing",
+            "details": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "source",
+                  "valueType": "code",
+                  "label": "Blocking Directive Source"
+                }
+              ],
+              "items": []
+            }
+          },
+          "failed_seo_audits": [],
+          "media_requests": [],
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "report": "nevermore-3.report.html"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "expected_limitations": [],
+  "passed": true,
+  "nonSeoThresholdsPassed": true,
+  "seoIndexabilityHeld": false
+}

@@ -1,0 +1,21 @@
+{
+  "site": {
+    "approved": false,
+    "approval_reference": null,
+    "pages_eligibility_confirmed": false
+  },
+  "media": {
+    "approved": false,
+    "approval_reference": null,
+    "manifest_sha256": null,
+    "bundle_url": null,
+    "bundle_sha256": null
+  },
+  "application": {
+    "approved": false,
+    "approval_reference": null,
+    "code_license": null,
+    "art_license": null,
+    "framework_permission": null
+  }
+}

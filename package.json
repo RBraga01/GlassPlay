@@ -1,0 +1,31 @@
+{
+  "name": "glassplay",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.15.0" },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "node scripts/build.mjs",
+    "build:review": "node scripts/build.mjs --review",
+    "preview": "astro preview --host 127.0.0.1",
+    "typecheck": "astro check",
+    "check:catalogue": "node scripts/check-catalogue.mjs",
+    "check:site": "node scripts/check-site.mjs",
+    "check:publication": "node scripts/check-publication.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "quality": "node scripts/measure-quality.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.2",
+    "@astrojs/sitemap": "3.7.4",
+    "@fontsource-variable/manrope": "5.3.0",
+    "@fontsource-variable/newsreader": "5.3.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "typescript": "~5.9.3",
+    "lighthouse": "13.5.0"
+  }
+}

@@ -1,0 +1,28 @@
+name: Release integrity
+
+on:
+  push:
+    paths: ['experiences/nevermore/**', 'releases/**', 'docs/media/manifest.json', 'catalog/**', 'config/**', 'scripts/verify-release.py', 'scripts/ready-media.py', 'tests/*.py', '.gitattributes', '.github/workflows/release-integrity.yml']
+  pull_request:
+    paths: ['experiences/nevermore/**', 'releases/**', 'docs/media/manifest.json', 'catalog/**', 'config/**', 'scripts/verify-release.py', 'scripts/ready-media.py', 'tests/*.py', '.gitattributes', '.github/workflows/release-integrity.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-integrity:
+    name: Curated source and release evidence
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.11'
+      - name: Verify committed release evidence
+        run: python scripts/verify-release.py
+      - name: Test release verifier rejection cases
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      # The existing nevermore-source.yml also keeps its original source hash
+      # verification and experience logic tests. Private archives are not fetched.

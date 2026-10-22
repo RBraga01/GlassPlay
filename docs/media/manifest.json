@@ -1,0 +1,608 @@
+{
+  "schema_version": 1,
+  "status": "PRIVATE_REVIEW_ONLY",
+  "public_distribution_approved": false,
+  "source_repository": "https://github.com/RBraga01/Nevermore",
+  "source_revision": "81df295f6825189bfba05288aca76595b4c59437",
+  "release": "v1.0.0-rc.1",
+  "device_validation": "Windows Host / Raven Simulator validated; physical Prism DEVICE-UNVERIFIED",
+  "output_directory": ".private/media/nevermore",
+  "sources": [
+    {
+      "id": "room_product",
+      "path": "docs/release/validation/product/simulator-room-with-audio.mp4",
+      "sha256": "5a48a74b6d592d01da9c25b30c68f4a1c3d05e080e13b78cc4a3a51694c6f3ac"
+    },
+    {
+      "id": "room_catalogue",
+      "path": "docs/release/validation/catalogue/simulator-room-with-audio.mp4",
+      "sha256": "ba4fd3da6496166579d7ae15c5e5c904a226bf1d158982350d0f7eb4b5c54129"
+    },
+    {
+      "id": "product_report",
+      "path": "docs/release/validation/product/capture-report.json",
+      "sha256": "0009f92d742dfb1b1a6c1405bbc606f52d3cecc25111de155e65469c4ab8cfe6"
+    },
+    {
+      "id": "catalogue_report",
+      "path": "docs/release/validation/catalogue/capture-report.json",
+      "sha256": "86f685f76696dfb3ae4418732ac7e24005e18fa7d9665b6026cd8f15212bfc54"
+    },
+    {
+      "id": "host",
+      "path": "assets/trick_or_treat/video/trick_or_treat.mp4",
+      "sha256": "0c31aa1dfed0a9edaa790c2c09f709fe0291b57542c18e2a440ccac340f6a698"
+    },
+    {
+      "id": "host_audio",
+      "path": "assets/trick_or_treat/audio/trick_or_treat.wav",
+      "sha256": "719a8339ca2f6ad5a1ac6a6bb5dec8d3dc52a3ba0342806256250d0684730c16"
+    },
+    {
+      "id": "mimic",
+      "path": "assets/trick_or_treat/video/trick_raven_box.mp4",
+      "sha256": "9417207cf86f59fb745bc18b79fc8b96f42e7de4c1f37d8b36b37e31cb59dc76"
+    },
+    {
+      "id": "mimic_audio",
+      "path": "assets/trick_or_treat/audio/trick_raven_box.wav",
+      "sha256": "501060faf30a21e8e333d58f57cac37ccb6674c22980f7ec6016936c8bd1c4f7"
+    },
+    {
+      "id": "bride",
+      "path": "assets/trick_or_treat/video/treat_ghost.mp4",
+      "sha256": "d5fcf29e232d59dad35c23d2757aaa5d38e49cd1c28a711b505ef5f55e6dc357"
+    },
+    {
+      "id": "bride_audio",
+      "path": "assets/trick_or_treat/audio/treat_ghost.wav",
+      "sha256": "9921c0256bc65d640ad157f65d4cdce8241a869ca9a3ccfc19e68ea2df695097"
+    },
+    {
+      "id": "raven",
+      "path": "assets/raven/video/raven_dive.mp4",
+      "sha256": "fc5b704d9b0bcdac15cd3a052aa766c13d918fdc830b43c5f660c97c8b788503"
+    },
+    {
+      "id": "raven_audio",
+      "path": "assets/production/audio/raven_dive.wav",
+      "sha256": "8ca9996c4e8c742e55c53a9cbd80baae758b03c135f6e18028cb12f14e5b1c62"
+    }
+  ],
+  "stills": [
+    {
+      "file": "host.webp",
+      "source": "host",
+      "timestamp_s": 0.625,
+      "frame_index": 15,
+      "alt": "The Midnight Host extends a hand, wearing a hood and a chain of skulls.",
+      "type": "runtime_render"
+    },
+    {
+      "file": "raven.webp",
+      "source": "raven",
+      "timestamp_s": 2.375,
+      "frame_index": 57,
+      "alt": "The blue-black raven dives forward with its wings spread.",
+      "type": "runtime_render"
+    },
+    {
+      "file": "bride.webp",
+      "source": "bride",
+      "timestamp_s": 1.625,
+      "frame_index": 39,
+      "alt": "The Veiled Wraith Bride raises her approved open-hand gesture.",
+      "type": "runtime_render"
+    },
+    {
+      "file": "mimic.webp",
+      "source": "mimic",
+      "timestamp_s": 1.5,
+      "frame_index": 36,
+      "alt": "The Ocular Maw Chest opens its toothed lid beneath a large central eye.",
+      "type": "runtime_render"
+    }
+  ],
+  "cover": {
+    "file": "cover.webp",
+    "type": "blender_editorial_composite_of_runtime_frames",
+    "sources": [
+      "raven",
+      "host",
+      "bride"
+    ],
+    "description": "Azure Night raven in foreground, Midnight Host at portrait scale, distant Bride; Blender-rendered night atmosphere and layered depth. Editorial art, not simultaneous gameplay."
+  },
+  "promo_edit": [
+    {
+      "source": "raven",
+      "source_in_frame": 24,
+      "source_out_frame_exclusive": 66,
+      "output_start_s": 0.0,
+      "duration_s": 1.75,
+      "type": "runtime_render",
+      "title": "THE RAVEN"
+    },
+    {
+      "source": "host",
+      "source_in_frame": 0,
+      "source_out_frame_exclusive": 78,
+      "output_start_s": 1.75,
+      "duration_s": 3.25,
+      "type": "runtime_render",
+      "title": "THE MIDNIGHT HOST"
+    },
+    {
+      "source": "mimic",
+      "source_in_frame": 0,
+      "source_out_frame_exclusive": 70,
+      "output_start_s": 5.0,
+      "duration_s": 2.916667,
+      "type": "runtime_render",
+      "title": "A MOST UNUSUAL TREAT"
+    },
+    {
+      "source": "bride",
+      "source_in_frame": 0,
+      "source_out_frame_exclusive": 78,
+      "output_start_s": 7.916667,
+      "duration_s": 3.25,
+      "type": "runtime_render",
+      "title": "THE VEILED WRAITH BRIDE"
+    },
+    {
+      "source": "room_product",
+      "source_in_frame": 408,
+      "source_out_frame_exclusive": 559,
+      "output_start_s": 11.166667,
+      "duration_s": 6.291667,
+      "type": "simulator_room",
+      "title": "TRICK OR TREAT"
+    },
+    {
+      "source": "room_product",
+      "source_in_frame": 1084,
+      "source_out_frame_exclusive": 1171,
+      "output_start_s": 17.458333,
+      "duration_s": 3.625,
+      "type": "simulator_room",
+      "title": "AN UNEXPECTED GUEST"
+    },
+    {
+      "source": "room_catalogue",
+      "source_in_frame": 343,
+      "source_out_frame_exclusive": 423,
+      "output_start_s": 21.083333,
+      "duration_s": 3.333333,
+      "type": "simulator_room",
+      "title": "THE RAVEN RETURNS"
+    },
+    {
+      "source": "poster.webp",
+      "output_start_s": 24.416667,
+      "duration_s": 2,
+      "type": "editorial_endcard",
+      "title": "An invitation after dark.",
+      "note": "The existing promo video retains its original end card; the replacement poster is not retroactively present in the video."
+    }
+  ],
+  "teaser_edit": [
+    {
+      "source": "raven",
+      "source_in_frame": 24,
+      "source_out_frame_exclusive": 66,
+      "output_start_s": 0.0,
+      "duration_s": 1.75,
+      "type": "runtime_render",
+      "title": ""
+    },
+    {
+      "source": "host",
+      "source_in_frame": 12,
+      "source_out_frame_exclusive": 54,
+      "output_start_s": 1.75,
+      "duration_s": 1.75,
+      "type": "runtime_render",
+      "title": ""
+    },
+    {
+      "source": "mimic",
+      "source_in_frame": 18,
+      "source_out_frame_exclusive": 60,
+      "output_start_s": 3.5,
+      "duration_s": 1.75,
+      "type": "runtime_render",
+      "title": ""
+    },
+    {
+      "source": "bride",
+      "source_in_frame": 12,
+      "source_out_frame_exclusive": 60,
+      "output_start_s": 5.25,
+      "duration_s": 2.0,
+      "type": "runtime_render",
+      "title": ""
+    }
+  ],
+  "audio": {
+    "promo": "Original runtime WAVs and original synchronized Simulator Room audio. Tiny 15/35 ms edge fades only; no new score, normalization, pitch shift or time stretch.",
+    "teaser": "No audio stream",
+    "captions": "captions.vtt",
+    "text_alternative": "transcript.md",
+    "listening_review": "Pending owner review; no human listening approval is claimed."
+  },
+  "editorial_rules": [
+    "Only the listed current production files were read.",
+    "No archive or docs/prefinal imagery.",
+    "Gallery stills retain their original crop and colors. Cover, poster, social and README art use Blender with approved frame plates, exterior alpha mattes, gentle cool grading, procedural atmosphere and rendered typography; no pose or model replacement.",
+    "Gallery stills retain their original crop and colors. Cover, poster, social and README art use Blender with approved frame plates, exterior alpha mattes, gentle cool grading, procedural atmosphere and rendered typography; no pose or model replacement.",
+    "Runtime and Simulator clips have distinct burned-in labels.",
+    "Montage clips remain at native 24 fps and original speed.",
+    "No claim of a continuous session, microphone demo or physical-glasses capture.",
+    "Responsive stills and muted teaser support lightweight mobile presentation."
+  ],
+  "rights": {
+    "mesh_model_status": "USER-ATTESTED-MESHY-PAID-ACCOUNT",
+    "independent_account_inspection": false,
+    "public_media_license": "Owner decision pending",
+    "raven_framework_distribution": "Permission decision pending",
+    "publication": "Owner approval required"
+  },
+  "attribution_reference_repository": "RBraga01/Nevermore",
+  "attribution_references": [
+    "assets/production/provenance.json",
+    "assets/trick_or_treat/audio/voice/voice_manifest.json",
+    "docs/release/public/THIRD_PARTY_NOTICES.md"
+  ],
+  "outputs": [
+    {
+      "file": "CREDITS.txt",
+      "bytes": 604,
+      "sha256": "60464acbfddfa1f2073722d2c14aadf650f6fac2367e62403d419ca7a47c52c0"
+    },
+    {
+      "file": "bride-small.webp",
+      "bytes": 10958,
+      "sha256": "dd4ccbf50937201b5656a4ff1886958112286311f4100aac3ed1bad59fd15c8e",
+      "width": 480,
+      "height": 360
+    },
+    {
+      "file": "bride.webp",
+      "bytes": 29694,
+      "sha256": "000632442574d3fa1e399708c8e66df4434fea977687c4d37841e7fc112f4db3",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "file": "captions.vtt",
+      "bytes": 809,
+      "sha256": "a6956ff06a9b34df7f0920f53d601aa3d10d2f0ca6fdcc9570699292ebcb188b"
+    },
+    {
+      "file": "cover-small.webp",
+      "bytes": 16794,
+      "sha256": "1e4905f5b74004b448dc9f4b3fed3f23f262902b805195aa2fda4615fdbb5e40",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "file": "cover.webp",
+      "bytes": 47218,
+      "sha256": "bd868446d6e0bc17492b6f7a8826b930e268279d6a5458c18b51ce803d9a8afe",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "file": "glassplay-social-small.webp",
+      "bytes": 20222,
+      "sha256": "9899581017b4ff35a500b5d2e9d50553d9c393cedb77b7b57f856cb3e138caa2",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "file": "glassplay-social.webp",
+      "bytes": 55438,
+      "sha256": "a99c73683d6210e6e0807783b0bf8177dcf95f462d8728caa9e9953a15630f76",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "file": "host-small.webp",
+      "bytes": 11312,
+      "sha256": "280f67e3beb6825dc98cbb6eca2a8ab64c601183a618f97d19cbfde6be7492a6",
+      "width": 480,
+      "height": 360
+    },
+    {
+      "file": "host.webp",
+      "bytes": 27162,
+      "sha256": "95b987dc7cb2ad65bc0dfc4fbd95fbe5884acece1a07c3e4e9740bc75b63656a",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "file": "mimic-small.webp",
+      "bytes": 15344,
+      "sha256": "f7a509ebb8d47959aa3cd4315701ec4f37683a807fedbe05d2a2538de370abfe",
+      "width": 480,
+      "height": 360
+    },
+    {
+      "file": "mimic.webp",
+      "bytes": 39768,
+      "sha256": "7207ebe7e460835a57ce1016f67bc1233e263e4ca2db3016e49c89617b7e9da9",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "file": "poster-small.webp",
+      "bytes": 20182,
+      "sha256": "e40ac1dce61fabf8a81c39dc253ee82ad5c99f584293a838b46f55632ffe3e0d",
+      "width": 640,
+      "height": 336
+    },
+    {
+      "file": "poster.webp",
+      "bytes": 55866,
+      "sha256": "54d375fff5da48b3ced08a03daea48823ea5b2e2a2c080b7aed1833a04b70c15",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "file": "promo.mp4",
+      "bytes": 1621703,
+      "sha256": "39c561d761c67e33e4ed9886b987e704d8431f7bfe1336c08823a79abbdd43fe",
+      "width": 960,
+      "height": 540,
+      "fps": 24.0,
+      "frames": 634,
+      "duration_s": 26.416667
+    },
+    {
+      "file": "raven-small.webp",
+      "bytes": 6744,
+      "sha256": "d07d29da90c846693292a8476af25fbea4e7ccf9b99f80e5da01c85b89695286",
+      "width": 480,
+      "height": 360
+    },
+    {
+      "file": "raven.webp",
+      "bytes": 17594,
+      "sha256": "95943be1220e0c0304a0bd9aae18b1476305509c05a2f7d4f8addd27edce7b1d",
+      "width": 960,
+      "height": 720
+    },
+    {
+      "file": "teaser.mp4",
+      "bytes": 182686,
+      "sha256": "4a5523957e756c2cc51f8c65fd5b9f92e8bf52ebbdf58674a57bb8ad9ab290f9",
+      "width": 640,
+      "height": 360,
+      "fps": 24.0,
+      "frames": 174,
+      "duration_s": 7.25
+    },
+    {
+      "file": "transcript.md",
+      "bytes": 1217,
+      "sha256": "b39e60b76a358f2e4fd52d9341a2ca0d6e6a0af4774ff1fa25d6f4b73376ef37"
+    }
+  ],
+  "assets": [
+    {
+      "path": "CREDITS.txt",
+      "sha256": "60464acbfddfa1f2073722d2c14aadf650f6fac2367e62403d419ca7a47c52c0",
+      "bytes": 604
+    },
+    {
+      "path": "bride-small.webp",
+      "sha256": "dd4ccbf50937201b5656a4ff1886958112286311f4100aac3ed1bad59fd15c8e",
+      "bytes": 10958
+    },
+    {
+      "path": "bride.webp",
+      "sha256": "000632442574d3fa1e399708c8e66df4434fea977687c4d37841e7fc112f4db3",
+      "bytes": 29694
+    },
+    {
+      "path": "captions.vtt",
+      "sha256": "a6956ff06a9b34df7f0920f53d601aa3d10d2f0ca6fdcc9570699292ebcb188b",
+      "bytes": 809
+    },
+    {
+      "path": "cover-small.webp",
+      "sha256": "1e4905f5b74004b448dc9f4b3fed3f23f262902b805195aa2fda4615fdbb5e40",
+      "bytes": 16794
+    },
+    {
+      "path": "cover.webp",
+      "sha256": "bd868446d6e0bc17492b6f7a8826b930e268279d6a5458c18b51ce803d9a8afe",
+      "bytes": 47218
+    },
+    {
+      "path": "glassplay-social-small.webp",
+      "sha256": "9899581017b4ff35a500b5d2e9d50553d9c393cedb77b7b57f856cb3e138caa2",
+      "bytes": 20222
+    },
+    {
+      "path": "glassplay-social.webp",
+      "sha256": "a99c73683d6210e6e0807783b0bf8177dcf95f462d8728caa9e9953a15630f76",
+      "bytes": 55438
+    },
+    {
+      "path": "host-small.webp",
+      "sha256": "280f67e3beb6825dc98cbb6eca2a8ab64c601183a618f97d19cbfde6be7492a6",
+      "bytes": 11312
+    },
+    {
+      "path": "host.webp",
+      "sha256": "95b987dc7cb2ad65bc0dfc4fbd95fbe5884acece1a07c3e4e9740bc75b63656a",
+      "bytes": 27162
+    },
+    {
+      "path": "mimic-small.webp",
+      "sha256": "f7a509ebb8d47959aa3cd4315701ec4f37683a807fedbe05d2a2538de370abfe",
+      "bytes": 15344
+    },
+    {
+      "path": "mimic.webp",
+      "sha256": "7207ebe7e460835a57ce1016f67bc1233e263e4ca2db3016e49c89617b7e9da9",
+      "bytes": 39768
+    },
+    {
+      "path": "poster-small.webp",
+      "sha256": "e40ac1dce61fabf8a81c39dc253ee82ad5c99f584293a838b46f55632ffe3e0d",
+      "bytes": 20182
+    },
+    {
+      "path": "poster.webp",
+      "sha256": "54d375fff5da48b3ced08a03daea48823ea5b2e2a2c080b7aed1833a04b70c15",
+      "bytes": 55866
+    },
+    {
+      "path": "promo.mp4",
+      "sha256": "39c561d761c67e33e4ed9886b987e704d8431f7bfe1336c08823a79abbdd43fe",
+      "bytes": 1621703
+    },
+    {
+      "path": "raven-small.webp",
+      "sha256": "d07d29da90c846693292a8476af25fbea4e7ccf9b99f80e5da01c85b89695286",
+      "bytes": 6744
+    },
+    {
+      "path": "raven.webp",
+      "sha256": "95943be1220e0c0304a0bd9aae18b1476305509c05a2f7d4f8addd27edce7b1d",
+      "bytes": 17594
+    },
+    {
+      "path": "teaser.mp4",
+      "sha256": "4a5523957e756c2cc51f8c65fd5b9f92e8bf52ebbdf58674a57bb8ad9ab290f9",
+      "bytes": 182686
+    },
+    {
+      "path": "transcript.md",
+      "sha256": "b39e60b76a358f2e4fd52d9341a2ca0d6e6a0af4774ff1fa25d6f4b73376ef37",
+      "bytes": 1217
+    }
+  ],
+  "bundle": {
+    "path": ".private/nevermore-web-media.zip",
+    "sha256": "850a4fab3d9b5c8b98a80befe52921765ca567c257a808af5a8001739fad7288",
+    "bytes": 2183299
+  },
+  "editorial_art": {
+    "version": "2026-10-22-blender-editorial-v1",
+    "renderer": "Blender 5.2.2 LTS / EEVEE",
+    "script": "scripts/art/nevermore_art.py",
+    "source_revision": "81df295f6825189bfba05288aca76595b4c59437",
+    "plates": [
+      {
+        "id": "raven",
+        "source": "assets/raven/video/raven_dive.mp4",
+        "source_sha256": "fc5b704d9b0bcdac15cd3a052aa766c13d918fdc830b43c5f660c97c8b788503",
+        "frame_index": 57,
+        "timestamp_s": 2.375,
+        "source_dimensions": [
+          640,
+          640
+        ],
+        "crop_xyxy": [
+          62,
+          117,
+          510,
+          459
+        ],
+        "plate": ".private/art-source/nevermore/raven-frame-057.png",
+        "plate_sha256": "a54d845f9792c15ad8ff50cfa28490ff7a0715c0a4fe56d3a51512c30123354f"
+      },
+      {
+        "id": "host",
+        "source": "assets/trick_or_treat/video/trick_or_treat.mp4",
+        "source_sha256": "0c31aa1dfed0a9edaa790c2c09f709fe0291b57542c18e2a440ccac340f6a698",
+        "frame_index": 15,
+        "timestamp_s": 0.625,
+        "source_dimensions": [
+          640,
+          640
+        ],
+        "crop_xyxy": [
+          103,
+          50,
+          463,
+          345
+        ],
+        "plate": ".private/art-source/nevermore/host-frame-015.png",
+        "plate_sha256": "b21ad6b4999fc771be48fada0dcaf003b513d1085caa4dbef2d0b284085e12ad"
+      },
+      {
+        "id": "bride",
+        "source": "assets/trick_or_treat/video/treat_ghost.mp4",
+        "source_sha256": "d5fcf29e232d59dad35c23d2757aaa5d38e49cd1c28a711b505ef5f55e6dc357",
+        "frame_index": 39,
+        "timestamp_s": 1.625,
+        "source_dimensions": [
+          640,
+          640
+        ],
+        "crop_xyxy": [
+          89,
+          23,
+          505,
+          640
+        ],
+        "plate": ".private/art-source/nevermore/bride-frame-039.png",
+        "plate_sha256": "08cd4040170ed95da61bfc882e403037636b70f6f76d69315c3aafe837cb143a"
+      }
+    ],
+    "composition_review": "Pending owner visual approval",
+    "private_source_directory": ".private/art-source/nevermore",
+    "operations": [
+      "Source MP4 decode at exact approved frame",
+      "Exterior matte and proportional plate scaling",
+      "Blender scene planes with mild cool response",
+      "Procedural midnight atmosphere, depth overlap, motes and edge falloff",
+      "Blender font geometry",
+      "WebP delivery encoding and responsive resize"
+    ],
+    "font_dependencies": [
+      "C:/Windows/Fonts/BASKVILL.TTF",
+      "C:/Windows/Fonts/SourceSansPro-Light.ttf",
+      "C:/Windows/Fonts/SourceSansPro-Regular.ttf",
+      "C:/Windows/Fonts/SourceSansPro-Semibold.ttf"
+    ],
+    "publication": "Private repository owner review only. Public media approval remains false.",
+    "script_sha256": "670d1afa5e1b3159a50b86abc76702ecad8ba8cc6957eb6cdfa6b2679f13058b",
+    "deliverables": [
+      {
+        "path": "docs/assets/nevermore-hero.webp",
+        "bytes": 118126,
+        "sha256": "aecf8cae92a71e18b6c565b48b6954301738c20ee45c7ede3bb14cf7d223131e"
+      },
+      {
+        "path": "experiences/nevermore/cover.webp",
+        "bytes": 118126,
+        "sha256": "aecf8cae92a71e18b6c565b48b6954301738c20ee45c7ede3bb14cf7d223131e"
+      }
+    ],
+    "render_sources": [
+      {
+        "path": ".private/art-source/nevermore/cover.blend",
+        "sha256": "028f56d8da515c294ac9e0d7cf677e96aa37b8335eac1895359a61f68d09c49e"
+      },
+      {
+        "path": ".private/art-source/nevermore/glassplay-social.blend",
+        "sha256": "95c0fae47a67828567126328ee6040fb5a9cdae0b34bcb8d8677f103abb6565b"
+      },
+      {
+        "path": ".private/art-source/nevermore/hero.blend",
+        "sha256": "097d0c5f78cf1c53d8f267c32fa2c6cdf093a709b15ecb64686880474b165708"
+      },
+      {
+        "path": ".private/art-source/nevermore/poster.blend",
+        "sha256": "78a9d8aea2f5970c28a6d8bfe5db192b98a862a558709cc357cb8a30aef496bc"
+      }
+    ],
+    "native_plate_resolution_note": "All selected source video frames are 640 x 640. Cropped characters are proportionally enlarged in the 2400 x 840 README art; this is editorial upscaling, not new source detail."
+  }
+}

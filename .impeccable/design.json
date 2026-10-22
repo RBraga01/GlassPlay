@@ -1,0 +1,211 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-22",
+  "title": "Design System: GlassPlay",
+  "extensions": {
+    "colorMeta": {
+      "glassplay-accent": {
+        "role": "primary",
+        "displayName": "Glassplay Accent",
+        "canonical": "#b4a6ff"
+      },
+      "glassplay-bg": {
+        "role": "neutral",
+        "displayName": "Glassplay Bg",
+        "canonical": "#0a111d"
+      },
+      "glassplay-surface": {
+        "role": "neutral",
+        "displayName": "Glassplay Surface",
+        "canonical": "#111a32"
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Text",
+        "canonical": "#f3f4fa"
+      },
+      "glassplay-muted": {
+        "role": "neutral",
+        "displayName": "Glassplay Muted",
+        "canonical": "#b7c1d8"
+      },
+      "glassplay-line": {
+        "role": "neutral",
+        "displayName": "Glassplay Line",
+        "canonical": "#34415b"
+      },
+      "nevermore-accent": {
+        "role": "secondary",
+        "displayName": "Nevermore Accent",
+        "canonical": "#e5d5ed",
+        "tonalRamp": [
+          "oklch(15.00% 0.0366 314.6)",
+          "oklch(26.43% 0.0366 314.6)",
+          "oklch(37.86% 0.0366 314.6)",
+          "oklch(49.29% 0.0366 314.6)",
+          "oklch(60.71% 0.0366 314.6)",
+          "oklch(72.14% 0.0366 314.6)",
+          "oklch(83.57% 0.0366 314.6)",
+          "oklch(95.00% 0.0366 314.6)"
+        ]
+      },
+      "nevermore-bg": {
+        "role": "neutral",
+        "displayName": "Nevermore Bg",
+        "canonical": "#141217",
+        "tonalRamp": [
+          "oklch(15.00% 0.0105 303.5)",
+          "oklch(26.43% 0.0105 303.5)",
+          "oklch(37.86% 0.0105 303.5)",
+          "oklch(49.29% 0.0105 303.5)",
+          "oklch(60.71% 0.0105 303.5)",
+          "oklch(72.14% 0.0105 303.5)",
+          "oklch(83.57% 0.0105 303.5)",
+          "oklch(95.00% 0.0105 303.5)"
+        ]
+      },
+      "nevermore-surface": {
+        "role": "neutral",
+        "displayName": "Nevermore Surface",
+        "canonical": "#201b25",
+        "tonalRamp": [
+          "oklch(15.00% 0.0203 307.5)",
+          "oklch(26.43% 0.0203 307.5)",
+          "oklch(37.86% 0.0203 307.5)",
+          "oklch(49.29% 0.0203 307.5)",
+          "oklch(60.71% 0.0203 307.5)",
+          "oklch(72.14% 0.0203 307.5)",
+          "oklch(83.57% 0.0203 307.5)",
+          "oklch(95.00% 0.0203 307.5)"
+        ]
+      },
+      "nevermore-muted": {
+        "role": "neutral",
+        "displayName": "Nevermore Muted",
+        "canonical": "#c6bacb",
+        "tonalRamp": [
+          "oklch(15.00% 0.0270 316.1)",
+          "oklch(26.43% 0.0270 316.1)",
+          "oklch(37.86% 0.0270 316.1)",
+          "oklch(49.29% 0.0270 316.1)",
+          "oklch(60.71% 0.0270 316.1)",
+          "oklch(72.14% 0.0270 316.1)",
+          "oklch(83.57% 0.0270 316.1)",
+          "oklch(95.00% 0.0270 316.1)"
+        ]
+      },
+      "nevermore-line": {
+        "role": "neutral",
+        "displayName": "Nevermore Line",
+        "canonical": "#423947",
+        "tonalRamp": [
+          "oklch(15.00% 0.0266 313.5)",
+          "oklch(26.43% 0.0266 313.5)",
+          "oklch(37.86% 0.0266 313.5)",
+          "oklch(49.29% 0.0266 313.5)",
+          "oklch(60.71% 0.0266 313.5)",
+          "oklch(72.14% 0.0266 313.5)",
+          "oklch(83.57% 0.0266 313.5)",
+          "oklch(95.00% 0.0266 313.5)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Shared serif display role; individual hero compositions apply documented local overrides."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Readable supporting copy and descriptions."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "action-color",
+        "value": "0.2s ease",
+        "purpose": "Primary action background and text-color transitions."
+      },
+      {
+        "name": "poster-image",
+        "value": "1s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Featured image hover scale to 1.035; removed for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "1700px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "narrow-mobile",
+        "value": "380px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "An accent-filled navigation link that inherits the current page theme.",
+      "html": "<a class=\"ds-primary\" href=\"#nevermore\">Discover Nevermore<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-primary{font-family:var(--sans,'Manrope Variable',sans-serif);display:inline-flex;align-items:center;justify-content:center;gap:2.25rem;min-height:52px;padding:13px 21px;border:1px solid var(--accent,#b4a6ff);background:var(--accent,#b4a6ff);color:var(--bg,#0a111d);text-decoration:none;font-size:.9rem;font-weight:700;line-height:1.7;transition:background .2s,color .2s}.ds-primary:hover{background:transparent;color:var(--accent,#b4a6ff)}.ds-primary:focus-visible{outline:2px solid var(--accent,#b4a6ff);outline-offset:6px;border-radius:2px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Text link",
+      "kind": "button",
+      "description": "An underlined secondary path with the shared authored arrow.",
+      "html": "<a class=\"ds-text-link\" href=\"#nevermore\">Step into Nevermore<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-text-link{font-family:var(--sans,'Manrope Variable',sans-serif);display:inline-flex;align-items:center;gap:1rem;font-size:.9rem;font-weight:650;color:var(--text,#f3f4fa);text-underline-offset:.3em;text-decoration-thickness:1px}.ds-text-link:hover{color:var(--accent,#b4a6ff)}.ds-text-link:focus-visible{outline:2px solid var(--accent,#b4a6ff);outline-offset:6px;border-radius:2px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Visible, compact text navigation with a mobile spacing adjustment.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#experiences\">Experiences</a><a href=\"#about\">About</a></nav>",
+      "css": ".ds-nav{font-family:var(--sans,'Manrope Variable',sans-serif);display:flex;gap:32px}.ds-nav a{font-size:.85rem;text-decoration:none;color:var(--text,#f3f4fa);text-underline-offset:.3em;text-decoration-thickness:1px}.ds-nav a:hover{color:var(--accent,#b4a6ff);text-decoration:underline}.ds-nav a:focus-visible{outline:2px solid var(--accent,#b4a6ff);outline-offset:6px;border-radius:2px}@media(max-width:760px){.ds-nav{gap:20px}.ds-nav a{font-size:.76rem}}@media(max-width:380px){.ds-nav{gap:13px}}"
+    },
+    {
+      "name": "Disclosure row",
+      "kind": "custom",
+      "description": "Native practical details with an SVG open-state indicator.",
+      "html": "<details class=\"ds-details\"><summary>Requirements &amp; installation<svg class=\"ds-disclosure-icon\" width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\" aria-hidden=\"true\"><path d=\"m4 6 5 5 5-5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></summary><div>Installation instructions remain within the experience details.</div></details>",
+      "css": ".ds-details{font-family:var(--sans,'Manrope Variable',sans-serif);color:var(--text,#f3f4fa);border-bottom:1px solid var(--line,#34415b);padding-block:20px}.ds-details summary{font-size:.95rem;cursor:pointer;padding:4px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px}.ds-details summary::-webkit-details-marker{display:none}.ds-disclosure-icon{flex-shrink:0}.ds-details[open]>summary .ds-disclosure-icon{transform:rotate(180deg)}.ds-details summary:focus-visible{outline:2px solid var(--accent,#b4a6ff);outline-offset:6px;border-radius:2px}.ds-details>div{padding:20px 0 12px;max-width:75ch;color:var(--muted,#b7c1d8);line-height:1.7}@media(max-width:760px){.ds-details summary{font-size:.87rem}}"
+    },
+    {
+      "name": "Preview status",
+      "kind": "chip",
+      "description": "Factual, non-interactive publication status within the featured artwork.",
+      "html": "<span class=\"ds-preview-status\">Preview in preparation</span>",
+      "css": ".ds-preview-status{font-family:var(--sans,'Manrope Variable',sans-serif);display:inline-block;font-size:.67rem;letter-spacing:.13em;text-transform:uppercase;background:#121017;color:#ece4ef;padding:5px 10px;border:1px solid #65576e;line-height:1.7}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A little magic through AR smart glasses",
+    "overview": "Original navy/violet collection identity, externally rendered conceptual smart glasses, distinct cinematic Nevermore world. Owner PR #1 visual approval remains pending.",
+    "rules": [
+      {
+        "title": "Owner visual authority",
+        "body": "Use the original glasses identity; no mint/arch replacement. Nevermore is a separate Halloween experience."
+      },
+      {
+        "title": "Honest evidence",
+        "body": "Evaluate real media independently from the public title-art fallback. Never claim physical Prism validation."
+      }
+    ]
+  }
+}

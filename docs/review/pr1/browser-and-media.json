@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-22",
+  "platform": "Windows host, real Chromium browser; physical Prism unverified",
+  "private_review_only": true,
+  "viewport_widths": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "pages": [
+    "home",
+    "nevermore",
+    "credits"
+  ],
+  "layout_checks": {
+    "combinations": 15,
+    "horizontal_overflow": 0,
+    "broken_images": 0,
+    "javascript_page_errors": 0,
+    "private_repository_links": 0
+  },
+  "video": {
+    "promo": {
+      "duration_s": 26.416667,
+      "decoded_frames": 634,
+      "dropped_frames": 0,
+      "caption_cues": 11,
+      "decoded_audio_bytes": 398308,
+      "ended_paused": true,
+      "loop": false,
+      "remains_stopped_after_ms": 1200
+    },
+    "teaser": {
+      "duration_s": 7.25,
+      "decoded_frames": 174,
+      "dropped_frames": 0,
+      "muted": true,
+      "loop": false
+    },
+    "desktop_short_check": {
+      "time_s": 2.013216,
+      "decoded_frames": 54,
+      "dropped_frames": 2,
+      "note": "Short playback while Lighthouse was running; not a zero-drop desktop claim."
+    },
+    "responses": "HTTP 206 range requests; no failed resource responses during complete playback",
+    "no_autoplay": true,
+    "preload": "none",
+    "audio_limitation": "Decoded audio is evidenced, not a new human listening review."
+  },
+  "accessibility": {
+    "keyboard_skip_focuses_main": true,
+    "keyboard_discovery_navigation": true,
+    "native_disclosure_enter": true,
+    "reduced_motion_scroll_auto": true,
+    "network_failure_message_visible": true
+  },
+  "media": [
+    {
+      "path": "CREDITS.txt",
+      "sha256": "60464acbfddfa1f2073722d2c14aadf650f6fac2367e62403d419ca7a47c52c0",
+      "bytes": 604,
+      "unchanged_from_reviewed_baseline": false
+    },
+    {
+      "path": "bride-small.webp",
+      "sha256": "dd4ccbf50937201b5656a4ff1886958112286311f4100aac3ed1bad59fd15c8e",
+      "bytes": 10958,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "bride.webp",
+      "sha256": "000632442574d3fa1e399708c8e66df4434fea977687c4d37841e7fc112f4db3",
+      "bytes": 29694,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "captions.vtt",
+      "sha256": "a6956ff06a9b34df7f0920f53d601aa3d10d2f0ca6fdcc9570699292ebcb188b",
+      "bytes": 809,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "cover-small.webp",
+      "sha256": "1e4905f5b74004b448dc9f4b3fed3f23f262902b805195aa2fda4615fdbb5e40",
+      "bytes": 16794,
+      "unchanged_from_reviewed_baseline": false
+    },
+    {
+      "path": "cover.webp",
+      "sha256": "bd868446d6e0bc17492b6f7a8826b930e268279d6a5458c18b51ce803d9a8afe",
+      "bytes": 47218,
+      "unchanged_from_reviewed_baseline": false
+    },
+    {
+      "path": "glassplay-social-small.webp",
+      "sha256": "9899581017b4ff35a500b5d2e9d50553d9c393cedb77b7b57f856cb3e138caa2",
+      "bytes": 20222,
+      "unchanged_from_reviewed_baseline": false
+    },
+    {
+      "path": "glassplay-social.webp",
+      "sha256": "a99c73683d6210e6e0807783b0bf8177dcf95f462d8728caa9e9953a15630f76",
+      "bytes": 55438,
+      "unchanged_from_reviewed_baseline": false
+    },
+    {
+      "path": "host-small.webp",
+      "sha256": "280f67e3beb6825dc98cbb6eca2a8ab64c601183a618f97d19cbfde6be7492a6",
+      "bytes": 11312,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "host.webp",
+      "sha256": "95b987dc7cb2ad65bc0dfc4fbd95fbe5884acece1a07c3e4e9740bc75b63656a",
+      "bytes": 27162,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "mimic-small.webp",
+      "sha256": "f7a509ebb8d47959aa3cd4315701ec4f37683a807fedbe05d2a2538de370abfe",
+      "bytes": 15344,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "mimic.webp",
+      "sha256": "7207ebe7e460835a57ce1016f67bc1233e263e4ca2db3016e49c89617b7e9da9",
+      "bytes": 39768,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "poster-small.webp",
+      "sha256": "e40ac1dce61fabf8a81c39dc253ee82ad5c99f584293a838b46f55632ffe3e0d",
+      "bytes": 20182,
+      "unchanged_from_reviewed_baseline": false
+    },
+    {
+      "path": "poster.webp",
+      "sha256": "54d375fff5da48b3ced08a03daea48823ea5b2e2a2c080b7aed1833a04b70c15",
+      "bytes": 55866,
+      "unchanged_from_reviewed_baseline": false
+    },
+    {
+      "path": "promo.mp4",
+      "sha256": "39c561d761c67e33e4ed9886b987e704d8431f7bfe1336c08823a79abbdd43fe",
+      "bytes": 1621703,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "raven-small.webp",
+      "sha256": "d07d29da90c846693292a8476af25fbea4e7ccf9b99f80e5da01c85b89695286",
+      "bytes": 6744,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "raven.webp",
+      "sha256": "95943be1220e0c0304a0bd9aae18b1476305509c05a2f7d4f8addd27edce7b1d",
+      "bytes": 17594,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "teaser.mp4",
+      "sha256": "4a5523957e756c2cc51f8c65fd5b9f92e8bf52ebbdf58674a57bb8ad9ab290f9",
+      "bytes": 182686,
+      "unchanged_from_reviewed_baseline": true
+    },
+    {
+      "path": "transcript.md",
+      "sha256": "b39e60b76a358f2e4fd52d9341a2ca0d6e6a0af4774ff1fa25d6f4b73376ef37",
+      "bytes": 1217,
+      "unchanged_from_reviewed_baseline": true
+    }
+  ],
+  "captures": [
+    {
+      "path": "docs/review/pr1/home-desktop.png",
+      "width": 1440,
+      "height": 3405,
+      "sha256": "7cf2c807b8ff433b6f1682aa9acb4e4e85bff33361946677e1190a0ca7133fe1"
+    },
+    {
+      "path": "docs/review/pr1/home-mobile.png",
+      "width": 390,
+      "height": 3260,
+      "sha256": "1393ef6c1898b55225b820c44708e84f4e4375002ef5f3d648ad192db78b4050"
+    },
+    {
+      "path": "docs/review/pr1/nevermore-desktop.png",
+      "width": 1440,
+      "height": 6548,
+      "sha256": "f644c5edb5fa8401d1392e455a5b54feded207d79ac3fc3d8fe32f9a57f6a1e9"
+    },
+    {
+      "path": "docs/review/pr1/nevermore-mobile.png",
+      "width": 390,
+      "height": 6315,
+      "sha256": "967f338e9f9e8d428b5818244381d4b2345949d367cadc202b089d23749d66dd"
+    }
+  ],
+  "acceptance": "Owner visual review pending; technical validation is not visual approval"
+}

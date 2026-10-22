@@ -1,0 +1,110 @@
+{
+  "measured_at": "2026-10-21T21:56:49.923Z",
+  "source_revision": "e2b5fb124a30d6edb7896cd51b06bb9e750356b0",
+  "working_tree_dirty": false,
+  "node": "v24.21.0",
+  "platform": "linux",
+  "profile": "Lighthouse default mobile emulation with simulated throttling",
+  "runs_per_page": 3,
+  "evaluation": "Median performance score; minimum accessibility, best-practices and SEO scores across three runs.",
+  "thresholds": {
+    "performance": 90,
+    "accessibility": 95,
+    "best-practices": 95,
+    "seo": 95
+  },
+  "pages": [
+    {
+      "id": "home",
+      "path": "/GlassPlay/",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "report": "home-1.report.html"
+        },
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "report": "home-2.report.html"
+        },
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "report": "home-3.report.html"
+        }
+      ]
+    },
+    {
+      "id": "nevermore",
+      "path": "/GlassPlay/experiences/nevermore/",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "runs": [
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "report": "nevermore-1.report.html"
+        },
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "report": "nevermore-2.report.html"
+        },
+        {
+          "scores": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "lighthouse_version": "13.5.0",
+          "browser": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+          "report": "nevermore-3.report.html"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

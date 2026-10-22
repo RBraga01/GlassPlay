@@ -1,0 +1,28 @@
+---
+import {media, hasMedia, url, nevermore} from '../lib/catalogue';
+const {teaser=false}=Astro.props;
+---
+{hasMedia ? (
+  <figure class="player">
+    <video controls playsinline preload="none" muted={teaser} poster={media('poster.webp')} width="1280" height="720" aria-label={teaser ? 'Nevermore short teaser' : 'Nevermore experience preview'}>
+      <source src={media(teaser ? 'teaser.mp4' : 'promo.mp4')} type="video/mp4" />
+      {!teaser && <track default kind="captions" srclang="en" label="English" src={media('captions.vtt')} />}
+      <p>Your browser cannot play this video. Read the description below.</p>
+    </video>
+    <figcaption>{teaser ? 'Approved production animation · silent teaser' : 'Production animation + Raven Simulator Room · captured on Windows, not physical Prism'}</figcaption>
+    <p class="media-error" role="status" hidden>Video could not load. The scene description below is still available. Reload the page to try again.</p>
+  </figure>
+) : (
+  <div class="preview-held">
+    <img src={url(nevermore.preview!.poster)} srcset={`${url('brand/nevermore-poster-small.webp')} 800w, ${url(nevermore.preview!.poster)} 1600w`} sizes="(max-width:760px) 90vw, 50vw" alt="Original Nevermore title artwork: a dark feather in cool blue light." width="1600" height="1000" loading="lazy" />
+    <div><h3>The encounter is almost here.</h3><p>The gameplay film is being prepared for public release. Explore the experience below.</p><span class="small-label">Title artwork · not gameplay footage</span></div>
+  </div>
+)}
+<script>
+  document.querySelectorAll('video').forEach(video => {
+    video.addEventListener('play', () => document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); }));
+    const showError = () => { const message=video.closest('figure')?.querySelector<HTMLElement>('.media-error'); if(message) message.hidden=false; };
+    video.addEventListener('error', showError);
+    video.querySelector('source')?.addEventListener('error', showError);
+  });
+</script>

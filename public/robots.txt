@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rbraga01.github.io/GlassPlay/sitemap-index.xml

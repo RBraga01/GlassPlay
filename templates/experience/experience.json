@@ -1,10 +1,18 @@
 {
-  "id": "replace-with-slug",
-  "name": "<Experience name>",
-  "theme": "<Theme>",
-  "summary": "Concept placeholder only; no build is available.",
-  "status": "concept",
-  "directory": "experiences/replace-with-slug",
+  "id": "new-experience",
+  "name": "New experience",
+  "theme": "Season",
+  "category": "Seasonal concept",
+  "summary": "Describe the idea without implying a working application.",
+  "status": "Concept",
+  "directory": "experiences/new-experience",
+  "page": null,
+  "cover": "brand/new-experience.svg",
+  "preview": null,
+  "candidate": null,
   "targets": [],
-  "install_url": null
+  "install_url": null,
+  "release_url": null,
+  "attribution": ["credits/#glassplay"],
+  "license_status": "concept_only"
 }

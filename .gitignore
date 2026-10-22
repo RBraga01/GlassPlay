@@ -13,6 +13,13 @@ node_modules/
 .next/
 dist/
 build/
+.astro/
+.private/
+reports/
+output/
+.playwright-cli/
+.impeccable/*
+!.impeccable/design.json
 *.log
 .DS_Store
 Thumbs.db

@@ -1,4 +1,4 @@
-![Nevermore — a Halloween experience for AR glasses](cover.svg)
+![Nevermore — a Halloween experience for AR glasses](cover.webp)
 
 # Nevermore
 **A Halloween haunting for AR smart glasses.**

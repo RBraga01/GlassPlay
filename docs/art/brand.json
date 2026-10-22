@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-22",
+  "method": "Original procedural geometry, materials, lighting and text rendered with Blender Cycles. Pillow is used only to resize, encode and export the actual renders.",
+  "renderer": {
+    "application": "Blender",
+    "version": "5.2.2 LTS",
+    "build": "d13f752e3b9c",
+    "engine": "Cycles",
+    "device": "NVIDIA GeForce RTX 3060 / OptiX",
+    "samples": 192,
+    "denoise": true,
+    "view_transform": "AgX / Medium High Contrast"
+  },
+  "visual_authority": {
+    "reference": "docs/assets/glassplay-hero.svg",
+    "palette": [
+      "#0A111D",
+      "#111A32",
+      "#221638"
+    ],
+    "subject": "Season-neutral conceptual AR eyewear, with restrained blue and violet lighting."
+  },
+  "disclosures": [
+    "GlassPlay glasses are original conceptual brand artwork. They do not depict or verify physical Prism hardware.",
+    "The Nevermore feather is original atmospheric title artwork, not gameplay, a screenshot, or an asset extracted from Nevermore.",
+    "No private models, footage, SDK content, source media, image-generation output, or stock imagery were inputs.",
+    "Public-site eligibility of these original images is separate from authorization to launch or distribute the site; the publication hold remains in effect."
+  ],
+  "authoring_source": {
+    "file": "scripts/art/render-brand.py",
+    "sha256": "743851ae360f257e88ef1c57cbda06089fa22b4d2fab54c00bd913428d04926b",
+    "instructions": "scripts/art/README.md"
+  },
+  "fonts": [
+    {
+      "family": "manrope",
+      "input": "node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2",
+      "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+      "license": "SIL Open Font License 1.1",
+      "license_file": "public/licenses/Manrope-OFL.txt"
+    },
+    {
+      "family": "newsreader",
+      "input": "node_modules/@fontsource-variable/newsreader/files/newsreader-latin-wght-normal.woff2",
+      "sha256": "62981321d9a3cc7a61a73792729043703fd6112da86e8ec848bb57f088578757",
+      "license": "SIL Open Font License 1.1",
+      "license_file": "public/licenses/Newsreader-OFL.txt"
+    }
+  ],
+  "editable_scenes": [
+    {
+      "file": ".private/art-source/glasses-glassplay-hero.blend",
+      "sha256": "e9cdbc253482cd5e1c7cab98cd0046dd4d4156411270fa4340ba5aeb4297baf8"
+    },
+    {
+      "file": ".private/art-source/glasses-glassplay-banner.blend",
+      "sha256": "636e90fb9c47ffdabef3285a954f306171842751d32ea5103a82b744404659d2"
+    },
+    {
+      "file": ".private/art-source/glasses-glassplay-social.blend",
+      "sha256": "9f763da6b9057a88c83e6167cf37d75786e44c45480808f5c33a17e7bb514c68"
+    },
+    {
+      "file": ".private/art-source/glasses-glassplay-icon.blend",
+      "sha256": "b5ef2e506ad62c5fcaac9c989e06c243a7bf68a9a5929ed1610ea70b09af265a"
+    },
+    {
+      "file": ".private/art-source/feather-nevermore-poster.blend",
+      "sha256": "5831f920d0c7da79777c663c4049434f13e7e050684c6d0530708fffbd67d4c6"
+    },
+    {
+      "file": ".private/art-source/feather-nevermore-social.blend",
+      "sha256": "71a7350bd6f6dc49ff0d900d0a53ce20a30aa4caee98d68589ff0e4474ac6c58"
+    }
+  ],
+  "exports": [
+    {
+      "file": "docs/assets/glassplay-hero.webp",
+      "width": 2400,
+      "height": 720,
+      "bytes": 39076,
+      "sha256": "e71faca5285eb29ae19bdc7868e2a48d351b125cc6dfe8f3e926140ae5c295c1",
+      "render": ".private/art-source/renders/glassplay-banner.png",
+      "render_sha256": "5bc51d9e88f6d41b33447fa03d95ea5bcc5313a8f859505c1e4c02afea181100"
+    },
+    {
+      "file": "public/brand/glassplay-hero.webp",
+      "width": 1600,
+      "height": 1100,
+      "bytes": 35680,
+      "sha256": "8871ceb7acc9a6115081fde03d78050f106836c3d04da41846377c69a715c708",
+      "render": ".private/art-source/renders/glassplay-hero.png",
+      "render_sha256": "54a31792526ae40bd814a641554ab47e62830b8a4859607b17e01ca201320989"
+    },
+    {
+      "file": "public/brand/glassplay-hero-small.webp",
+      "width": 800,
+      "height": 550,
+      "bytes": 14690,
+      "sha256": "a4acccc9214e35c3a7a6b56c6669ab5817b4042c4ec847480e8e6e046271d802",
+      "render": ".private/art-source/renders/glassplay-hero.png",
+      "render_sha256": "54a31792526ae40bd814a641554ab47e62830b8a4859607b17e01ca201320989"
+    },
+    {
+      "file": "public/brand/glassplay-social.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 495794,
+      "sha256": "ffa329c8c3153c388e82e6a7e51badd3fa31ddf033fcaeed9153994978e49f03",
+      "render": ".private/art-source/renders/glassplay-social.png",
+      "render_sha256": "2c4883a8c245fb11fb2a1ed3f1f279a636a4e5d7352148031865161a553355e6"
+    },
+    {
+      "file": "public/brand/glassplay-icon.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 172932,
+      "sha256": "5d9a3733e9613a6d83d634b43850a7a133a41a4ba5ff1435ea8ecd73b3396522",
+      "render": ".private/art-source/renders/glassplay-icon.png",
+      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3"
+    },
+    {
+      "file": "public/brand/favicon.png",
+      "width": 64,
+      "height": 64,
+      "bytes": 3446,
+      "sha256": "01be3ee5d079e578fb7727daa2e7d4d360d3a2273327fb9347ed3a2a6aba5bb2",
+      "render": ".private/art-source/renders/glassplay-icon.png",
+      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3"
+    },
+    {
+      "file": "public/brand/apple-touch-icon.png",
+      "width": 180,
+      "height": 180,
+      "bytes": 22379,
+      "sha256": "f72e5c7fdf52ff012afdddb334976804bb11baf06d0bf24f2f8237a8a5f19a14",
+      "render": ".private/art-source/renders/glassplay-icon.png",
+      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3"
+    },
+    {
+      "file": "public/brand/nevermore-poster.webp",
+      "width": 1600,
+      "height": 1000,
+      "bytes": 87752,
+      "sha256": "43ace1105ffc8b281ce106dc68600947c0ee3bafc772925a48995f501c8cb179",
+      "render": ".private/art-source/renders/nevermore-poster.png",
+      "render_sha256": "876a3acbcfb5d5141caa52664a03452c54826fff85de33298f159261ddee58fc"
+    },
+    {
+      "file": "public/brand/nevermore-poster-small.webp",
+      "width": 800,
+      "height": 500,
+      "bytes": 26326,
+      "sha256": "b302ca62db4bdfddabaebf92e2db12922929b6fbd0a9d0bafc6ad72777cc3147",
+      "render": ".private/art-source/renders/nevermore-poster.png",
+      "render_sha256": "876a3acbcfb5d5141caa52664a03452c54826fff85de33298f159261ddee58fc"
+    },
+    {
+      "file": "public/brand/nevermore-social.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 541916,
+      "sha256": "fa4efed322025c023fc62d90ef2c1456b807a28a0cb1ad298b078c023705c25f",
+      "render": ".private/art-source/renders/nevermore-social.png",
+      "render_sha256": "20565e2453ba114b7b07e2efbf0d529719baede9c3fe0ec57690527f2f824ca7"
+    }
+  ]
+}
