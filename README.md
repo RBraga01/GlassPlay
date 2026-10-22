@@ -1,4 +1,4 @@
-![GlassPlay — Interactive experiences for AR smart glasses](docs/assets/glassplay-hero.webp)
+![Smart glasses on a desk at dusk, surrounded by small magical encounters](docs/assets/glassplay-hero.webp)
 
 # GlassPlay
 **A little magic, right before your eyes.**

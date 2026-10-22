@@ -76,42 +76,6 @@
   ],
   "exports": [
     {
-      "file": "docs/assets/glassplay-hero.webp",
-      "width": 2400,
-      "height": 720,
-      "bytes": 39076,
-      "sha256": "e71faca5285eb29ae19bdc7868e2a48d351b125cc6dfe8f3e926140ae5c295c1",
-      "render": ".private/art-source/renders/glassplay-banner.png",
-      "render_sha256": "5bc51d9e88f6d41b33447fa03d95ea5bcc5313a8f859505c1e4c02afea181100"
-    },
-    {
-      "file": "public/brand/glassplay-hero.webp",
-      "width": 1600,
-      "height": 1100,
-      "bytes": 35680,
-      "sha256": "8871ceb7acc9a6115081fde03d78050f106836c3d04da41846377c69a715c708",
-      "render": ".private/art-source/renders/glassplay-hero.png",
-      "render_sha256": "54a31792526ae40bd814a641554ab47e62830b8a4859607b17e01ca201320989"
-    },
-    {
-      "file": "public/brand/glassplay-hero-small.webp",
-      "width": 800,
-      "height": 550,
-      "bytes": 14690,
-      "sha256": "a4acccc9214e35c3a7a6b56c6669ab5817b4042c4ec847480e8e6e046271d802",
-      "render": ".private/art-source/renders/glassplay-hero.png",
-      "render_sha256": "54a31792526ae40bd814a641554ab47e62830b8a4859607b17e01ca201320989"
-    },
-    {
-      "file": "public/brand/glassplay-social.png",
-      "width": 1200,
-      "height": 630,
-      "bytes": 495794,
-      "sha256": "ffa329c8c3153c388e82e6a7e51badd3fa31ddf033fcaeed9153994978e49f03",
-      "render": ".private/art-source/renders/glassplay-social.png",
-      "render_sha256": "2c4883a8c245fb11fb2a1ed3f1f279a636a4e5d7352148031865161a553355e6"
-    },
-    {
       "file": "public/brand/glassplay-icon.png",
       "width": 512,
       "height": 512,
@@ -165,5 +129,57 @@
       "render": ".private/art-source/renders/nevermore-social.png",
       "render_sha256": "20565e2453ba114b7b07e2efbf0d529719baede9c3fe0ec57690527f2f824ca7"
     }
-  ]
+  ],
+  "superseded_exports": [
+    {
+      "file": "docs/assets/glassplay-hero.webp",
+      "width": 2400,
+      "height": 720,
+      "bytes": 39076,
+      "sha256": "e71faca5285eb29ae19bdc7868e2a48d351b125cc6dfe8f3e926140ae5c295c1",
+      "render": ".private/art-source/renders/glassplay-banner.png",
+      "render_sha256": "5bc51d9e88f6d41b33447fa03d95ea5bcc5313a8f859505c1e4c02afea181100",
+      "superseded_on": "2026-10-22"
+    },
+    {
+      "file": "public/brand/glassplay-hero.webp",
+      "width": 1600,
+      "height": 1100,
+      "bytes": 35680,
+      "sha256": "8871ceb7acc9a6115081fde03d78050f106836c3d04da41846377c69a715c708",
+      "render": ".private/art-source/renders/glassplay-hero.png",
+      "render_sha256": "54a31792526ae40bd814a641554ab47e62830b8a4859607b17e01ca201320989",
+      "superseded_on": "2026-10-22"
+    },
+    {
+      "file": "public/brand/glassplay-hero-small.webp",
+      "width": 800,
+      "height": 550,
+      "bytes": 14690,
+      "sha256": "a4acccc9214e35c3a7a6b56c6669ab5817b4042c4ec847480e8e6e046271d802",
+      "render": ".private/art-source/renders/glassplay-hero.png",
+      "render_sha256": "54a31792526ae40bd814a641554ab47e62830b8a4859607b17e01ca201320989",
+      "superseded_on": "2026-10-22"
+    },
+    {
+      "file": "public/brand/glassplay-social.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 495794,
+      "sha256": "ffa329c8c3153c388e82e6a7e51badd3fa31ddf033fcaeed9153994978e49f03",
+      "render": ".private/art-source/renders/glassplay-social.png",
+      "render_sha256": "2c4883a8c245fb11fb2a1ed3f1f279a636a4e5d7352148031865161a553355e6",
+      "superseded_on": "2026-10-22"
+    }
+  ],
+  "superseded_by": {
+    "files": [
+      "docs/assets/glassplay-hero.webp",
+      "public/brand/glassplay-hero-small.webp",
+      "public/brand/glassplay-hero.webp",
+      "public/brand/glassplay-social.png"
+    ],
+    "record": "docs/assets/glassplay-hero-provenance.json",
+    "note": "The GlassPlay hero, README banner and social card now derive from owner-supplied artwork; this file's disclosures apply only to the remaining exports (icon, favicon and Nevermore title art)."
+  }
 }

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-22",
+  "visual_direction": "GlassPlay hero & brand evolution: the playful side of smart glasses. Little unexpected moments; more than meets the eye.",
+  "source": {
+    "description": "Owner-supplied reference artwork approved as the new GlassPlay creative direction (1672x941 PNG).",
+    "provided_by": "Project owner (RBraga01), 2026-10-22",
+    "creation_method": "Not documented in this repository; recorded as supplied by the owner.",
+    "private_copy": ".private/art-source/glassplay-v2/reference.png",
+    "sha256": "215ebe197699757e5610574fadde78a65d08681bcf4e01ece5267ca0edac3a41"
+  },
+  "processing": {
+    "script": "scripts/art/glassplay_hero.py",
+    "operations": [
+      "Removed the baked-in 'GlassPlay' wordmark, trademark sign and tagline by local-contrast masking and inpainting of the defocused wall; the page renders the name and tagline as HTML.",
+      "Removed two faint engraved strokes on the right temple so the glasses carry no brand-like mark. The small camera lens near the hinge is a generic functional detail and was kept.",
+      "No characters, glasses, lighting or composition were redrawn or added.",
+      "Mobile composition: crop (520, 0)-(1672, 820) around the glasses and encounters."
+    ],
+    "plate_private_copy": ".private/art-source/glassplay-v2/glassplay-hero-plate.png",
+    "plate_sha256": "14ab75fda0d98692b93b27954041591381ff7284a43d145d7250ce0ce09dc539",
+    "cards_script": "scripts/art/glassplay_cards.mjs (social card and README banner; website Manrope type rendered in headless Chrome)"
+  },
+  "disclosures": [
+    "The glasses are brand-neutral illustration. They do not depict Raven Prism or any specific device.",
+    "The small encounters illustrate the kind of experiences GlassPlay explores; they are not screenshots or claims about display capability.",
+    "No trademark sign or brand affiliation is shown."
+  ],
+  "exports": [
+    {
+      "file": "public/brand/glassplay-hero-1672.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 178342,
+      "sha256": "14a9e13e15ae9f6e120764282c209911f6982a5198484f847b3f409df99e192d",
+      "use": "Home hero, desktop (srcset 1672w)"
+    },
+    {
+      "file": "public/brand/glassplay-hero-1200.webp",
+      "width": 1200,
+      "height": 675,
+      "bytes": 108680,
+      "sha256": "7a3bc6574ae5371a1f7f130f656c11f192996eacb0168fd7ab4bdd6eafb39685",
+      "use": "Home hero, desktop (default src, srcset 1200w)"
+    },
+    {
+      "file": "public/brand/glassplay-hero-800.webp",
+      "width": 800,
+      "height": 450,
+      "bytes": 62204,
+      "sha256": "0d800c3220311a002de57ebd7654b94a1bfb82a0dc063c49f705051269693832",
+      "use": "Home hero, desktop (srcset 800w)"
+    },
+    {
+      "file": "public/brand/glassplay-hero-mobile-1100.webp",
+      "width": 1100,
+      "height": 783,
+      "bytes": 115774,
+      "sha256": "8937e44695034bbdd670f3cb1c803f5b175b26369a9f04b1923787f51bd305a6",
+      "use": "Home hero, mobile composition (srcset 1100w)"
+    },
+    {
+      "file": "public/brand/glassplay-hero-mobile-840.webp",
+      "width": 840,
+      "height": 598,
+      "bytes": 81644,
+      "sha256": "f257505d9ded5c53dac033ed0b753a8d9d22217c2974adc214a317a0cd55078f",
+      "use": "Home hero, mobile composition (srcset 840w)"
+    },
+    {
+      "file": "public/brand/glassplay-hero-mobile-560.webp",
+      "width": 560,
+      "height": 399,
+      "bytes": 46132,
+      "sha256": "016cdf1cc72395ad5914342df828bea4ed3dd653a06826eadc3b199d0926fbb9",
+      "use": "Home hero, mobile composition (srcset 560w)"
+    },
+    {
+      "file": "public/brand/glassplay-social.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 1025315,
+      "sha256": "e841f2da860b06869ff0112efd50a608d429cb177d06d023cfa4157690e3fb29",
+      "use": "Open Graph / Twitter card for GlassPlay pages"
+    },
+    {
+      "file": "docs/assets/glassplay-hero.webp",
+      "width": 1672,
+      "height": 941,
+      "bytes": 190892,
+      "sha256": "5b807365ce13ba154d6312f54be1937ab385ba24775781222347112857d3420b",
+      "use": "README banner"
+    }
+  ]
+}
