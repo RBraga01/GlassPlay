@@ -1,8 +1,8 @@
 # Nevermore — curated source preview
 
-**Synchronized to the Nevermore production release candidate `1.0.0-rc.1`.**
+**Synchronized to the Nevermore production release candidate `1.0.0-rc.2` (`b4980cf`).**
 
-This directory holds **23 selected upstream files**: production Python, two original media catalogue manifests, and five test files (four logic suites plus the discovery isolation fixture). The new `assets/production/manifest.json` tracks updated approved video hashes for Shadow and Glitch. The runtime Python code itself has not changed since the earlier GlassPlay export.
+This directory holds **23 selected upstream files**: production Python, two original media catalogue manifests, and five test files (four logic suites plus the discovery isolation fixture). The new `assets/production/manifest.json` tracks updated approved video hashes for Shadow and Glitch. Since rc.1 only `nevermore/app.py` changed: the unused procedural sound bank is built lazily.
 
 > **Not a standalone runnable build.** The separately installed Raven Framework, the approved MP4/WAV media and the Vosk model are absent. The full package is still a **private draft in Nevermore**.
 

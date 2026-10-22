@@ -2,14 +2,14 @@
 
 Build a **simple, visual collection of interactive experiences for AR smart glasses**. The root README should be a short storefront rather than a development log. Keep evidence and rights documentation in experience folders.
 
-## Nevermore state (2026-10-21)
+## Nevermore state (2026-10-22)
 
-- `experiences/nevermore/app/`: 23 curated, byte-identical source files from `RBraga01/Nevermore` commit `81df295`, checked by `export-manifest.json` and CI.
+- `experiences/nevermore/app/`: 23 curated, byte-identical source files from `RBraga01/Nevermore` commit `b4980cf` (rc.2), checked by `export-manifest.json`, `releases/nevermore-rc2.json` and CI.
 - This directory is **not a runnable package**: 20-event media and offline Vosk model are not copied.
-- The complete `v1.0.0-rc.1` ZIP, checksums and two demo videos exist only as **private draft GitHub Release** assets in Nevermore.
+- `v1.0.0-rc.2` ZIP, checksum, two demo videos, validation JSON and Raven handoff exist only as a **private draft GitHub Release** in Nevermore.
 - Host/Simulator PASS, real Prism **DEVICE-UNVERIFIED**.
-- Meshy status: **USER-ATTESTED-MESHY-PAID-ACCOUNT**, no independent account inspection. Do not regress this back to an unresolved request, but do not claim independent verification.
-- Public source/art license and use/distribution permission for proprietary Raven Framework **remain outstanding**.
+- Licensing decided: code MIT; Nevermore-specific artwork/media All Rights Reserved; CC0/Apache-2.0 upstream terms kept; Meshy paid-account attestation and Guardian/Bride/Chest Meshy Community CC0 remix links recorded.
+- External, not Nevermore defects: Raven's official public Framework/deployment process, Prism app identity/entitlements, physical Prism validation. Public application download stays held (`application.approved=false`).
 
 ## Rules
 

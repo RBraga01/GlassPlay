@@ -1,0 +1,1660 @@
+{
+  "schema_version": 1,
+  "experience": "nevermore",
+  "version": "1.0.0-rc.2",
+  "verified_on": "2026-10-22",
+  "publication": {
+    "authorized": false,
+    "public_url": null,
+    "status": "application_download_held_pending_raven_deployment_guidance",
+    "external_dependencies": [
+      "official_raven_framework_public_distribution_and_deployment_process",
+      "prism_app_identity_and_entitlements",
+      "physical_prism_validation"
+    ]
+  },
+  "source_integration": {
+    "repository": "RBraga01/Nevermore",
+    "commit": "b4980cfc7c6c93838892d966c61284bfd0740214",
+    "files": [
+      {
+        "path": "app/main.py",
+        "bytes": 451,
+        "sha256": "b63c582e036c235bed0513a394744bc621390fe852b34198b50b195066aa9e78"
+      },
+      {
+        "path": "app/requirements.txt",
+        "bytes": 92,
+        "sha256": "7cb48388d4e306699002b1ae503ec20bfbff64c5bc717bdec6ac66f049dbc7bb"
+      },
+      {
+        "path": "app/nevermore/__init__.py",
+        "bytes": 308,
+        "sha256": "33d4dafdc0c17340d55d4a24ed1403aaa1345c1f057cbe9ce27c5c448a115b9d"
+      },
+      {
+        "path": "app/nevermore/app.py",
+        "bytes": 16873,
+        "sha256": "380398fafbcc17068696f2181704c2563af7ef2da4b1bd66a0046f4c1f091d70"
+      },
+      {
+        "path": "app/nevermore/audio.py",
+        "bytes": 5119,
+        "sha256": "47b845e63b17ea112d14a0aa03c7b2e93bdc09ccde4dad0412bfba3ab0021652"
+      },
+      {
+        "path": "app/nevermore/audio_playback.py",
+        "bytes": 3468,
+        "sha256": "9ee5344bfcdb9d6b4af5a3b5e66df58cf49003c53c0df3c703ff4f1bbee5ae8d"
+      },
+      {
+        "path": "app/nevermore/choices.py",
+        "bytes": 1742,
+        "sha256": "75d1d12fc4f5412bec382a97a81f2582ae82a761532ee07b6a486b6a6f2eb912"
+      },
+      {
+        "path": "app/nevermore/director.py",
+        "bytes": 9373,
+        "sha256": "8feff49625cc853579bcb92aa341d2f0cf8c30ac6707c917ef52960d603159a0"
+      },
+      {
+        "path": "app/nevermore/discoveries.py",
+        "bytes": 2755,
+        "sha256": "f91467cc65b7b2aabb298ddf6fce5b55983e3b35e2e0e7b367d9daa8571b4ca6"
+      },
+      {
+        "path": "app/nevermore/events.py",
+        "bytes": 5766,
+        "sha256": "ca6f1bf540ce66d8731ebe3bfe0fc004ea8e349991235f43ad378ab5514a2a45"
+      },
+      {
+        "path": "app/nevermore/production_media.py",
+        "bytes": 1313,
+        "sha256": "c8c96e9987e4e46fa6e2bfb16bc93a2923b657e7fd45c49118a132c4f8757c56"
+      },
+      {
+        "path": "app/nevermore/scenes.py",
+        "bytes": 7408,
+        "sha256": "a076f251c4277d7ea492e40a133801e15d9131f91b723a63f80c5f982fca91c8"
+      },
+      {
+        "path": "app/nevermore/scheduler.py",
+        "bytes": 1524,
+        "sha256": "442c914eb2b7b4035b2ce629d037aaff4be1d55bb2b453900db4aa102ff87d43"
+      },
+      {
+        "path": "app/nevermore/trick_or_treat_media.py",
+        "bytes": 1905,
+        "sha256": "caf68e957ba7cde91e0466d114ad4b732196ba198af62612ecbfd49ef808e83b"
+      },
+      {
+        "path": "app/nevermore/triggers.py",
+        "bytes": 1408,
+        "sha256": "6f33491c55c476c93e497156f0e4b696c063e855d8926a34c22e570de983e6b0"
+      },
+      {
+        "path": "app/nevermore/voice.py",
+        "bytes": 5622,
+        "sha256": "adf5da93f6f3aafb6012438224eadd2c074c1f076f79f0d03fe8f0156bb62d88"
+      },
+      {
+        "path": "app/assets/production/manifest.json",
+        "bytes": 3970,
+        "sha256": "4d65cbc8b307af0de30bb88b28280d2a15fffb1ba7f1ddcc6790086be9675c50"
+      },
+      {
+        "path": "app/assets/trick_or_treat/manifest.json",
+        "bytes": 1163,
+        "sha256": "cd8b2091a552d62a99c9b17ba2c98bae0b59a3c14a4595b85aaa411f208d72c5"
+      },
+      {
+        "path": "app/tests/conftest.py",
+        "bytes": 232,
+        "sha256": "fe89acbeda544fc65d917d365263f4bf12e9b9bdb6ff17fb877bdf672f78a66f"
+      },
+      {
+        "path": "app/tests/test_audio.py",
+        "bytes": 836,
+        "sha256": "08ba3949588305e939f09ccf068c912db49a2ae42392bf0195b076d9a0150e53"
+      },
+      {
+        "path": "app/tests/test_director.py",
+        "bytes": 6527,
+        "sha256": "82b24a0d0a5dae33c35d878263264f907593c0ee00a593b64d9fe252fed82df6"
+      },
+      {
+        "path": "app/tests/test_events.py",
+        "bytes": 2800,
+        "sha256": "d94875d6596fac31dab1812d4bc281224acc436044939a07d3e9808d9fe8dff0"
+      },
+      {
+        "path": "app/tests/test_scheduler.py",
+        "bytes": 605,
+        "sha256": "c1ad0f74986552b4f534f303e69228b35d8661d97f526e525623cb0b26575dd1"
+      }
+    ]
+  },
+  "artifacts": {
+    "private_draft": {
+      "filename": "Nevermore-1.0.0-rc.2.zip",
+      "bytes": 54802288,
+      "sha256": "21f946888e59623f5b19539c76042379ceda9cfd1cdc01e14d25a00502f95edc",
+      "source_commit": "b4980cfc7c6c93838892d966c61284bfd0740214",
+      "manifest_sha256": "04d9cb08e2574634000398c93823660e393fa3cba318fb3acc1694dcb341ad7f",
+      "payload_files": 98,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 49,
+          "sha256": "35a0ebdf180dce2e5ebcbb0e09b67385eb04945a3e615a6d91dd34b575d35203"
+        },
+        {
+          "path": ".gitignore",
+          "bytes": 64,
+          "sha256": "2852519357ae166cce28eb15edda16bfd5664e576f2a2a538a61a44d9fb67735"
+        },
+        {
+          "path": "ASSET_LICENSES.md",
+          "bytes": 4234,
+          "sha256": "394990643c4cd4513895e6dcbdb9e3d575cc0733a45d3b3b0466c753ff4b2c3f"
+        },
+        {
+          "path": "assets/production/audio/eyes.wav",
+          "bytes": 576044,
+          "sha256": "13a5995108903db9fba7a9d858072cbbee85e30507cb48f691fdf8ca6269b00a"
+        },
+        {
+          "path": "assets/production/audio/glitch.wav",
+          "bytes": 499244,
+          "sha256": "b1d38cb024f1855a0f68b8de245093830b4d7e55b12506cb74acd6b3a2198511"
+        },
+        {
+          "path": "assets/production/audio/nevermore.wav",
+          "bytes": 633644,
+          "sha256": "6945ff0c30a408b3fd01911b8626e7bd336f4ada5270a8e94738b6dc3d8ee0f5"
+        },
+        {
+          "path": "assets/production/audio/raven_dive.wav",
+          "bytes": 576044,
+          "sha256": "8ca9996c4e8c742e55c53a9cbd80baae758b03c135f6e18028cb12f14e5b1c62"
+        },
+        {
+          "path": "assets/production/audio/raven_duet.wav",
+          "bytes": 960044,
+          "sha256": "4f46f2fd8c8cd4dfad65ef7c6eea98cf24a61d7d98802b9bab0204aed3525bff"
+        },
+        {
+          "path": "assets/production/audio/raven_perch.wav",
+          "bytes": 1056044,
+          "sha256": "14d7d40b320cbdb33f4a8a41a9a49b1581c70dc5fbc474701d5bf1e6f86b721e"
+        },
+        {
+          "path": "assets/production/audio/raven_shadow.wav",
+          "bytes": 288044,
+          "sha256": "1a032e0dd2700fa516a711e20392ea7420f947894098f507d81f690196c023cf"
+        },
+        {
+          "path": "assets/production/audio/raven_sweep.wav",
+          "bytes": 768044,
+          "sha256": "4c9f7dc6f1087708588574aa86358006e7065bd4baf99c140be23ab838398b5b"
+        },
+        {
+          "path": "assets/production/audio/shadow.wav",
+          "bytes": 441644,
+          "sha256": "f0f4c4e19a6e4d12975111bc26ac2e1227ce716bec48179e10220c30328b4b0d"
+        },
+        {
+          "path": "assets/production/manifest.json",
+          "bytes": 4073,
+          "sha256": "09799b972c90a329700fab88bb19fbfcb4cadff992954325370e3913ce12be4d"
+        },
+        {
+          "path": "assets/production/video/eyes.mp4",
+          "bytes": 65911,
+          "sha256": "44e0d7fe114750f5b3afe911ae8b26563288e767baeb90348c739c1407142b49"
+        },
+        {
+          "path": "assets/production/video/glitch.mp4",
+          "bytes": 64405,
+          "sha256": "97828c6286bb73cb7760a8c5eb12b6af86cff880534ad76fea48da4b50139af7"
+        },
+        {
+          "path": "assets/production/video/nevermore.mp4",
+          "bytes": 219331,
+          "sha256": "fe0758809a4468f3b09733322b97bb62efa441b076b78bf54b616175c5130f92"
+        },
+        {
+          "path": "assets/production/video/raven_duet.mp4",
+          "bytes": 218890,
+          "sha256": "c4408b530ed0d2a5a0b26aedfd5386f0f4a5d0e230fe483d03d4e76ea28b80df"
+        },
+        {
+          "path": "assets/production/video/raven_perch.mp4",
+          "bytes": 167722,
+          "sha256": "f6846321021b68377d6cb2f413fa842f61624c0b5247e8ef22d235636c4622e6"
+        },
+        {
+          "path": "assets/production/video/raven_shadow.mp4",
+          "bytes": 25204,
+          "sha256": "b31d1730d305f86162b2dd72b1958bcbba6fbf387ec8ede5bf2edbf894004bb0"
+        },
+        {
+          "path": "assets/production/video/raven_sweep.mp4",
+          "bytes": 113720,
+          "sha256": "f9f2eed7582085b5e9b07c33bc0bf7574505736462b944a3119dfb7a2b705f0f"
+        },
+        {
+          "path": "assets/production/video/shadow.mp4",
+          "bytes": 44477,
+          "sha256": "fd772f9a2d3b272d75808512a2fc92027fdaad429e928e480444163bcbe93f55"
+        },
+        {
+          "path": "assets/raven/video/raven_dive.mp4",
+          "bytes": 237586,
+          "sha256": "fc5b704d9b0bcdac15cd3a052aa766c13d918fdc830b43c5f660c97c8b788503"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/treat_badge.wav",
+          "bytes": 537644,
+          "sha256": "d2a0eab7fdf4e47ae88541cf5e7b61a5fc5a938462c64ed9e9ca74b4f0854283"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/treat_candy.wav",
+          "bytes": 633644,
+          "sha256": "6d69e0873acacdeaa19dcb2b29daaceb22157cf483f5b4c79b045fb5a0f05233"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/treat_ghost.wav",
+          "bytes": 633644,
+          "sha256": "9921c0256bc65d640ad157f65d4cdce8241a869ca9a3ccfc19e68ea2df695097"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/treat_pumpkin.wav",
+          "bytes": 595244,
+          "sha256": "fcfd27cbbf890746c1dfe88d4cc00abc70c74c39251986a3eb68f465b3c9756b"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/trick_behind_you.wav",
+          "bytes": 556844,
+          "sha256": "fb0db7b3bcd9dc663d60b5f17b786331482ca19799ad60d808233e75e552eace"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/trick_or_treat.wav",
+          "bytes": 1056044,
+          "sha256": "719a8339ca2f6ad5a1ac6a6bb5dec8d3dc52a3ba0342806256250d0684730c16"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/trick_raven_box.wav",
+          "bytes": 576044,
+          "sha256": "501060faf30a21e8e333d58f57cac37ccb6674c22980f7ec6016936c8bd1c4f7"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/trick_spider.wav",
+          "bytes": 518444,
+          "sha256": "e92ff121e582a81764b0d46c50c0be243a18bc90fe24d62a747064cfcadc6912"
+        },
+        {
+          "path": "assets/trick_or_treat/manifest.json",
+          "bytes": 1178,
+          "sha256": "4e1dbdbf972f9c0ddad02c01b7c537ae2223c43a78234d8a1c14ba234aa31c1c"
+        },
+        {
+          "path": "assets/trick_or_treat/video/treat_badge.mp4",
+          "bytes": 1373828,
+          "sha256": "3e42e580ddfa9edb93f3bb21e67b4ef46f5c1f894ef76f5621bdbda5631eb6c2"
+        },
+        {
+          "path": "assets/trick_or_treat/video/treat_candy.mp4",
+          "bytes": 438250,
+          "sha256": "ad72857321aae40192dd1a7d6765fe5941285d036ac971902efa2f1ff3c472a8"
+        },
+        {
+          "path": "assets/trick_or_treat/video/treat_ghost.mp4",
+          "bytes": 793012,
+          "sha256": "d5fcf29e232d59dad35c23d2757aaa5d38e49cd1c28a711b505ef5f55e6dc357"
+        },
+        {
+          "path": "assets/trick_or_treat/video/treat_pumpkin.mp4",
+          "bytes": 342412,
+          "sha256": "d9b85a3dac7998573a6c0c810185e516375870a29b3307c17355a947cb1bd778"
+        },
+        {
+          "path": "assets/trick_or_treat/video/trick_behind_you.mp4",
+          "bytes": 479244,
+          "sha256": "0eed6a74225927a34cd1131226473fb0325aa7be1ba58b47f7c127e7d0f72e02"
+        },
+        {
+          "path": "assets/trick_or_treat/video/trick_or_treat.mp4",
+          "bytes": 434309,
+          "sha256": "0c31aa1dfed0a9edaa790c2c09f709fe0291b57542c18e2a440ccac340f6a698"
+        },
+        {
+          "path": "assets/trick_or_treat/video/trick_raven_box.mp4",
+          "bytes": 784394,
+          "sha256": "9417207cf86f59fb745bc18b79fc8b96f42e7de4c1f37d8b36b37e31cb59dc76"
+        },
+        {
+          "path": "assets/trick_or_treat/video/trick_spider.mp4",
+          "bytes": 613285,
+          "sha256": "73f0834fd967613d481175e139b0fd4b84b60404aaddfcbf283b917282bf623d"
+        },
+        {
+          "path": "assets/voice/LICENSE-APACHE-2.0.txt",
+          "bytes": 11560,
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        },
+        {
+          "path": "assets/voice/provenance.json",
+          "bytes": 2178,
+          "sha256": "a11dc09b262081123a05fe6971566b6bb8fd7a79db3798323bf58bf5a530870d"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/am/final.mdl",
+          "bytes": 15962575,
+          "sha256": "75370a0137f9daf8f469dedd7daa4513ae7a621f03240c6e512e2b50b656a7b6"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/conf/mfcc.conf",
+          "bytes": 131,
+          "sha256": "1e2228006d01d805ad1c267fee9f79709ca87ac51bd82b0e3f5c69ba543f0fc4"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/conf/model.conf",
+          "bytes": 290,
+          "sha256": "8f14cb1eeb07c762c371db648c6be688d347236155ca0f64fb13b6567a8ce81f"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/graph/disambig_tid.int",
+          "bytes": 102,
+          "sha256": "9ad87cc166d0998f08f758f47a6223a120dfffcbee805c4849c3aa5e6bb3c0fc"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/graph/Gr.fst",
+          "bytes": 24013795,
+          "sha256": "023c8b7e30704a9e37765c635c252e608a02f361235bf94abdcf2a5225d85b20"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/graph/HCLr.fst",
+          "bytes": 22416994,
+          "sha256": "5caafba3081e1646545ac6bff0dd7a318e53dcbdc86f237909ce1d2ac1293d34"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int",
+          "bytes": 1761,
+          "sha256": "da199d9c991e0e84681ddbb34627b915b26302d50a8fdaa23c51e2bc3a50b5c3"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.dubm",
+          "bytes": 168048,
+          "sha256": "8c5d7dd69d2122313baaf19f61f35dd3fa18b70c62ac0687e311e1c46e6daca7"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.ie",
+          "bytes": 8288887,
+          "sha256": "3f37faf90c375b9e4740b569398b5829ed9cc07d19be6d441f72c3b71d7efcc6"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.mat",
+          "bytes": 44975,
+          "sha256": "ddd83586dc5f928cda8738b922c85ffe38fc789cb5f9151a712ca12f37265382"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats",
+          "bytes": 1080,
+          "sha256": "33be09afcc80059847a275c3d043b51f1ab954c7c2438ddbbf4745e8ba144ff9"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf",
+          "bytes": 95,
+          "sha256": "a2f3571754b64297cb7efb2e7ca3df61995c5a45fcbb97188f90613552bb2dfe"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/splice.conf",
+          "bytes": 35,
+          "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/README",
+          "bytes": 199,
+          "sha256": "c0cf286e4f7783306c5f6469b37db69228fb16803b03cae661edb2d7bba64ebb"
+        },
+        {
+          "path": "CREDITS.json",
+          "bytes": 8727,
+          "sha256": "070434a54d60e586efd0e30847b8a0a8b57d40fb67549c689b9098dda54d290b"
+        },
+        {
+          "path": "docs/architecture.md",
+          "bytes": 6407,
+          "sha256": "b09cdfc794ee16c6521c2d7a1418f1a3a2e3b8595ec0719fd60c02461254ada8"
+        },
+        {
+          "path": "docs/events.md",
+          "bytes": 2237,
+          "sha256": "7071998718f51a764c876fb9bde48b727f1584609bf482fa5460b27d6feedea9"
+        },
+        {
+          "path": "docs/installation.md",
+          "bytes": 1946,
+          "sha256": "af1f0986036f18704c74cbf282651856d1827a0068d50dcc7732df4ead561e2c"
+        },
+        {
+          "path": "docs/release/flows.md",
+          "bytes": 1810,
+          "sha256": "351b38b9794450444f71649e2b8d822ad398c1d75ef19af657af70d6746cba57"
+        },
+        {
+          "path": "docs/release/permissions.md",
+          "bytes": 1259,
+          "sha256": "2fc9d21e7bf5cc7a985ddcd50c18c5f1b06a4ee2188f567574e44749327c99be"
+        },
+        {
+          "path": "docs/release/tests.md",
+          "bytes": 2193,
+          "sha256": "77cbb34752a8e895e556acc2ffe84b620d534f19edd18de76852a49a8402f5cc"
+        },
+        {
+          "path": "docs/release/variables.md",
+          "bytes": 1186,
+          "sha256": "d41ed974e4831d4bb744f9aae02041e79a1efa0c6ecb523b9da4b0e5058d2ce6"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1342,
+          "sha256": "462fe2d0cf036b546a77e481a73ad4ac1aedf4a9048c92926ee86587c79bf317"
+        },
+        {
+          "path": "main.py",
+          "bytes": 470,
+          "sha256": "2d974bed74f0878a0f4fed1a5c05557859cdfba9aebf8de2d978196d3a76f2c7"
+        },
+        {
+          "path": "nevermore/__init__.py",
+          "bytes": 323,
+          "sha256": "8c57b20eec5352d53b165e92df4dedc415eb66b68eef72ce4533689568b1ee2f"
+        },
+        {
+          "path": "nevermore/app.py",
+          "bytes": 17254,
+          "sha256": "b22571db45c9c213b7b56f1c2b605c2332046dc72354e038c8a399e997e69fdc"
+        },
+        {
+          "path": "nevermore/audio.py",
+          "bytes": 5278,
+          "sha256": "e511245c762cdc94683eab6736c801ea657bc42099f0c4d5892cf68791bc1ebc"
+        },
+        {
+          "path": "nevermore/audio_playback.py",
+          "bytes": 3557,
+          "sha256": "4d0c6e5a21a8f925242ee45b3a367c07891ee511f7b8f98a990269df7b0fd960"
+        },
+        {
+          "path": "nevermore/choices.py",
+          "bytes": 1783,
+          "sha256": "3942518bdcf8b56595b0db5775a34699ed99da3d3366acf43d813b2c0e2db5e0"
+        },
+        {
+          "path": "nevermore/director.py",
+          "bytes": 9601,
+          "sha256": "eeac274453f972524692ece761a7b7c4de2a5ed0ebf78d2f23a002d161de071f"
+        },
+        {
+          "path": "nevermore/discoveries.py",
+          "bytes": 2818,
+          "sha256": "100732de01c13f49d6d43b49024d65519f76d424e0efc5e09427a216046d0891"
+        },
+        {
+          "path": "nevermore/events.py",
+          "bytes": 5900,
+          "sha256": "636bbae254c19e63c813c06fa00f3d2ba300fe5c0c9c2dca3d6aed17394c2b35"
+        },
+        {
+          "path": "nevermore/production_media.py",
+          "bytes": 1337,
+          "sha256": "a441ffc8985ed42748022d15ac6a377eb59e88dc57d28d3073361dc4e8ab83f0"
+        },
+        {
+          "path": "nevermore/scenes.py",
+          "bytes": 7585,
+          "sha256": "dbd5faf418dbfd54614dd18a70fb0d721275d4971de64ade0a92e605f9bc53a9"
+        },
+        {
+          "path": "nevermore/scheduler.py",
+          "bytes": 1567,
+          "sha256": "a4a5b440fb50c7653336ba250f523f67928a30d4e01faf25bec6dbfc9d63f6d3"
+        },
+        {
+          "path": "nevermore/trick_or_treat_media.py",
+          "bytes": 1956,
+          "sha256": "a42ce9781a39087d7725ab42006fb6a95478ca22b7275b1b33dfbdf07e6be11b"
+        },
+        {
+          "path": "nevermore/triggers.py",
+          "bytes": 1447,
+          "sha256": "d720db405102995377ab84169d9ae57976549d5708343b25bf9193b538eb8b30"
+        },
+        {
+          "path": "nevermore/voice.py",
+          "bytes": 5774,
+          "sha256": "82618fa84df76c932f14777d60148926d2e06fe20e9368e8d2192dad4896fd86"
+        },
+        {
+          "path": "pytest.ini",
+          "bytes": 51,
+          "sha256": "ecbf5ef9abf449e6ed3cba5ae3b0da5ff681000913127a0f8baf6d24ad8c8c79"
+        },
+        {
+          "path": "RAVEN_FRAMEWORK.md",
+          "bytes": 2483,
+          "sha256": "ca0106f4382bd60e4bf9b08d9c519010b0281a866e902f33de0149b5a6223499"
+        },
+        {
+          "path": "README.md",
+          "bytes": 3181,
+          "sha256": "f44ea28557d28974bb58f126601dc0e8b03c8cb57aa19c784722f8b7766582b7"
+        },
+        {
+          "path": "RELEASE_NOTES.md",
+          "bytes": 2158,
+          "sha256": "715724e1c30691472a1e34f3b13c6ff8c5798815d18c81c38e99d3e376625347"
+        },
+        {
+          "path": "requirements.txt",
+          "bytes": 94,
+          "sha256": "f8642fa4b4aa830cd347ad8bfc16c0258c656cede87412f1c10e48893438df63"
+        },
+        {
+          "path": "RIGHTS.md",
+          "bytes": 2449,
+          "sha256": "5455faeb6f199c1d9452ba5f96a07d458b835f5ff1aa5b43c0dafa806f7b7103"
+        },
+        {
+          "path": "tests/conftest.py",
+          "bytes": 238,
+          "sha256": "d5e347515c17957ad3a1a7278232b26eb865472cdb40c202a486caa762ea7be7"
+        },
+        {
+          "path": "tests/test_approved_raven.py",
+          "bytes": 859,
+          "sha256": "c9081d5a14714342433077b9ab5e304a61558f89518648ea1f0af2ba1672b87c"
+        },
+        {
+          "path": "tests/test_audio.py",
+          "bytes": 866,
+          "sha256": "7120785ee2528a6445e329fbdc68bea1af40d0f7a26fd0458abffe9b045e73a6"
+        },
+        {
+          "path": "tests/test_audio_playback.py",
+          "bytes": 6498,
+          "sha256": "2c217a33483abfa4d587a27b43aecadd2032af145576a13d8041da3da84662c8"
+        },
+        {
+          "path": "tests/test_director.py",
+          "bytes": 6675,
+          "sha256": "3953758ca498130c37bb3f621e93d969698773b75edd0219b77b38ea988f134d"
+        },
+        {
+          "path": "tests/test_events.py",
+          "bytes": 2870,
+          "sha256": "28e5e13b2ddde68a388385b24aaf61c8f850bc1de9d2f5920b250bbbd915b176"
+        },
+        {
+          "path": "tests/test_product.py",
+          "bytes": 4491,
+          "sha256": "ce1625f817d30cdf9628f960b28c831310c83cf022a17c0aceba10a5508111e2"
+        },
+        {
+          "path": "tests/test_scenes.py",
+          "bytes": 5013,
+          "sha256": "daf5faec7f5de6925df64513fb16aae4e643b6ac61322f645cc7a7dbbb5cf975"
+        },
+        {
+          "path": "tests/test_scheduler.py",
+          "bytes": 633,
+          "sha256": "7eb6197977acd003e6f3bb0913b37e158bb866f9d1daaeda8a1d4284a618601c"
+        },
+        {
+          "path": "tests/test_session.py",
+          "bytes": 6301,
+          "sha256": "4eb7133c8ab454379a3b9724472dbbf21347d7ecbe2b489d46cfb375d6f9f90c"
+        },
+        {
+          "path": "tests/test_trick_or_treat_media.py",
+          "bytes": 6067,
+          "sha256": "4e41b44757701411fb6dd469f9c450e88bb674b7059b066f83bb0cb2f4790fef"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "bytes": 2437,
+          "sha256": "7acdd26f690695289f48b80a7067ced53a2838d5f7bd2532a3ea9e5e4dcccd6f"
+        },
+        {
+          "path": "tools/verify_release.py",
+          "bytes": 1798,
+          "sha256": "86f5178917f52ae76e1d299b8a7624989c990ea30a43ace3b1e658d5824bf6f0"
+        }
+      ],
+      "status": "private_github_draft_v1.0.0-rc.2",
+      "public_url": null
+    },
+    "local_candidate": {
+      "filename": "Nevermore-1.0.0-rc.2.zip",
+      "bytes": 54802288,
+      "sha256": "21f946888e59623f5b19539c76042379ceda9cfd1cdc01e14d25a00502f95edc",
+      "source_commit": "b4980cfc7c6c93838892d966c61284bfd0740214",
+      "manifest_sha256": "04d9cb08e2574634000398c93823660e393fa3cba318fb3acc1694dcb341ad7f",
+      "payload_files": 98,
+      "files": [
+        {
+          "path": ".gitattributes",
+          "bytes": 49,
+          "sha256": "35a0ebdf180dce2e5ebcbb0e09b67385eb04945a3e615a6d91dd34b575d35203"
+        },
+        {
+          "path": ".gitignore",
+          "bytes": 64,
+          "sha256": "2852519357ae166cce28eb15edda16bfd5664e576f2a2a538a61a44d9fb67735"
+        },
+        {
+          "path": "ASSET_LICENSES.md",
+          "bytes": 4234,
+          "sha256": "394990643c4cd4513895e6dcbdb9e3d575cc0733a45d3b3b0466c753ff4b2c3f"
+        },
+        {
+          "path": "assets/production/audio/eyes.wav",
+          "bytes": 576044,
+          "sha256": "13a5995108903db9fba7a9d858072cbbee85e30507cb48f691fdf8ca6269b00a"
+        },
+        {
+          "path": "assets/production/audio/glitch.wav",
+          "bytes": 499244,
+          "sha256": "b1d38cb024f1855a0f68b8de245093830b4d7e55b12506cb74acd6b3a2198511"
+        },
+        {
+          "path": "assets/production/audio/nevermore.wav",
+          "bytes": 633644,
+          "sha256": "6945ff0c30a408b3fd01911b8626e7bd336f4ada5270a8e94738b6dc3d8ee0f5"
+        },
+        {
+          "path": "assets/production/audio/raven_dive.wav",
+          "bytes": 576044,
+          "sha256": "8ca9996c4e8c742e55c53a9cbd80baae758b03c135f6e18028cb12f14e5b1c62"
+        },
+        {
+          "path": "assets/production/audio/raven_duet.wav",
+          "bytes": 960044,
+          "sha256": "4f46f2fd8c8cd4dfad65ef7c6eea98cf24a61d7d98802b9bab0204aed3525bff"
+        },
+        {
+          "path": "assets/production/audio/raven_perch.wav",
+          "bytes": 1056044,
+          "sha256": "14d7d40b320cbdb33f4a8a41a9a49b1581c70dc5fbc474701d5bf1e6f86b721e"
+        },
+        {
+          "path": "assets/production/audio/raven_shadow.wav",
+          "bytes": 288044,
+          "sha256": "1a032e0dd2700fa516a711e20392ea7420f947894098f507d81f690196c023cf"
+        },
+        {
+          "path": "assets/production/audio/raven_sweep.wav",
+          "bytes": 768044,
+          "sha256": "4c9f7dc6f1087708588574aa86358006e7065bd4baf99c140be23ab838398b5b"
+        },
+        {
+          "path": "assets/production/audio/shadow.wav",
+          "bytes": 441644,
+          "sha256": "f0f4c4e19a6e4d12975111bc26ac2e1227ce716bec48179e10220c30328b4b0d"
+        },
+        {
+          "path": "assets/production/manifest.json",
+          "bytes": 4073,
+          "sha256": "09799b972c90a329700fab88bb19fbfcb4cadff992954325370e3913ce12be4d"
+        },
+        {
+          "path": "assets/production/video/eyes.mp4",
+          "bytes": 65911,
+          "sha256": "44e0d7fe114750f5b3afe911ae8b26563288e767baeb90348c739c1407142b49"
+        },
+        {
+          "path": "assets/production/video/glitch.mp4",
+          "bytes": 64405,
+          "sha256": "97828c6286bb73cb7760a8c5eb12b6af86cff880534ad76fea48da4b50139af7"
+        },
+        {
+          "path": "assets/production/video/nevermore.mp4",
+          "bytes": 219331,
+          "sha256": "fe0758809a4468f3b09733322b97bb62efa441b076b78bf54b616175c5130f92"
+        },
+        {
+          "path": "assets/production/video/raven_duet.mp4",
+          "bytes": 218890,
+          "sha256": "c4408b530ed0d2a5a0b26aedfd5386f0f4a5d0e230fe483d03d4e76ea28b80df"
+        },
+        {
+          "path": "assets/production/video/raven_perch.mp4",
+          "bytes": 167722,
+          "sha256": "f6846321021b68377d6cb2f413fa842f61624c0b5247e8ef22d235636c4622e6"
+        },
+        {
+          "path": "assets/production/video/raven_shadow.mp4",
+          "bytes": 25204,
+          "sha256": "b31d1730d305f86162b2dd72b1958bcbba6fbf387ec8ede5bf2edbf894004bb0"
+        },
+        {
+          "path": "assets/production/video/raven_sweep.mp4",
+          "bytes": 113720,
+          "sha256": "f9f2eed7582085b5e9b07c33bc0bf7574505736462b944a3119dfb7a2b705f0f"
+        },
+        {
+          "path": "assets/production/video/shadow.mp4",
+          "bytes": 44477,
+          "sha256": "fd772f9a2d3b272d75808512a2fc92027fdaad429e928e480444163bcbe93f55"
+        },
+        {
+          "path": "assets/raven/video/raven_dive.mp4",
+          "bytes": 237586,
+          "sha256": "fc5b704d9b0bcdac15cd3a052aa766c13d918fdc830b43c5f660c97c8b788503"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/treat_badge.wav",
+          "bytes": 537644,
+          "sha256": "d2a0eab7fdf4e47ae88541cf5e7b61a5fc5a938462c64ed9e9ca74b4f0854283"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/treat_candy.wav",
+          "bytes": 633644,
+          "sha256": "6d69e0873acacdeaa19dcb2b29daaceb22157cf483f5b4c79b045fb5a0f05233"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/treat_ghost.wav",
+          "bytes": 633644,
+          "sha256": "9921c0256bc65d640ad157f65d4cdce8241a869ca9a3ccfc19e68ea2df695097"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/treat_pumpkin.wav",
+          "bytes": 595244,
+          "sha256": "fcfd27cbbf890746c1dfe88d4cc00abc70c74c39251986a3eb68f465b3c9756b"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/trick_behind_you.wav",
+          "bytes": 556844,
+          "sha256": "fb0db7b3bcd9dc663d60b5f17b786331482ca19799ad60d808233e75e552eace"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/trick_or_treat.wav",
+          "bytes": 1056044,
+          "sha256": "719a8339ca2f6ad5a1ac6a6bb5dec8d3dc52a3ba0342806256250d0684730c16"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/trick_raven_box.wav",
+          "bytes": 576044,
+          "sha256": "501060faf30a21e8e333d58f57cac37ccb6674c22980f7ec6016936c8bd1c4f7"
+        },
+        {
+          "path": "assets/trick_or_treat/audio/trick_spider.wav",
+          "bytes": 518444,
+          "sha256": "e92ff121e582a81764b0d46c50c0be243a18bc90fe24d62a747064cfcadc6912"
+        },
+        {
+          "path": "assets/trick_or_treat/manifest.json",
+          "bytes": 1178,
+          "sha256": "4e1dbdbf972f9c0ddad02c01b7c537ae2223c43a78234d8a1c14ba234aa31c1c"
+        },
+        {
+          "path": "assets/trick_or_treat/video/treat_badge.mp4",
+          "bytes": 1373828,
+          "sha256": "3e42e580ddfa9edb93f3bb21e67b4ef46f5c1f894ef76f5621bdbda5631eb6c2"
+        },
+        {
+          "path": "assets/trick_or_treat/video/treat_candy.mp4",
+          "bytes": 438250,
+          "sha256": "ad72857321aae40192dd1a7d6765fe5941285d036ac971902efa2f1ff3c472a8"
+        },
+        {
+          "path": "assets/trick_or_treat/video/treat_ghost.mp4",
+          "bytes": 793012,
+          "sha256": "d5fcf29e232d59dad35c23d2757aaa5d38e49cd1c28a711b505ef5f55e6dc357"
+        },
+        {
+          "path": "assets/trick_or_treat/video/treat_pumpkin.mp4",
+          "bytes": 342412,
+          "sha256": "d9b85a3dac7998573a6c0c810185e516375870a29b3307c17355a947cb1bd778"
+        },
+        {
+          "path": "assets/trick_or_treat/video/trick_behind_you.mp4",
+          "bytes": 479244,
+          "sha256": "0eed6a74225927a34cd1131226473fb0325aa7be1ba58b47f7c127e7d0f72e02"
+        },
+        {
+          "path": "assets/trick_or_treat/video/trick_or_treat.mp4",
+          "bytes": 434309,
+          "sha256": "0c31aa1dfed0a9edaa790c2c09f709fe0291b57542c18e2a440ccac340f6a698"
+        },
+        {
+          "path": "assets/trick_or_treat/video/trick_raven_box.mp4",
+          "bytes": 784394,
+          "sha256": "9417207cf86f59fb745bc18b79fc8b96f42e7de4c1f37d8b36b37e31cb59dc76"
+        },
+        {
+          "path": "assets/trick_or_treat/video/trick_spider.mp4",
+          "bytes": 613285,
+          "sha256": "73f0834fd967613d481175e139b0fd4b84b60404aaddfcbf283b917282bf623d"
+        },
+        {
+          "path": "assets/voice/LICENSE-APACHE-2.0.txt",
+          "bytes": 11560,
+          "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+        },
+        {
+          "path": "assets/voice/provenance.json",
+          "bytes": 2178,
+          "sha256": "a11dc09b262081123a05fe6971566b6bb8fd7a79db3798323bf58bf5a530870d"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/am/final.mdl",
+          "bytes": 15962575,
+          "sha256": "75370a0137f9daf8f469dedd7daa4513ae7a621f03240c6e512e2b50b656a7b6"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/conf/mfcc.conf",
+          "bytes": 131,
+          "sha256": "1e2228006d01d805ad1c267fee9f79709ca87ac51bd82b0e3f5c69ba543f0fc4"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/conf/model.conf",
+          "bytes": 290,
+          "sha256": "8f14cb1eeb07c762c371db648c6be688d347236155ca0f64fb13b6567a8ce81f"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/graph/disambig_tid.int",
+          "bytes": 102,
+          "sha256": "9ad87cc166d0998f08f758f47a6223a120dfffcbee805c4849c3aa5e6bb3c0fc"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/graph/Gr.fst",
+          "bytes": 24013795,
+          "sha256": "023c8b7e30704a9e37765c635c252e608a02f361235bf94abdcf2a5225d85b20"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/graph/HCLr.fst",
+          "bytes": 22416994,
+          "sha256": "5caafba3081e1646545ac6bff0dd7a318e53dcbdc86f237909ce1d2ac1293d34"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int",
+          "bytes": 1761,
+          "sha256": "da199d9c991e0e84681ddbb34627b915b26302d50a8fdaa23c51e2bc3a50b5c3"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.dubm",
+          "bytes": 168048,
+          "sha256": "8c5d7dd69d2122313baaf19f61f35dd3fa18b70c62ac0687e311e1c46e6daca7"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.ie",
+          "bytes": 8288887,
+          "sha256": "3f37faf90c375b9e4740b569398b5829ed9cc07d19be6d441f72c3b71d7efcc6"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.mat",
+          "bytes": 44975,
+          "sha256": "ddd83586dc5f928cda8738b922c85ffe38fc789cb5f9151a712ca12f37265382"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats",
+          "bytes": 1080,
+          "sha256": "33be09afcc80059847a275c3d043b51f1ab954c7c2438ddbbf4745e8ba144ff9"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf",
+          "bytes": 95,
+          "sha256": "a2f3571754b64297cb7efb2e7ca3df61995c5a45fcbb97188f90613552bb2dfe"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/ivector/splice.conf",
+          "bytes": 35,
+          "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756"
+        },
+        {
+          "path": "assets/voice/vosk-model-small-en-us-0.15/README",
+          "bytes": 199,
+          "sha256": "c0cf286e4f7783306c5f6469b37db69228fb16803b03cae661edb2d7bba64ebb"
+        },
+        {
+          "path": "CREDITS.json",
+          "bytes": 8727,
+          "sha256": "070434a54d60e586efd0e30847b8a0a8b57d40fb67549c689b9098dda54d290b"
+        },
+        {
+          "path": "docs/architecture.md",
+          "bytes": 6407,
+          "sha256": "b09cdfc794ee16c6521c2d7a1418f1a3a2e3b8595ec0719fd60c02461254ada8"
+        },
+        {
+          "path": "docs/events.md",
+          "bytes": 2237,
+          "sha256": "7071998718f51a764c876fb9bde48b727f1584609bf482fa5460b27d6feedea9"
+        },
+        {
+          "path": "docs/installation.md",
+          "bytes": 1946,
+          "sha256": "af1f0986036f18704c74cbf282651856d1827a0068d50dcc7732df4ead561e2c"
+        },
+        {
+          "path": "docs/release/flows.md",
+          "bytes": 1810,
+          "sha256": "351b38b9794450444f71649e2b8d822ad398c1d75ef19af657af70d6746cba57"
+        },
+        {
+          "path": "docs/release/permissions.md",
+          "bytes": 1259,
+          "sha256": "2fc9d21e7bf5cc7a985ddcd50c18c5f1b06a4ee2188f567574e44749327c99be"
+        },
+        {
+          "path": "docs/release/tests.md",
+          "bytes": 2193,
+          "sha256": "77cbb34752a8e895e556acc2ffe84b620d534f19edd18de76852a49a8402f5cc"
+        },
+        {
+          "path": "docs/release/variables.md",
+          "bytes": 1186,
+          "sha256": "d41ed974e4831d4bb744f9aae02041e79a1efa0c6ecb523b9da4b0e5058d2ce6"
+        },
+        {
+          "path": "LICENSE",
+          "bytes": 1342,
+          "sha256": "462fe2d0cf036b546a77e481a73ad4ac1aedf4a9048c92926ee86587c79bf317"
+        },
+        {
+          "path": "main.py",
+          "bytes": 470,
+          "sha256": "2d974bed74f0878a0f4fed1a5c05557859cdfba9aebf8de2d978196d3a76f2c7"
+        },
+        {
+          "path": "nevermore/__init__.py",
+          "bytes": 323,
+          "sha256": "8c57b20eec5352d53b165e92df4dedc415eb66b68eef72ce4533689568b1ee2f"
+        },
+        {
+          "path": "nevermore/app.py",
+          "bytes": 17254,
+          "sha256": "b22571db45c9c213b7b56f1c2b605c2332046dc72354e038c8a399e997e69fdc"
+        },
+        {
+          "path": "nevermore/audio.py",
+          "bytes": 5278,
+          "sha256": "e511245c762cdc94683eab6736c801ea657bc42099f0c4d5892cf68791bc1ebc"
+        },
+        {
+          "path": "nevermore/audio_playback.py",
+          "bytes": 3557,
+          "sha256": "4d0c6e5a21a8f925242ee45b3a367c07891ee511f7b8f98a990269df7b0fd960"
+        },
+        {
+          "path": "nevermore/choices.py",
+          "bytes": 1783,
+          "sha256": "3942518bdcf8b56595b0db5775a34699ed99da3d3366acf43d813b2c0e2db5e0"
+        },
+        {
+          "path": "nevermore/director.py",
+          "bytes": 9601,
+          "sha256": "eeac274453f972524692ece761a7b7c4de2a5ed0ebf78d2f23a002d161de071f"
+        },
+        {
+          "path": "nevermore/discoveries.py",
+          "bytes": 2818,
+          "sha256": "100732de01c13f49d6d43b49024d65519f76d424e0efc5e09427a216046d0891"
+        },
+        {
+          "path": "nevermore/events.py",
+          "bytes": 5900,
+          "sha256": "636bbae254c19e63c813c06fa00f3d2ba300fe5c0c9c2dca3d6aed17394c2b35"
+        },
+        {
+          "path": "nevermore/production_media.py",
+          "bytes": 1337,
+          "sha256": "a441ffc8985ed42748022d15ac6a377eb59e88dc57d28d3073361dc4e8ab83f0"
+        },
+        {
+          "path": "nevermore/scenes.py",
+          "bytes": 7585,
+          "sha256": "dbd5faf418dbfd54614dd18a70fb0d721275d4971de64ade0a92e605f9bc53a9"
+        },
+        {
+          "path": "nevermore/scheduler.py",
+          "bytes": 1567,
+          "sha256": "a4a5b440fb50c7653336ba250f523f67928a30d4e01faf25bec6dbfc9d63f6d3"
+        },
+        {
+          "path": "nevermore/trick_or_treat_media.py",
+          "bytes": 1956,
+          "sha256": "a42ce9781a39087d7725ab42006fb6a95478ca22b7275b1b33dfbdf07e6be11b"
+        },
+        {
+          "path": "nevermore/triggers.py",
+          "bytes": 1447,
+          "sha256": "d720db405102995377ab84169d9ae57976549d5708343b25bf9193b538eb8b30"
+        },
+        {
+          "path": "nevermore/voice.py",
+          "bytes": 5774,
+          "sha256": "82618fa84df76c932f14777d60148926d2e06fe20e9368e8d2192dad4896fd86"
+        },
+        {
+          "path": "pytest.ini",
+          "bytes": 51,
+          "sha256": "ecbf5ef9abf449e6ed3cba5ae3b0da5ff681000913127a0f8baf6d24ad8c8c79"
+        },
+        {
+          "path": "RAVEN_FRAMEWORK.md",
+          "bytes": 2483,
+          "sha256": "ca0106f4382bd60e4bf9b08d9c519010b0281a866e902f33de0149b5a6223499"
+        },
+        {
+          "path": "README.md",
+          "bytes": 3181,
+          "sha256": "f44ea28557d28974bb58f126601dc0e8b03c8cb57aa19c784722f8b7766582b7"
+        },
+        {
+          "path": "RELEASE_NOTES.md",
+          "bytes": 2158,
+          "sha256": "715724e1c30691472a1e34f3b13c6ff8c5798815d18c81c38e99d3e376625347"
+        },
+        {
+          "path": "requirements.txt",
+          "bytes": 94,
+          "sha256": "f8642fa4b4aa830cd347ad8bfc16c0258c656cede87412f1c10e48893438df63"
+        },
+        {
+          "path": "RIGHTS.md",
+          "bytes": 2449,
+          "sha256": "5455faeb6f199c1d9452ba5f96a07d458b835f5ff1aa5b43c0dafa806f7b7103"
+        },
+        {
+          "path": "tests/conftest.py",
+          "bytes": 238,
+          "sha256": "d5e347515c17957ad3a1a7278232b26eb865472cdb40c202a486caa762ea7be7"
+        },
+        {
+          "path": "tests/test_approved_raven.py",
+          "bytes": 859,
+          "sha256": "c9081d5a14714342433077b9ab5e304a61558f89518648ea1f0af2ba1672b87c"
+        },
+        {
+          "path": "tests/test_audio.py",
+          "bytes": 866,
+          "sha256": "7120785ee2528a6445e329fbdc68bea1af40d0f7a26fd0458abffe9b045e73a6"
+        },
+        {
+          "path": "tests/test_audio_playback.py",
+          "bytes": 6498,
+          "sha256": "2c217a33483abfa4d587a27b43aecadd2032af145576a13d8041da3da84662c8"
+        },
+        {
+          "path": "tests/test_director.py",
+          "bytes": 6675,
+          "sha256": "3953758ca498130c37bb3f621e93d969698773b75edd0219b77b38ea988f134d"
+        },
+        {
+          "path": "tests/test_events.py",
+          "bytes": 2870,
+          "sha256": "28e5e13b2ddde68a388385b24aaf61c8f850bc1de9d2f5920b250bbbd915b176"
+        },
+        {
+          "path": "tests/test_product.py",
+          "bytes": 4491,
+          "sha256": "ce1625f817d30cdf9628f960b28c831310c83cf022a17c0aceba10a5508111e2"
+        },
+        {
+          "path": "tests/test_scenes.py",
+          "bytes": 5013,
+          "sha256": "daf5faec7f5de6925df64513fb16aae4e643b6ac61322f645cc7a7dbbb5cf975"
+        },
+        {
+          "path": "tests/test_scheduler.py",
+          "bytes": 633,
+          "sha256": "7eb6197977acd003e6f3bb0913b37e158bb866f9d1daaeda8a1d4284a618601c"
+        },
+        {
+          "path": "tests/test_session.py",
+          "bytes": 6301,
+          "sha256": "4eb7133c8ab454379a3b9724472dbbf21347d7ecbe2b489d46cfb375d6f9f90c"
+        },
+        {
+          "path": "tests/test_trick_or_treat_media.py",
+          "bytes": 6067,
+          "sha256": "4e41b44757701411fb6dd469f9c450e88bb674b7059b066f83bb0cb2f4790fef"
+        },
+        {
+          "path": "THIRD_PARTY_NOTICES.md",
+          "bytes": 2437,
+          "sha256": "7acdd26f690695289f48b80a7067ced53a2838d5f7bd2532a3ea9e5e4dcccd6f"
+        },
+        {
+          "path": "tools/verify_release.py",
+          "bytes": 1798,
+          "sha256": "86f5178917f52ae76e1d299b8a7624989c990ea30a43ace3b1e658d5824bf6f0"
+        }
+      ],
+      "status": "local_verified_candidate",
+      "public_url": null
+    }
+  },
+  "catalogue": {
+    "trick_or_treat": {
+      "video": "assets/trick_or_treat/video/trick_or_treat.mp4",
+      "audio": "assets/trick_or_treat/audio/trick_or_treat.wav",
+      "frames": 132,
+      "fps": 24
+    },
+    "trick_raven_box": {
+      "video": "assets/trick_or_treat/video/trick_raven_box.mp4",
+      "audio": "assets/trick_or_treat/audio/trick_raven_box.wav",
+      "frames": 72,
+      "fps": 24
+    },
+    "trick_spider": {
+      "video": "assets/trick_or_treat/video/trick_spider.mp4",
+      "audio": "assets/trick_or_treat/audio/trick_spider.wav",
+      "frames": 65,
+      "fps": 24
+    },
+    "trick_behind_you": {
+      "video": "assets/trick_or_treat/video/trick_behind_you.mp4",
+      "audio": "assets/trick_or_treat/audio/trick_behind_you.wav",
+      "frames": 70,
+      "fps": 24
+    },
+    "treat_candy": {
+      "video": "assets/trick_or_treat/video/treat_candy.mp4",
+      "audio": "assets/trick_or_treat/audio/treat_candy.wav",
+      "frames": 80,
+      "fps": 24
+    },
+    "treat_ghost": {
+      "video": "assets/trick_or_treat/video/treat_ghost.mp4",
+      "audio": "assets/trick_or_treat/audio/treat_ghost.wav",
+      "frames": 80,
+      "fps": 24
+    },
+    "treat_pumpkin": {
+      "video": "assets/trick_or_treat/video/treat_pumpkin.mp4",
+      "audio": "assets/trick_or_treat/audio/treat_pumpkin.wav",
+      "frames": 75,
+      "fps": 24
+    },
+    "treat_badge": {
+      "video": "assets/trick_or_treat/video/treat_badge.mp4",
+      "audio": "assets/trick_or_treat/audio/treat_badge.wav",
+      "frames": 68,
+      "fps": 24
+    },
+    "raven_sweep": {
+      "video": "assets/production/video/raven_sweep.mp4",
+      "audio": "assets/production/audio/raven_sweep.wav",
+      "frames": 96,
+      "fps": 24
+    },
+    "raven_perch": {
+      "video": "assets/production/video/raven_perch.mp4",
+      "audio": "assets/production/audio/raven_perch.wav",
+      "frames": 132,
+      "fps": 24
+    },
+    "raven_shadow": {
+      "video": "assets/production/video/raven_shadow.mp4",
+      "audio": "assets/production/audio/raven_shadow.wav",
+      "frames": 36,
+      "fps": 24
+    },
+    "raven_duet": {
+      "video": "assets/production/video/raven_duet.mp4",
+      "audio": "assets/production/audio/raven_duet.wav",
+      "frames": 120,
+      "fps": 24
+    },
+    "eyes": {
+      "video": "assets/production/video/eyes.mp4",
+      "audio": "assets/production/audio/eyes.wav",
+      "frames": 72,
+      "fps": 24
+    },
+    "nevermore": {
+      "video": "assets/production/video/nevermore.mp4",
+      "audio": "assets/production/audio/nevermore.wav",
+      "frames": 80,
+      "fps": 24
+    },
+    "shadow": {
+      "video": "assets/production/video/shadow.mp4",
+      "audio": "assets/production/audio/shadow.wav",
+      "frames": 56,
+      "fps": 24
+    },
+    "glitch": {
+      "video": "assets/production/video/glitch.mp4",
+      "audio": "assets/production/audio/glitch.wav",
+      "frames": 63,
+      "fps": 24
+    },
+    "ghost": {
+      "video": "assets/trick_or_treat/video/treat_ghost.mp4",
+      "audio": "assets/trick_or_treat/audio/treat_ghost.wav",
+      "frames": 80,
+      "fps": 24
+    },
+    "spider": {
+      "video": "assets/trick_or_treat/video/trick_spider.mp4",
+      "audio": "assets/trick_or_treat/audio/trick_spider.wav",
+      "frames": 65,
+      "fps": 24
+    },
+    "pumpkin": {
+      "video": "assets/trick_or_treat/video/treat_pumpkin.mp4",
+      "audio": "assets/trick_or_treat/audio/treat_pumpkin.wav",
+      "frames": 75,
+      "fps": 24
+    },
+    "raven_dive": {
+      "video": "assets/raven/video/raven_dive.mp4",
+      "audio": "assets/production/audio/raven_dive.wav",
+      "frames": 72,
+      "fps": 24
+    }
+  },
+  "runtime_files": [
+    {
+      "path": "assets/production/audio/eyes.wav",
+      "bytes": 576044,
+      "sha256": "13a5995108903db9fba7a9d858072cbbee85e30507cb48f691fdf8ca6269b00a"
+    },
+    {
+      "path": "assets/production/audio/glitch.wav",
+      "bytes": 499244,
+      "sha256": "b1d38cb024f1855a0f68b8de245093830b4d7e55b12506cb74acd6b3a2198511"
+    },
+    {
+      "path": "assets/production/audio/nevermore.wav",
+      "bytes": 633644,
+      "sha256": "6945ff0c30a408b3fd01911b8626e7bd336f4ada5270a8e94738b6dc3d8ee0f5"
+    },
+    {
+      "path": "assets/production/audio/raven_dive.wav",
+      "bytes": 576044,
+      "sha256": "8ca9996c4e8c742e55c53a9cbd80baae758b03c135f6e18028cb12f14e5b1c62"
+    },
+    {
+      "path": "assets/production/audio/raven_duet.wav",
+      "bytes": 960044,
+      "sha256": "4f46f2fd8c8cd4dfad65ef7c6eea98cf24a61d7d98802b9bab0204aed3525bff"
+    },
+    {
+      "path": "assets/production/audio/raven_perch.wav",
+      "bytes": 1056044,
+      "sha256": "14d7d40b320cbdb33f4a8a41a9a49b1581c70dc5fbc474701d5bf1e6f86b721e"
+    },
+    {
+      "path": "assets/production/audio/raven_shadow.wav",
+      "bytes": 288044,
+      "sha256": "1a032e0dd2700fa516a711e20392ea7420f947894098f507d81f690196c023cf"
+    },
+    {
+      "path": "assets/production/audio/raven_sweep.wav",
+      "bytes": 768044,
+      "sha256": "4c9f7dc6f1087708588574aa86358006e7065bd4baf99c140be23ab838398b5b"
+    },
+    {
+      "path": "assets/production/audio/shadow.wav",
+      "bytes": 441644,
+      "sha256": "f0f4c4e19a6e4d12975111bc26ac2e1227ce716bec48179e10220c30328b4b0d"
+    },
+    {
+      "path": "assets/production/video/eyes.mp4",
+      "bytes": 65911,
+      "sha256": "44e0d7fe114750f5b3afe911ae8b26563288e767baeb90348c739c1407142b49"
+    },
+    {
+      "path": "assets/production/video/glitch.mp4",
+      "bytes": 64405,
+      "sha256": "97828c6286bb73cb7760a8c5eb12b6af86cff880534ad76fea48da4b50139af7"
+    },
+    {
+      "path": "assets/production/video/nevermore.mp4",
+      "bytes": 219331,
+      "sha256": "fe0758809a4468f3b09733322b97bb62efa441b076b78bf54b616175c5130f92"
+    },
+    {
+      "path": "assets/production/video/raven_duet.mp4",
+      "bytes": 218890,
+      "sha256": "c4408b530ed0d2a5a0b26aedfd5386f0f4a5d0e230fe483d03d4e76ea28b80df"
+    },
+    {
+      "path": "assets/production/video/raven_perch.mp4",
+      "bytes": 167722,
+      "sha256": "f6846321021b68377d6cb2f413fa842f61624c0b5247e8ef22d235636c4622e6"
+    },
+    {
+      "path": "assets/production/video/raven_shadow.mp4",
+      "bytes": 25204,
+      "sha256": "b31d1730d305f86162b2dd72b1958bcbba6fbf387ec8ede5bf2edbf894004bb0"
+    },
+    {
+      "path": "assets/production/video/raven_sweep.mp4",
+      "bytes": 113720,
+      "sha256": "f9f2eed7582085b5e9b07c33bc0bf7574505736462b944a3119dfb7a2b705f0f"
+    },
+    {
+      "path": "assets/production/video/shadow.mp4",
+      "bytes": 44477,
+      "sha256": "fd772f9a2d3b272d75808512a2fc92027fdaad429e928e480444163bcbe93f55"
+    },
+    {
+      "path": "assets/raven/video/raven_dive.mp4",
+      "bytes": 237586,
+      "sha256": "fc5b704d9b0bcdac15cd3a052aa766c13d918fdc830b43c5f660c97c8b788503"
+    },
+    {
+      "path": "assets/trick_or_treat/audio/treat_badge.wav",
+      "bytes": 537644,
+      "sha256": "d2a0eab7fdf4e47ae88541cf5e7b61a5fc5a938462c64ed9e9ca74b4f0854283"
+    },
+    {
+      "path": "assets/trick_or_treat/audio/treat_candy.wav",
+      "bytes": 633644,
+      "sha256": "6d69e0873acacdeaa19dcb2b29daaceb22157cf483f5b4c79b045fb5a0f05233"
+    },
+    {
+      "path": "assets/trick_or_treat/audio/treat_ghost.wav",
+      "bytes": 633644,
+      "sha256": "9921c0256bc65d640ad157f65d4cdce8241a869ca9a3ccfc19e68ea2df695097"
+    },
+    {
+      "path": "assets/trick_or_treat/audio/treat_pumpkin.wav",
+      "bytes": 595244,
+      "sha256": "fcfd27cbbf890746c1dfe88d4cc00abc70c74c39251986a3eb68f465b3c9756b"
+    },
+    {
+      "path": "assets/trick_or_treat/audio/trick_behind_you.wav",
+      "bytes": 556844,
+      "sha256": "fb0db7b3bcd9dc663d60b5f17b786331482ca19799ad60d808233e75e552eace"
+    },
+    {
+      "path": "assets/trick_or_treat/audio/trick_or_treat.wav",
+      "bytes": 1056044,
+      "sha256": "719a8339ca2f6ad5a1ac6a6bb5dec8d3dc52a3ba0342806256250d0684730c16"
+    },
+    {
+      "path": "assets/trick_or_treat/audio/trick_raven_box.wav",
+      "bytes": 576044,
+      "sha256": "501060faf30a21e8e333d58f57cac37ccb6674c22980f7ec6016936c8bd1c4f7"
+    },
+    {
+      "path": "assets/trick_or_treat/audio/trick_spider.wav",
+      "bytes": 518444,
+      "sha256": "e92ff121e582a81764b0d46c50c0be243a18bc90fe24d62a747064cfcadc6912"
+    },
+    {
+      "path": "assets/trick_or_treat/video/treat_badge.mp4",
+      "bytes": 1373828,
+      "sha256": "3e42e580ddfa9edb93f3bb21e67b4ef46f5c1f894ef76f5621bdbda5631eb6c2"
+    },
+    {
+      "path": "assets/trick_or_treat/video/treat_candy.mp4",
+      "bytes": 438250,
+      "sha256": "ad72857321aae40192dd1a7d6765fe5941285d036ac971902efa2f1ff3c472a8"
+    },
+    {
+      "path": "assets/trick_or_treat/video/treat_ghost.mp4",
+      "bytes": 793012,
+      "sha256": "d5fcf29e232d59dad35c23d2757aaa5d38e49cd1c28a711b505ef5f55e6dc357"
+    },
+    {
+      "path": "assets/trick_or_treat/video/treat_pumpkin.mp4",
+      "bytes": 342412,
+      "sha256": "d9b85a3dac7998573a6c0c810185e516375870a29b3307c17355a947cb1bd778"
+    },
+    {
+      "path": "assets/trick_or_treat/video/trick_behind_you.mp4",
+      "bytes": 479244,
+      "sha256": "0eed6a74225927a34cd1131226473fb0325aa7be1ba58b47f7c127e7d0f72e02"
+    },
+    {
+      "path": "assets/trick_or_treat/video/trick_or_treat.mp4",
+      "bytes": 434309,
+      "sha256": "0c31aa1dfed0a9edaa790c2c09f709fe0291b57542c18e2a440ccac340f6a698"
+    },
+    {
+      "path": "assets/trick_or_treat/video/trick_raven_box.mp4",
+      "bytes": 784394,
+      "sha256": "9417207cf86f59fb745bc18b79fc8b96f42e7de4c1f37d8b36b37e31cb59dc76"
+    },
+    {
+      "path": "assets/trick_or_treat/video/trick_spider.mp4",
+      "bytes": 613285,
+      "sha256": "73f0834fd967613d481175e139b0fd4b84b60404aaddfcbf283b917282bf623d"
+    }
+  ],
+  "device_validation": {
+    "windows_and_raven_simulator": "PASS_RECORDED_HOST_EVIDENCE",
+    "physical_prism": "DEVICE-UNVERIFIED",
+    "fresh_device_test_performed": false
+  },
+  "rights": {
+    "source_code_license": "MIT",
+    "artwork_and_media_license": "Nevermore-specific assets All Rights Reserved (ASSET_LICENSES.md); upstream CC0 recordings keep CC0; Vosk model Apache-2.0",
+    "meshy": {
+      "schema_version": 1,
+      "recorded": "2026-10-21",
+      "status": "USER-ATTESTED-MESHY-PAID-ACCOUNT",
+      "attestation": "The project owner states that every Meshy-generated model used by Nevermore was generated by the owner in the owner's paid Meshy account.",
+      "scope": "Meshy-derived production models used by Nevermore.",
+      "public_distribution_note": "Original Meshy BLEND/FBX/GLB source exports are not part of the curated public RC package. Final public license wording and release-policy checks remain the responsibility of the delivery/release team.",
+      "independently_verified": false,
+      "remix_records": {
+        "Dark Guardian / Skull Warden": {
+          "meshy_share_url": "https://www.meshy.ai/s/G7gwhv",
+          "relationship": "Owner-attested remix of a Meshy Community model.",
+          "upstream_license_basis": "Meshy Community 3D models are published under CC0 according to Meshy Community Guidelines.",
+          "verification_note": "Share-page metadata was not independently extracted in this update; URL and remix relationship were supplied by the project owner."
+        },
+        "Veiled Wraith Bride": {
+          "meshy_share_url": "https://www.meshy.ai/s/9XYfSD",
+          "relationship": "Owner-attested remix of a Meshy Community model.",
+          "upstream_license_basis": "Meshy Community 3D models are published under CC0 according to Meshy Community Guidelines.",
+          "verification_note": "Share-page metadata was not independently extracted in this update; URL and remix relationship were supplied by the project owner."
+        },
+        "Ocular Maw / Mimic Chest": {
+          "meshy_share_url": "https://www.meshy.ai/s/N8PAvb",
+          "relationship": "Owner-attested remix of a Meshy Community model.",
+          "upstream_license_basis": "Meshy Community 3D models are published under CC0 according to Meshy Community Guidelines.",
+          "verification_note": "Share-page metadata was not independently extracted in this update; URL and remix relationship were supplied by the project owner."
+        }
+      },
+      "licensing_basis": {
+        "paid_plan_outputs": "Meshy states that paid-plan users retain private ownership of assets they create, subject to rights in source materials.",
+        "community_sources": "Meshy states that 3D models published to the Meshy Community are shared under CC0.",
+        "nevermore_policy": "Original Meshy source models are not redistributed in the curated public package."
+      }
+    },
+    "raven_framework": {
+      "version": "1.0.6",
+      "commit": "791afd896cc646636ef906f5bf06c09c8fbb430a",
+      "license": "Proprietary, source available; Raven Resonance terms apply",
+      "bundled": false,
+      "relicensed": false,
+      "official_public_process": "pending_raven_guidance (see RAVEN_FRAMEWORK.md)"
+    }
+  },
+  "packaging": {
+    "tool": "tools/package_public.py",
+    "source_commit": "b4980cfc7c6c93838892d966c61284bfd0740214",
+    "tool_git_blob_sha": "06d58992e5e048a58dc84b0a6549244ccb6c0fe8",
+    "tool_modified": false,
+    "reproducibility": "Allowlisted payload and hashes are repeatable for an identical working tree. ZIP bytes may vary with file timestamps and platform line endings; compare the generated manifest and checksum for each build.",
+    "format": "Python source application with runtime media and offline Vosk model; no executable, interpreter or SDK",
+    "generated_files": [
+      ".gitattributes",
+      ".gitignore",
+      "CREDITS.json",
+      "RELEASE_MANIFEST.json"
+    ]
+  },
+  "source_delta": {
+    "from_commit": "81df295f6825189bfba05288aca76595b4c59437",
+    "to_commit": "b4980cfc7c6c93838892d966c61284bfd0740214",
+    "runtime_changed": true,
+    "changed_paths": [
+      "AGENTS.md",
+      "ASSET_LICENSES.md",
+      "LICENSE",
+      "README.md",
+      "assets/production/meshy-owner-attestation.json",
+      "assets/trick_or_treat/README.md",
+      "docs/architecture.md",
+      "docs/installation.md",
+      "docs/release/README.md",
+      "docs/release/public/INSTALLATION.md",
+      "docs/release/public/RAVEN_FRAMEWORK.md",
+      "docs/release/public/README.md",
+      "docs/release/public/RELEASE_NOTES.md",
+      "docs/release/public/RIGHTS.md",
+      "docs/release/public/THIRD_PARTY_NOTICES.md",
+      "docs/release/tests.md",
+      "docs/release/variables.md",
+      "docs/trick-or-treat-production.md",
+      "nevermore/app.py",
+      "tests/test_product.py",
+      "tests/test_public_export.py",
+      "tools/package_public.py",
+      "tools/profile_host.py"
+    ],
+    "summary": "Final licensing (MIT code, All Rights Reserved assets, Meshy remix provenance), single Raven Framework dependency document, packager rc.2, lazy legacy sound bank in nevermore/app.py, host profiler. Runtime media and both media manifests unchanged.",
+    "package_changes": "Adds LICENSE, ASSET_LICENSES.md and RAVEN_FRAMEWORK.md; nevermore/app.py builds the unused procedural sound bank lazily; version 1.0.0-rc.2."
+  },
+  "validation": {
+    "package_application_tests": {
+      "passed": 80,
+      "scope": "Extracted package outside the private repository"
+    },
+    "package_media_decode": {
+      "events": 20,
+      "pinned_files": 98,
+      "result": "PASS"
+    },
+    "source_application_and_packaging_tests": {
+      "passed": 91
+    },
+    "persistence_restart": "PASS (new process reads journal; reset CLI clears it)",
+    "exclusion_and_secret_scans": "PASS",
+    "runtime_capture_revalidation": "PASS: Room captures match rc.2 runtime media byte-for-byte; 20/20 host audio matches",
+    "limitations": [
+      "No physical Prism test",
+      "No clean-machine install; tests use the pinned SDK environment",
+      "Speech verified with recorded fixtures; live human accuracy not certified"
+    ],
+    "environment": {
+      "python": "3.14.4",
+      "pytest": "8.4.2",
+      "opencv": "5.0.0",
+      "numpy": "2.5.3",
+      "sdk_commit": "791afd896cc646636ef906f5bf06c09c8fbb430a"
+    }
+  },
+  "package_source_paths": {
+    "ASSET_LICENSES.md": "ASSET_LICENSES.md",
+    "assets/production/audio/eyes.wav": "assets/production/audio/eyes.wav",
+    "assets/production/audio/glitch.wav": "assets/production/audio/glitch.wav",
+    "assets/production/audio/nevermore.wav": "assets/production/audio/nevermore.wav",
+    "assets/production/audio/raven_dive.wav": "assets/production/audio/raven_dive.wav",
+    "assets/production/audio/raven_duet.wav": "assets/production/audio/raven_duet.wav",
+    "assets/production/audio/raven_perch.wav": "assets/production/audio/raven_perch.wav",
+    "assets/production/audio/raven_shadow.wav": "assets/production/audio/raven_shadow.wav",
+    "assets/production/audio/raven_sweep.wav": "assets/production/audio/raven_sweep.wav",
+    "assets/production/audio/shadow.wav": "assets/production/audio/shadow.wav",
+    "assets/production/manifest.json": "assets/production/manifest.json",
+    "assets/production/video/eyes.mp4": "assets/production/video/eyes.mp4",
+    "assets/production/video/glitch.mp4": "assets/production/video/glitch.mp4",
+    "assets/production/video/nevermore.mp4": "assets/production/video/nevermore.mp4",
+    "assets/production/video/raven_duet.mp4": "assets/production/video/raven_duet.mp4",
+    "assets/production/video/raven_perch.mp4": "assets/production/video/raven_perch.mp4",
+    "assets/production/video/raven_shadow.mp4": "assets/production/video/raven_shadow.mp4",
+    "assets/production/video/raven_sweep.mp4": "assets/production/video/raven_sweep.mp4",
+    "assets/production/video/shadow.mp4": "assets/production/video/shadow.mp4",
+    "assets/raven/video/raven_dive.mp4": "assets/raven/video/raven_dive.mp4",
+    "assets/trick_or_treat/audio/treat_badge.wav": "assets/trick_or_treat/audio/treat_badge.wav",
+    "assets/trick_or_treat/audio/treat_candy.wav": "assets/trick_or_treat/audio/treat_candy.wav",
+    "assets/trick_or_treat/audio/treat_ghost.wav": "assets/trick_or_treat/audio/treat_ghost.wav",
+    "assets/trick_or_treat/audio/treat_pumpkin.wav": "assets/trick_or_treat/audio/treat_pumpkin.wav",
+    "assets/trick_or_treat/audio/trick_behind_you.wav": "assets/trick_or_treat/audio/trick_behind_you.wav",
+    "assets/trick_or_treat/audio/trick_or_treat.wav": "assets/trick_or_treat/audio/trick_or_treat.wav",
+    "assets/trick_or_treat/audio/trick_raven_box.wav": "assets/trick_or_treat/audio/trick_raven_box.wav",
+    "assets/trick_or_treat/audio/trick_spider.wav": "assets/trick_or_treat/audio/trick_spider.wav",
+    "assets/trick_or_treat/manifest.json": "assets/trick_or_treat/manifest.json",
+    "assets/trick_or_treat/video/treat_badge.mp4": "assets/trick_or_treat/video/treat_badge.mp4",
+    "assets/trick_or_treat/video/treat_candy.mp4": "assets/trick_or_treat/video/treat_candy.mp4",
+    "assets/trick_or_treat/video/treat_ghost.mp4": "assets/trick_or_treat/video/treat_ghost.mp4",
+    "assets/trick_or_treat/video/treat_pumpkin.mp4": "assets/trick_or_treat/video/treat_pumpkin.mp4",
+    "assets/trick_or_treat/video/trick_behind_you.mp4": "assets/trick_or_treat/video/trick_behind_you.mp4",
+    "assets/trick_or_treat/video/trick_or_treat.mp4": "assets/trick_or_treat/video/trick_or_treat.mp4",
+    "assets/trick_or_treat/video/trick_raven_box.mp4": "assets/trick_or_treat/video/trick_raven_box.mp4",
+    "assets/trick_or_treat/video/trick_spider.mp4": "assets/trick_or_treat/video/trick_spider.mp4",
+    "assets/voice/LICENSE-APACHE-2.0.txt": "assets/voice/LICENSE-APACHE-2.0.txt",
+    "assets/voice/provenance.json": "assets/voice/provenance.json",
+    "assets/voice/vosk-model-small-en-us-0.15/am/final.mdl": "assets/voice/vosk-model-small-en-us-0.15/am/final.mdl",
+    "assets/voice/vosk-model-small-en-us-0.15/conf/mfcc.conf": "assets/voice/vosk-model-small-en-us-0.15/conf/mfcc.conf",
+    "assets/voice/vosk-model-small-en-us-0.15/conf/model.conf": "assets/voice/vosk-model-small-en-us-0.15/conf/model.conf",
+    "assets/voice/vosk-model-small-en-us-0.15/graph/disambig_tid.int": "assets/voice/vosk-model-small-en-us-0.15/graph/disambig_tid.int",
+    "assets/voice/vosk-model-small-en-us-0.15/graph/Gr.fst": "assets/voice/vosk-model-small-en-us-0.15/graph/Gr.fst",
+    "assets/voice/vosk-model-small-en-us-0.15/graph/HCLr.fst": "assets/voice/vosk-model-small-en-us-0.15/graph/HCLr.fst",
+    "assets/voice/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int": "assets/voice/vosk-model-small-en-us-0.15/graph/phones/word_boundary.int",
+    "assets/voice/vosk-model-small-en-us-0.15/ivector/final.dubm": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.dubm",
+    "assets/voice/vosk-model-small-en-us-0.15/ivector/final.ie": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.ie",
+    "assets/voice/vosk-model-small-en-us-0.15/ivector/final.mat": "assets/voice/vosk-model-small-en-us-0.15/ivector/final.mat",
+    "assets/voice/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats": "assets/voice/vosk-model-small-en-us-0.15/ivector/global_cmvn.stats",
+    "assets/voice/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf": "assets/voice/vosk-model-small-en-us-0.15/ivector/online_cmvn.conf",
+    "assets/voice/vosk-model-small-en-us-0.15/ivector/splice.conf": "assets/voice/vosk-model-small-en-us-0.15/ivector/splice.conf",
+    "assets/voice/vosk-model-small-en-us-0.15/README": "assets/voice/vosk-model-small-en-us-0.15/README",
+    "docs/architecture.md": "docs/architecture.md",
+    "docs/events.md": "docs/events.md",
+    "docs/installation.md": "docs/release/public/INSTALLATION.md",
+    "docs/release/flows.md": "docs/release/flows.md",
+    "docs/release/permissions.md": "docs/release/permissions.md",
+    "docs/release/tests.md": "docs/release/tests.md",
+    "docs/release/variables.md": "docs/release/variables.md",
+    "LICENSE": "LICENSE",
+    "main.py": "main.py",
+    "nevermore/__init__.py": "nevermore/__init__.py",
+    "nevermore/app.py": "nevermore/app.py",
+    "nevermore/audio.py": "nevermore/audio.py",
+    "nevermore/audio_playback.py": "nevermore/audio_playback.py",
+    "nevermore/choices.py": "nevermore/choices.py",
+    "nevermore/director.py": "nevermore/director.py",
+    "nevermore/discoveries.py": "nevermore/discoveries.py",
+    "nevermore/events.py": "nevermore/events.py",
+    "nevermore/production_media.py": "nevermore/production_media.py",
+    "nevermore/scenes.py": "nevermore/scenes.py",
+    "nevermore/scheduler.py": "nevermore/scheduler.py",
+    "nevermore/trick_or_treat_media.py": "nevermore/trick_or_treat_media.py",
+    "nevermore/triggers.py": "nevermore/triggers.py",
+    "nevermore/voice.py": "nevermore/voice.py",
+    "pytest.ini": "pytest.ini",
+    "RAVEN_FRAMEWORK.md": "docs/release/public/RAVEN_FRAMEWORK.md",
+    "README.md": "docs/release/public/README.md",
+    "RELEASE_NOTES.md": "docs/release/public/RELEASE_NOTES.md",
+    "requirements.txt": "requirements.txt",
+    "RIGHTS.md": "docs/release/public/RIGHTS.md",
+    "tests/conftest.py": "tests/conftest.py",
+    "tests/test_approved_raven.py": "tests/test_approved_raven.py",
+    "tests/test_audio.py": "tests/test_audio.py",
+    "tests/test_audio_playback.py": "tests/test_audio_playback.py",
+    "tests/test_director.py": "tests/test_director.py",
+    "tests/test_events.py": "tests/test_events.py",
+    "tests/test_product.py": "tests/test_product.py",
+    "tests/test_scenes.py": "tests/test_scenes.py",
+    "tests/test_scheduler.py": "tests/test_scheduler.py",
+    "tests/test_session.py": "tests/test_session.py",
+    "tests/test_trick_or_treat_media.py": "tests/test_trick_or_treat_media.py",
+    "THIRD_PARTY_NOTICES.md": "docs/release/public/THIRD_PARTY_NOTICES.md",
+    "tools/verify_release.py": "tools/verify_release.py"
+  }
+}

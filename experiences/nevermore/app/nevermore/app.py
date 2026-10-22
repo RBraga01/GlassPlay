@@ -60,7 +60,7 @@ class NevermoreApp(RavenApp):
         if qt_app is not None:
             qt_app.aboutToQuit.connect(self._audio_player.close)
             qt_app.aboutToQuit.connect(self._voice.close)
-        self._sounds = build_sound_bank()
+        self._sounds: dict[str, bytes] | None = None  # legacy cues; built only if requested
         self._router = TriggerRouter(self._selector, self._start_event, self._director.summon)
         self._voice_resume = QTimer(self)
         self._voice_resume.setSingleShot(True)
@@ -372,6 +372,10 @@ class NevermoreApp(RavenApp):
                 self._pack_sounds[sound] = self._canvas.pack[event_id].audio.read_bytes()
             self._audio_player.play_audio(self._pack_sounds[sound])
             return
+        if self._sounds is None:
+            # Every production event plays authored pack audio. Keep the
+            # procedural bank as a lazy fallback instead of a startup cost.
+            self._sounds = build_sound_bank()
         wav = self._sounds.get(sound)
         if wav:
             self._audio_player.play_audio(wav)

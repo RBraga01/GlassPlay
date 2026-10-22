@@ -20,13 +20,13 @@ ARM the experience, meet the **Midnight Host** and choose **Trick or Treat**. Th
 
 ## Availability
 
-**Windows / Raven Simulator release candidate: `1.0.0-rc.1`.** The full curated ZIP (~55 MB) and two demonstration videos have been prepared as **draft assets in the private Nevermore development repository**. They have **not been released or copied into GlassPlay**.
+**Windows / Raven Simulator release candidate: `1.0.0-rc.2`.** The curated ZIP (~55 MB), checksum, two demonstration videos and a Raven engineering handoff are prepared as a **private draft in the Nevermore development repository**. They have **not been released or copied into GlassPlay**.
 
-The candidate includes the approved **Skull Warden**, **Veiled Wraith Bride** with her updated offering gesture, **Ocular Maw Chest** and the final Raven sequence. Fresh host / Room recordings and 79 application tests support this candidate.
+**Verified:** Windows host and Raven Simulator 1.0.6; 20 authored encounters with audiovisual playback, offline “Raven” invocation, simulated sessions, DISARM/retrigger checks; package re-verified outside the development repository.
+**Not verified:** physical Raven Prism hardware (**DEVICE-UNVERIFIED**), live-human speech accuracy on device.
 
-**Verified:** Windows host and Raven Simulator 1.0.6; 20 events with audiovisual playback, simulated sessions and stop/retrigger checks.  
-**Not verified:** physical Raven Prism hardware, live-human speech recognition accuracy on device.
+**Licensing:** code MIT; Nevermore artwork and media All Rights Reserved; upstream CC0 and Apache-2.0 terms preserved. Raven Framework is not included or relicensed.
 
-**You cannot install it from GlassPlay yet.** The curated [Python source preview](app/README.md) and media manifests are available for review, without binaries or media. Public code/art licensing and Raven SDK authorization must be resolved before public distribution; hardware testing is required before Prism compatibility is claimed.
+**You cannot install it from GlassPlay yet.** The public download waits for Raven's official third-party Framework/deployment process. The curated [Python source preview](app/README.md) and media manifests are available for review, without binaries or media.
 
 [What remains](ASSETS_PENDING.md) · [← GlassPlay](../../README.md)

@@ -4,14 +4,15 @@
 The GlassPlay website is live at <https://rbraga01.github.io/GlassPlay/>, published
 from this private repository on 2026-10-22 with the owner-approved Nevermore
 images and videos (PR #2, `533192b`; owner copy corrections in PR #3, `fe6993a`).
-The Windows/Simulator application candidate is built and locally verified, but
-public application downloads remain withheld. Technical verification does not
-grant distribution rights.
+Nevermore `1.0.0-rc.2` (source `b4980cf`) is packaged, independently verified
+and held as a private draft with a Raven engineering handoff. Public application
+downloads remain withheld until Raven publishes its third-party deployment
+process.
 
 The exact candidate, test evidence and original draft are documented in
 [BASELINE.md](BASELINE.md). [INSTALLATION.md](INSTALLATION.md) covers dependencies,
 internal installation, verification and the existing reproducible packaging
-procedure. [Release metadata](../../releases/nevermore-rc1.json) provides individual
+procedure. [Release metadata](../../releases/nevermore-rc2.json) provides individual
 hashes for all 34 runtime files and every packaged payload.
 
 ## Owner decisions
@@ -21,9 +22,10 @@ hashes for all 34 runtime files and every packaged payload.
 | Website launch from private source | **Approved and live** (2026-10-22) | `config/publication.json` `site.approved=true`; GlassPlay source stays private |
 | Website promotional media | **Approved and live** (2026-10-22) | 19 files pinned by `docs/media/manifest.json` and `media-bundles/nevermore-web-media.zip`; original models stay excluded |
 | Hosting route | **GitHub Pages from the private repository** (owner has GitHub Pro) | Pages via GitHub Actions; `github-pages` environment limited to `main`; protected `main`; see [deployment](../DEPLOYMENT.md) |
-| Application source code license | No license selected; separate from website launch | Choose distribution terms only if publishing application code; proprietary/source-available terms and a chosen open-source license are distinct options |
-| Application artwork/runtime terms and SDK permissions | Application release held; Raven Framework remains an external proprietary dependency | Resolve the application-specific code/art terms and applicable written SDK conditions before public application distribution |
-| Public candidate ZIP/downloads | Not authorized | Approve the exact candidate and release destination separately; keep application approval false and download URLs absent for the website introduction |
+| Application source code license | **Decided: MIT** | Recorded in Nevermore `LICENSE`; applies to Nevermore code only |
+| Application artwork/media terms | **Decided: All Rights Reserved** for Nevermore-specific assets; CC0/Apache-2.0 upstream terms kept | Recorded in Nevermore `ASSET_LICENSES.md` |
+| Raven Framework | External dependency, not included or relicensed | Raven's official third-party Framework/deployment process is pending on Raven's side; Nevermore's `RAVEN_FRAMEWORK.md` is the one section to update |
+| Public candidate ZIP/downloads | Held (rc.2 private draft) | Approve after Raven deployment guidance and device testing; keep `application.approved=false` and download URLs absent until then |
 
 No MIT, CC0, Creative Commons or other license has been imposed on the owner's
 code or artwork. Website approval covers the website and its 19 media files only;
