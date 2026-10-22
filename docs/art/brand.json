@@ -76,33 +76,6 @@
   ],
   "exports": [
     {
-      "file": "public/brand/glassplay-icon.png",
-      "width": 512,
-      "height": 512,
-      "bytes": 172932,
-      "sha256": "5d9a3733e9613a6d83d634b43850a7a133a41a4ba5ff1435ea8ecd73b3396522",
-      "render": ".private/art-source/renders/glassplay-icon.png",
-      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3"
-    },
-    {
-      "file": "public/brand/favicon.png",
-      "width": 64,
-      "height": 64,
-      "bytes": 3446,
-      "sha256": "01be3ee5d079e578fb7727daa2e7d4d360d3a2273327fb9347ed3a2a6aba5bb2",
-      "render": ".private/art-source/renders/glassplay-icon.png",
-      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3"
-    },
-    {
-      "file": "public/brand/apple-touch-icon.png",
-      "width": 180,
-      "height": 180,
-      "bytes": 22379,
-      "sha256": "f72e5c7fdf52ff012afdddb334976804bb11baf06d0bf24f2f8237a8a5f19a14",
-      "render": ".private/art-source/renders/glassplay-icon.png",
-      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3"
-    },
-    {
       "file": "public/brand/nevermore-poster.webp",
       "width": 1600,
       "height": 1000,
@@ -128,6 +101,33 @@
       "sha256": "fa4efed322025c023fc62d90ef2c1456b807a28a0cb1ad298b078c023705c25f",
       "render": ".private/art-source/renders/nevermore-social.png",
       "render_sha256": "20565e2453ba114b7b07e2efbf0d529719baede9c3fe0ec57690527f2f824ca7"
+    },
+    {
+      "file": "public/brand/apple-touch-icon.png",
+      "width": 180,
+      "height": 180,
+      "bytes": 26663,
+      "sha256": "7355f4dbe0a97aa2d0ed81a3c87782f27f2f564c0dfafa7cfd6ed11b7913e200",
+      "render": "scripts/art/glassplay_icons.mjs",
+      "method": "The header brand mark (src/components/Logo.astro path) in the blue-to-violet 'Play' gradient on the hero's navy/violet night, rendered as vector by headless Chrome."
+    },
+    {
+      "file": "public/brand/favicon.png",
+      "width": 64,
+      "height": 64,
+      "bytes": 5069,
+      "sha256": "d430815c284851b2b572b10eb113c7267d914f0746635c62e79f084061cf0978",
+      "render": "scripts/art/glassplay_icons.mjs",
+      "method": "The header brand mark (src/components/Logo.astro path) in the blue-to-violet 'Play' gradient on the hero's navy/violet night, rendered as vector by headless Chrome."
+    },
+    {
+      "file": "public/brand/glassplay-icon.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 147533,
+      "sha256": "1e387cf86d99563fe380948d96337ec6afc58fc5919a3799952e83844a51af77",
+      "render": "scripts/art/glassplay_icons.mjs",
+      "method": "The header brand mark (src/components/Logo.astro path) in the blue-to-violet 'Play' gradient on the hero's navy/violet night, rendered as vector by headless Chrome."
     }
   ],
   "superseded_exports": [
@@ -170,16 +170,49 @@
       "render": ".private/art-source/renders/glassplay-social.png",
       "render_sha256": "2c4883a8c245fb11fb2a1ed3f1f279a636a4e5d7352148031865161a553355e6",
       "superseded_on": "2026-10-22"
+    },
+    {
+      "file": "public/brand/glassplay-icon.png",
+      "width": 512,
+      "height": 512,
+      "bytes": 172932,
+      "sha256": "5d9a3733e9613a6d83d634b43850a7a133a41a4ba5ff1435ea8ecd73b3396522",
+      "render": ".private/art-source/renders/glassplay-icon.png",
+      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3",
+      "superseded_on": "2026-10-22"
+    },
+    {
+      "file": "public/brand/favicon.png",
+      "width": 64,
+      "height": 64,
+      "bytes": 3446,
+      "sha256": "01be3ee5d079e578fb7727daa2e7d4d360d3a2273327fb9347ed3a2a6aba5bb2",
+      "render": ".private/art-source/renders/glassplay-icon.png",
+      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3",
+      "superseded_on": "2026-10-22"
+    },
+    {
+      "file": "public/brand/apple-touch-icon.png",
+      "width": 180,
+      "height": 180,
+      "bytes": 22379,
+      "sha256": "f72e5c7fdf52ff012afdddb334976804bb11baf06d0bf24f2f8237a8a5f19a14",
+      "render": ".private/art-source/renders/glassplay-icon.png",
+      "render_sha256": "09b206205eabdf887fbeb6fe61878064a69fa9f7bd9f0fbecc632889900573d3",
+      "superseded_on": "2026-10-22"
     }
   ],
   "superseded_by": {
     "files": [
       "docs/assets/glassplay-hero.webp",
+      "public/brand/apple-touch-icon.png",
+      "public/brand/favicon.png",
       "public/brand/glassplay-hero-small.webp",
       "public/brand/glassplay-hero.webp",
+      "public/brand/glassplay-icon.png",
       "public/brand/glassplay-social.png"
     ],
     "record": "docs/assets/glassplay-hero-provenance.json",
-    "note": "The GlassPlay hero, README banner and social card now derive from owner-supplied artwork; this file's disclosures apply only to the remaining exports (icon, favicon and Nevermore title art)."
+    "note": "The GlassPlay hero, README banner and social card derive from owner-supplied artwork; the app icons (512 / 180 / 64) render the header brand mark via scripts/art/glassplay_icons.mjs. This file's original disclosures apply only to the remaining Blender exports (Nevermore title art)."
   }
 }
