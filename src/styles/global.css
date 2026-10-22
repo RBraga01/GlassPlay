@@ -41,7 +41,6 @@
   .hero-footnote{color:var(--muted);font-size:.74rem;margin-top:23px;max-width:300px}
   .glasses-art{min-width:0;margin-left:-5%;margin-right:-5%;position:relative}
   .glasses-art img{width:100%;height:auto;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,#000 62%,transparent 100%)}
-  .glasses-art figcaption{text-align:right;color:var(--muted);font-size:.65rem;margin-top:8px}
   .experience-section h2{font-size:clamp(3.8rem,7vw,6rem);color:#e5d5ed}
   .section-intro .experience-tagline{font-size:1rem;margin-top:12px;color:#c6bacb}
   .season{border-top:1px solid var(--line);padding-block:12px 20px}
@@ -49,5 +48,5 @@
   .about-section{align-items:start}.about-links{display:flex;gap:28px;flex-wrap:wrap}.creator-link{margin-top:24px}
   .site-footer nav a{min-height:28px}
   @media(max-width:1100px){.home-hero{grid-template-columns:1fr 1fr;padding-block:56px 72px}.hero-copy h1{font-size:clamp(3rem,5.5vw,4rem)}.glasses-art{margin-left:-8%;margin-right:-5%}}
-  @media(max-width:760px){.home-hero{grid-template-columns:1fr;padding-block:40px 50px;gap:14px}.hero-copy h1{font-size:clamp(2.8rem,9.9vw,4.6rem);max-width:560px}.hero-summary{margin-top:22px;max-width:390px;font-size:.94rem}.hero-footnote{max-width:100%;font-size:.7rem}.glasses-art{margin:0 -12px}.glasses-art figcaption{font-size:.59rem;margin-right:12px;margin-top:0}.season-grid{gap:12px}.season-info{padding-top:16px}.season p{max-width:46ch}.experience-section h2{font-size:4rem}.about-section{gap:25px}}
+  @media(max-width:760px){.home-hero{grid-template-columns:1fr;padding-block:40px 50px;gap:14px}.hero-copy h1{font-size:clamp(2.8rem,9.9vw,4.6rem);max-width:560px}.hero-summary{margin-top:22px;max-width:390px;font-size:.94rem}.hero-footnote{max-width:100%;font-size:.7rem}.glasses-art{margin:0 -12px}.season-grid{gap:12px}.season-info{padding-top:16px}.season p{max-width:46ch}.experience-section h2{font-size:4rem}.about-section{gap:25px}}
 }
