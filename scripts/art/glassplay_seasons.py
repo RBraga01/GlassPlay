@@ -35,7 +35,11 @@ def clean(image: np.ndarray, box: tuple[int, int, int, int]) -> np.ndarray:
     x0, y0, x1, y1 = box
     mask = np.zeros(image.shape[:2], np.uint8)
     mask[y0:y1, x0:x1] = 255
-    return cv2.inpaint(image, mask, 5, cv2.INPAINT_TELEA)
+    result = cv2.inpaint(image, mask, 5, cv2.INPAINT_TELEA)
+    # Soften inpainting creases inside the patch so it matches the brushed temple finish.
+    soft = cv2.GaussianBlur(result, (0, 0), 2.2)
+    alpha = cv2.GaussianBlur(mask.astype(np.float32) / 255, (0, 0), 3)[..., None]
+    return np.clip(result * (1 - alpha) + soft * alpha, 0, 255).astype(np.uint8)
 
 
 def save_webp(image: np.ndarray, path: Path, width: int, quality: int = 80) -> dict:

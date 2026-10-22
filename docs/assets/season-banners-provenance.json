@@ -24,42 +24,42 @@
       "source_private_copy": ".private/art-source/seasons/christmas-reference.png",
       "source_sha256": "2702fd4b4d7c26af81343ff6c90f24bf7133df754441aa6c2cef4f9fb0e9fce9",
       "plate_private_copy": ".private/art-source/seasons/season-christmas-plate.png",
-      "plate_sha256": "d5213e6f6a7b0477239d8b48cbc78154eb76a27431bd675d2a83df27cc610a0e",
+      "plate_sha256": "3e1cfd964eb21164fed93529b67913073ae471e0bc5d727ea1369bdda93e845c",
       "exports": [
         {
           "file": "public/brand/season-christmas-800.webp",
           "width": 800,
           "height": 450,
-          "bytes": 68876,
-          "sha256": "5b73e58869d145bfb07327ff1bd0f24129d70330fcedb6a5024a23beaaecadce"
+          "bytes": 68810,
+          "sha256": "dd5da58bfbf5b58d11640b3af23d61cf5ac941d81d42c11db6fbb2e1e5890864"
         },
         {
           "file": "public/brand/season-christmas-1200.webp",
           "width": 1200,
           "height": 675,
-          "bytes": 118472,
-          "sha256": "18d1df5ed01185fa3d55ee0df425512fcf7d2976f033eb6153f5b28e84204c93"
+          "bytes": 118470,
+          "sha256": "414257788d4c2916fb977d6497f55c07669655cf60c85518486f8f572bf94566"
         },
         {
           "file": "public/brand/season-christmas-1672.webp",
           "width": 1672,
           "height": 941,
-          "bytes": 189566,
-          "sha256": "8013825da0329785e3fbd3907be4551a3628297527c80a234c8af4f063ce15da"
+          "bytes": 189528,
+          "sha256": "ac01eb464310b9ab0c8a5aea1953998e700d876e3036dd832042bf5d0967c32f"
         },
         {
           "file": "public/brand/season-christmas-mobile-660.webp",
           "width": 660,
           "height": 463,
-          "bytes": 58312,
-          "sha256": "3e75c769fe8cef67cc10b4e9ea9fab72c8fc999071e5f4717538dbbc6cd5b52c"
+          "bytes": 58292,
+          "sha256": "0038c37c1f766b2f930823df514043de22d6b68a72c286acecba7427e18f613d"
         },
         {
           "file": "public/brand/season-christmas-mobile-1000.webp",
           "width": 1000,
           "height": 701,
-          "bytes": 97898,
-          "sha256": "c3b5c64fee38573d90d9b40d3fd3857b24b015855d15d4cdc23b1472d903fc12"
+          "bytes": 97870,
+          "sha256": "7473fd0b1d4c97324895a25c699595bc717f3258af5f37a98b832363a1b0bba3"
         }
       ]
     },
@@ -68,42 +68,42 @@
       "source_private_copy": ".private/art-source/seasons/easter-reference.png",
       "source_sha256": "2691b0d0054d5f5a0ba6e108ddbaafb4465d2d284e5df7b33bd98ece5ffdffc4",
       "plate_private_copy": ".private/art-source/seasons/season-easter-plate.png",
-      "plate_sha256": "053a1643870fd40b423f3496749dbb362ba268ce0d8ace13bc00f091ffa5e6d2",
+      "plate_sha256": "156735de41077cd82fded89adf7d31f46cbbb4cf82b31402f3f85181d84451cf",
       "exports": [
         {
           "file": "public/brand/season-easter-800.webp",
           "width": 800,
           "height": 450,
-          "bytes": 65672,
-          "sha256": "71c83a4aff4e664636ac03ba597d5f6bdc52b0c1018ca9ff273b7c9a95a6c06e"
+          "bytes": 65646,
+          "sha256": "d80287d6c09e32114077004637b82ee5d6e9bb8f1cd227b407faa2127975e8f8"
         },
         {
           "file": "public/brand/season-easter-1200.webp",
           "width": 1200,
           "height": 675,
-          "bytes": 114794,
-          "sha256": "4eed95ddbaffa2a19cb98598ca28cd9a8325333a1f33bcf907829b0bd10c832c"
+          "bytes": 114714,
+          "sha256": "d3a69f924854fafbd2a610083ac2b19a4bc4729c60b735599d9ff14bdf5e8440"
         },
         {
           "file": "public/brand/season-easter-1672.webp",
           "width": 1672,
           "height": 941,
-          "bytes": 188804,
-          "sha256": "770b320dc3289f824eb889218f908d7c429dadab932e5119c72c7886ef7c42f2"
+          "bytes": 188728,
+          "sha256": "db489c3b30e08960952ef87eabdb7ae2fc9bd0975701db0c72dbf68ae7c3a4c7"
         },
         {
           "file": "public/brand/season-easter-mobile-660.webp",
           "width": 660,
           "height": 463,
-          "bytes": 54030,
-          "sha256": "eb2a5833edb75949c3db6f5df2938672e66da2f9c6977a9545b9ab58858c863a"
+          "bytes": 54020,
+          "sha256": "f2c9989ddd9dbca5f1a3bbd45c5196605a0108eaa596fa4af60e0bd8729d8dbb"
         },
         {
           "file": "public/brand/season-easter-mobile-1000.webp",
           "width": 1000,
           "height": 701,
-          "bytes": 94866,
-          "sha256": "636b4f7953f5d8b1a8917a831593bbe8bb8e60a1e4e714fb5887ed421e8d4fe3"
+          "bytes": 94818,
+          "sha256": "b5fe6af2fbcab9c60a2406a07af8e9c761dbde032936760e286d53e4acf4f093"
         }
       ]
     },
@@ -112,42 +112,42 @@
       "source_private_copy": ".private/art-source/seasons/st-patricks-reference.png",
       "source_sha256": "a00b7079a70aa22b1f8a436f388acb627474872e24a0c82137906c22dce3403d",
       "plate_private_copy": ".private/art-source/seasons/season-st-patricks-plate.png",
-      "plate_sha256": "442f212d0a0d327b2172115ed2009ea02e5c87f121e212f47d955f161681d7dc",
+      "plate_sha256": "28a03859397864351037b2ca971d041f2c35f66c427a6fcf938a56f565c960a4",
       "exports": [
         {
           "file": "public/brand/season-st-patricks-800.webp",
           "width": 800,
           "height": 450,
-          "bytes": 66290,
-          "sha256": "5054346d2fce409706fa1ee8e8fe0cfe6c5edfd8a67cc56ba4f3eb140530e29d"
+          "bytes": 66208,
+          "sha256": "adb369bae01b859238c67225f95a76fc612ce3ea3851fd24957e32ea1a48d0ec"
         },
         {
           "file": "public/brand/season-st-patricks-1200.webp",
           "width": 1200,
           "height": 675,
-          "bytes": 116590,
-          "sha256": "913b9c030ddb1df6dbbb3ef67adfd29db8d912d62a08aa1ee2d1275168b1fc5d"
+          "bytes": 116574,
+          "sha256": "dcd048c60e161063d52f268aeee9ccfff2897262398117f3cfc02c553df0da7a"
         },
         {
           "file": "public/brand/season-st-patricks-1672.webp",
           "width": 1672,
           "height": 941,
-          "bytes": 191096,
-          "sha256": "4d8261ffa80494c6cf84044c4a63cdc121c79b8526d1839254150343a24d8e74"
+          "bytes": 191136,
+          "sha256": "c5b5e7b9b2d523530f3fa0f43b890153f655de06d5ab935b3887e5bd7e605fd0"
         },
         {
           "file": "public/brand/season-st-patricks-mobile-660.webp",
           "width": 660,
           "height": 463,
-          "bytes": 54668,
-          "sha256": "d1b1e2797bf4d23cc8fb12f50a87cf198041649ddf9e2146a348d14639ccd0d4"
+          "bytes": 54678,
+          "sha256": "ac7136cafd2b8f47b294e8cb1fc570f01a1c6a9aa5bfb4f296db969f17cb25dd"
         },
         {
           "file": "public/brand/season-st-patricks-mobile-1000.webp",
           "width": 1000,
           "height": 701,
-          "bytes": 95458,
-          "sha256": "db142735493f66e9cf6a38c11aee5b1108ed86c21017e3f107d73efa6a6f4ed3"
+          "bytes": 95378,
+          "sha256": "285b7dbc1bfe34a8898406b7b27c827185625cab865fe9fe6636dfe3b2843098"
         }
       ]
     }

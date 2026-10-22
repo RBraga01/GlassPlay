@@ -7,7 +7,7 @@ import {nevermore, concepts, url} from '../lib/catalogue';
 const art = (cover: string, variant: string) => url(cover.replace(/-1200\.webp$/, `-${variant}.webp`));
 const mobileSet = (cover: string) => `${art(cover, 'mobile-660')} 660w, ${art(cover, 'mobile-1000')} 1000w`;
 const desktopSet = (cover: string) => `${art(cover, '800')} 800w, ${url(cover)} 1200w, ${art(cover, '1672')} 1672w`;
-const desktopSizes = '(max-width: 1100px) calc(100vw - 64px), 1328px';
+const desktopSizes = '(max-width: 1100px) calc(100vw - 64px), min(1328px, calc(100vw - 112px))';
 const placeholder = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
 const seasonAlt: Record<string, string> = {
   christmas: 'Concept art: smart glasses on a snowy windowsill at night, with a tiny leaping reindeer, a snowman holding a lantern, an opening gift and a shooting star.',
@@ -35,6 +35,8 @@ const seasonAlt: Record<string, string> = {
   </section>
   <section class="seasons-section wrap" aria-labelledby="seasons-heading">
     <div class="section-intro"><h2 id="seasons-heading">A world for<br /><span>every season.</span></h2><p>New worlds are taking shape. These are future concepts, with a little room left for surprise.</p></div>
+    {/* Without JavaScript the deferred art is hidden and the <noscript> art is shown instead. */}
+    <noscript><style is:inline>.season-art[data-deferred]{display:none}</style></noscript>
     <div class="season-list">
       {concepts.map(item => (
         <article class="season season-banner">
@@ -45,7 +47,7 @@ const seasonAlt: Record<string, string> = {
           </picture>
           <noscript><picture class="season-art">
             <source media="(max-width: 760px)" srcset={mobileSet(item.cover)} sizes="calc(100vw - 40px)" width="1112" height="780" />
-            <img src={url(item.cover)} srcset={desktopSet(item.cover)} sizes={desktopSizes} width="1672" height="941" loading="lazy" decoding="async" alt="" />
+            <img src={url(item.cover)} srcset={desktopSet(item.cover)} sizes={desktopSizes} width="1672" height="941" loading="lazy" decoding="async" alt={seasonAlt[item.id]} />
           </picture></noscript>
           <div class="season-info"><h3>{item.name}</h3><span class="small-label">Coming soon · Concept</span><p>{item.summary}</p></div>
         </article>
@@ -66,4 +68,6 @@ const seasonAlt: Record<string, string> = {
   });
   const afterPaint = () => requestAnimationFrame(() => requestAnimationFrame(reveal));
   if (document.readyState === 'complete') afterPaint(); else addEventListener('load', afterPaint, { once: true });
+  // Never hold the banners back for long: one slow resource must not keep them blank.
+  setTimeout(reveal, 2500);
 </script>
