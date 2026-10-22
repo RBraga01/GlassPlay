@@ -45,6 +45,19 @@ test('safe build can be verified before site launch approval', t => {
   assert.throws(() => assertPublication(f.directory, f.options), /site approval/);
 });
 
+test('rendered brand WebP is hash checked and cannot admit a video', t => {
+  const f = fixture(t);
+  f.put('public/brand/glasses.webp', 'original rendered art');
+  f.put('dist/brand/glasses.webp', 'original rendered art');
+  assert.equal(assertBuildBoundary(f.directory, f.mode, f.options).media_files, 0);
+  f.put('dist/brand/glasses.webp', 'changed art');
+  assert.throws(() => assertBuildBoundary(f.directory, f.mode, f.options));
+  f.put('dist/brand/glasses.webp', 'original rendered art');
+  f.put('public/brand/hidden.mp4', 'private video');
+  f.put('dist/brand/hidden.mp4', 'private video');
+  assert.throws(() => assertBuildBoundary(f.directory, f.mode, f.options), /Unexpected public source/);
+});
+
 test('site-only approval deploys title artwork without application rights', t => {
   const f = fixture(t, { site: true });
   assert.equal(assertPublication(f.directory, f.options).application_links, 0);

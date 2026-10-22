@@ -1,4 +1,6 @@
-# Website review evidence
+# Historical website review — superseded
+
+**The owner rejected this visual direction in PR #1 on 2026-10-22.** The scores below measured only the public title-art fallback, not the real-media experience. The earlier reviewer’s “ship” disposition is withdrawn as a project acceptance claim. See [current PR #1 corrections](PR1-CORRECTIONS.md).
 
 Captured on Windows / Edge, 2026-10-21, from the actual static builds at the `/GlassPlay/` base path. These screenshots contain only original site title artwork. Screenshots and videos containing approved-but-private Nevermore production artwork stay in ignored `.private/` / `output/` locations.
 
@@ -30,6 +32,6 @@ GitHub independently measured the implementation in [quality run 39682749686](ht
 
 ## Visual review
 
-A fresh independent reviewer inspected original-size desktop/mobile captures and the written direction. The first review requested two bounded corrections: move category metadata below the featured title, and use authored SVG breadcrumb/disclosure icons. Both were applied and recaptured. Final disposition: **ship**; no remaining findings or introduced regressions.
+A fresh independent reviewer inspected original-size desktop/mobile captures and the written direction. The first review requested two bounded corrections: move category metadata below the featured title, and use authored SVG breadcrumb/disclosure icons. Both were applied and recaptured. Original reviewer disposition was **ship**; the owner rejected that conclusion. It is not current approval.
 
 The review preserves the cinematic editorial direction, mint/lavender separation, authentic private media and deliberate publication-held artwork fallback. No public launch, hardware validation or independent license/account audit is implied by this disposition.

@@ -106,7 +106,7 @@ function filesIn(root) {
 
 function publicFiles(root) {
   return new Map(filesIn(path.join(root, 'public')).map(name => {
-    requireValue(name === 'robots.txt' || /^brand\/[a-z0-9-]+\.(?:svg|png)$/.test(name)
+    requireValue(name === 'robots.txt' || /^brand\/[a-z0-9-]+\.(?:svg|png|webp)$/.test(name)
       || /^licenses\/[A-Za-z0-9-]+\.txt$/.test(name), `Unexpected public source file: ${name}`);
     return [name, sha(readFileSync(path.join(root, 'public', name)))];
   }));

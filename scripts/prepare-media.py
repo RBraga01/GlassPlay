@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import subprocess
@@ -21,6 +22,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageFont, ImageOps
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / ".private/media/nevermore"
 BUNDLE = ROOT / ".private/nevermore-web-media.zip"
+EDITORIAL_SOURCE = ROOT / ".private/art-source/nevermore"
 SOURCE_REVISION = "81df295f6825189bfba05288aca76595b4c59437"
 FPS = 24
 SIZE = (960, 540)
@@ -122,6 +124,16 @@ def save_image(name: str, im: Image.Image, small_width: int = 640) -> None:
     small.save(OUTPUT/f"{name}-small.webp", quality=84, method=6)
 
 
+def editorial_art():
+    """Load the Blender finalizer only when its private source renders exist."""
+    if not all((EDITORIAL_SOURCE/f"{name}.png").exists() for name in ("hero", "cover", "poster", "glassplay-social")):
+        return None
+    spec = importlib.util.spec_from_file_location("nevermore_art", ROOT/"scripts/art/nevermore_art.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def prepare_images(paths: dict[str, Path]) -> Image.Image:
     subjects = {name: subject(frame(paths[name], timestamp)) for name, (timestamp, _) in STILLS.items()}
     for name, im in subjects.items():
@@ -147,6 +159,10 @@ def prepare_images(paths: dict[str, Path]) -> Image.Image:
     d.text((60, 372), "A little magic, right before your eyes.", fill="#b6adbe", font=font(22))
     d.text((60, 553), "INTERACTIVE EXPERIENCES FOR AR SMART GLASSES", fill="#99909e", font=font(15))
     save_image("glassplay-social", social)
+    art = editorial_art()
+    if art:
+        art.encode_outputs()
+    # Existing video edit keeps its original editorial end card and exact frames.
     return poster
 
 
@@ -274,7 +290,7 @@ Captions identify the two spoken lines and describe important scene sounds.
 Timing follows the source cue reports; a final owner listening review is pending.
 """
     (OUTPUT/"transcript.md").write_text(transcript, encoding="utf-8")
-    (OUTPUT/"CREDITS.txt").write_text("Nevermore — RBraga01\nRuntime art: approved Nevermore production assets; Meshy-derived models, USER-ATTESTED-MESHY-PAID-ACCOUNT.\nFictional Host voice: locally generated Qwen3-TTS performance, as recorded in the source voice manifest.\nSound effects: see assets/production/provenance.json and third-party notices in the source release.\nRaven Simulator Room: Raven Framework 1.0.6. No physical-device recording.\nPublic artwork/media licensing, framework permissions and publication approval remain pending.\n", encoding="utf-8")
+    (OUTPUT/"CREDITS.txt").write_text("Nevermore — RBraga01\nNevermore's character artwork was developed using 3D assets created with Meshy and animated for this project. Only finished rendered visuals are presented; original source models are not distributed.\nFictional Host voice: locally generated Qwen3-TTS performance, as recorded in the source voice manifest.\nSound effects: see assets/production/provenance.json and third-party notices in the source release.\nRaven Simulator Room: Raven Framework 1.0.6. No physical-device recording.\nPublic artwork/media licensing, framework permissions and publication approval remain pending.\n", encoding="utf-8")
 
 
 def inspect_video(path: Path) -> dict:
@@ -363,6 +379,10 @@ def main() -> None:
     (OUTPUT/"review-manifest.json").write_text(encoded, encoding="utf-8")
     (ROOT/"docs/media").mkdir(parents=True, exist_ok=True)
     (ROOT/"docs/media/manifest.json").write_text(encoded, encoding="utf-8")
+    art = editorial_art()
+    if art:
+        provenance = json.loads((EDITORIAL_SOURCE/"provenance.json").read_text(encoding="utf-8"))
+        art.finalize_manifest(art.load_preparer(), provenance)
     print(json.dumps({"directory": str(OUTPUT), "files": len(outputs), "bytes": sum(item["bytes"] for item in outputs)}, indent=2))
 
 

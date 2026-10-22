@@ -1,13 +1,13 @@
 # GlassPlay implementation handoff
 
-Prepared 2026-10-21 from the owner's **GlassPlay Full Product, Website & Release Implementation** brief.
+Initially prepared 2026-10-21; visual direction superseded by the owner’s 2026-10-22 PR #1 review. See [current correction review](review/PR1-CORRECTIONS.md). Based on the owner's **GlassPlay Full Product, Website & Release Implementation** brief.
 
 **Implementation ready for review. Public launch held.** The feature branch is `feat/glassplay-product-site`; [PR #1](https://github.com/RBraga01/GlassPlay/pull/1) contains the implementation. Neither repository's remote `main`, visibility, Pages settings nor the private Nevermore release has been changed by this implementation.
 
 ## Delivered
 
 - Astro 7 / TypeScript static site, configured for `/GlassPlay/`: homepage, Nevermore, About section, credits/privacy and a useful 404.
-- Editorial visual system: self-hosted Newsreader/Manrope, mint GlassPlay identity, distinct lavender Nevermore identity, responsive layouts and seasonal concept artwork.
+- Revised visual system: original navy/violet GlassPlay identity, Blender-rendered conceptual AR glasses, separate cinematic Nevermore artwork, self-hosted Manrope/Newsreader and responsive layouts. Owner visual approval is pending.
 - One validated catalogue for Nevermore and three future concepts. Product availability and device validation are separate; no invented download or physical-device claim.
 - Authentic internal media package: 26.417-second promotional film with original sound, 7.25-second silent teaser, four encounter stills, cover/share images, responsive thumbnails, poster, captions, transcript and provenance. Source animation and audio are unchanged.
 - An intentional title-art public build and a separate noindex private media review. Public media promotion requires an explicitly authorized, hash-pinned bundle; the build cannot silently use private files.
@@ -22,15 +22,17 @@ See [DEVELOPMENT](DEVELOPMENT.md) for commands and [media preparation](media/REA
 
 | Surface | Local output | Scope |
 | --- | --- | --- |
-| Default website | `dist/`, preview `/GlassPlay/` | 23 generated files, no Nevermore video/audio or application download |
-| Owner media review | `.private/site/`, preview `/GlassPlay/` | 42 files, including 19 verified private derivatives; never upload as Pages |
+| Default website | `dist/`, preview `/GlassPlay/` | No Nevermore video/audio or application download |
+| Owner media review | `.private/site/`, preview `/GlassPlay/` | Includes 19 verified private derivatives; never upload as Pages |
 | Promotional film | `.private/media/nevermore/promo.mp4` | Actual approved production animation and labelled Windows Simulator Room montage |
-| Media bundle | `.private/nevermore-web-media.zip` | 2,196,666 bytes; all 19 files pinned in [manifest](media/manifest.json) |
+| Media bundle | `.private/nevermore-web-media.zip` | All 19 current files and bundle size/hash pinned in [manifest](media/manifest.json) |
 | Refreshed application | `E:/raven/releases/glassplay-ready/Nevermore-1.0.0-rc.1.zip` | Verified complete package; not a website source asset or public URL |
 
-The private bundle SHA-256 is `8e97462e7998cf53037bdacad3871d14601d1d316693f7f1580f65797228e56d`. The refreshed application SHA-256 is `d4fecf4cbafcc5c3c0060c4dcc7066434152bd5527466141937f76a17bec5179`.
+The current private bundle SHA-256 is recorded in the media manifest; new artwork supersedes the original bundle. The refreshed application SHA-256 is `d4fecf4cbafcc5c3c0060c4dcc7066434152bd5527466141937f76a17bec5179`.
 
-## Verification
+## Original implementation verification (historical)
+
+These 2026-10-21 results predate the owner’s visual rejection. They do not approve the current artwork or establish performance of real media. Current results belong to [PR #1 corrections](review/PR1-CORRECTIONS.md).
 
 - 23 Node tests: catalogue states and publication boundary rejection cases.
 - 21 Python tests: source/release verifier and safe media-bundle staging.
@@ -45,7 +47,7 @@ The private bundle SHA-256 is `8e97462e7998cf53037bdacad3871d14601d1d316693f7f15
 
 The complete implementation commit `dd8253cf94c497270217e02804929036785708ce` passed all five applicable GitHub CI workflows: website, catalogue, source logic/integrity, release integrity and Lighthouse. Remote mobile Lighthouse measured **98/100/100/100 on both pages**. A final documentation-only commit records this evidence and the actual design tokens; it does not change the tested application or website build inputs. Pages did not run.
 
-Visual review used normal desktop/mobile captures, then an independent reviewer. The responsive title and two small typography/icon findings were corrected. Evidence contains only original site title artwork; screenshots with private Nevermore media stay local.
+The original independent “ship” verdict was rejected by the owner on PR #1. It is superseded. New renders and actual-media desktop/mobile evidence require owner visual approval. Screenshots with private Nevermore media stay local.
 
 ## What remains an owner or external decision
 

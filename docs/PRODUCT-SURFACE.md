@@ -1,11 +1,13 @@
 # Surface brief
 
-Mode: **Persuade**. A curious smart-glasses visitor should understand the category, want to explore Nevermore, see what it actually looks like, and understand whether it can currently be obtained.
+Mode: **Persuade**. A smart-glasses visitor should understand the category immediately, want to explore Nevermore, see authentic media and understand its current availability.
 
-Exploration record: seed `361fea76`, index 6. The owner's explicit brand, cinematic direction and autonomy instructions govern the selected composition. No external comp or intermediate user approval was fabricated.
+## Owner direction — PR #1, 2026-10-22
 
-The first viewport promises small authored encounters within the real world. A featured poster is the direct path into Nevermore. Its page earns interest with atmosphere, authentic media when authorized and recognizable interactions. Practical constraints are easy to find but are not hero copy.
+The original navy/violet glowing-glasses identity is the authority. The previous mint editorial arch is rejected. This is a directed correction, not another open design tournament.
 
-The known risk is presenting an unreleased collection like a finished store. Every future experience is a concept, every download is held, and physical validation is separate. The approved brief explicitly allows an intentional fallback while private media awaits publication. Dark title art is that fallback, not fabricated gameplay.
+The first viewport combines a clear AR-glasses category, the existing tagline and original glasses rendered externally in Blender. Nevermore follows in a separate cinematic world using approved production frames. The README heroes, website artwork, icon and social exports derive from the same production direction.
 
-The user delegated minor creative choices and did not request intermediate approvals. No fabricated testimonials, device footage, reviews, customers or rights claims were introduced. No website or public release has been launched.
+Nevermore is a Windows/Simulator preview. Concept art is labelled; no image suggests physical Prism validation. The source remains private. A site-first launch can precede application release, but the exact site and promotional media still require independent owner approval.
+
+The public fallback is intentionally distinct from the private media review. Evaluate both honestly: actual media browser playback and Lighthouse review measurements cannot be replaced by fallback-only scores. Do not mark the corrected visual as approved on the owner's behalf.

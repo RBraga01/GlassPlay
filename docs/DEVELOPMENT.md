@@ -45,4 +45,4 @@ The private build lives in `.private/site`, includes noindex, and must never be 
 - `releases/` and `docs/media/`: pinned release/media evidence and source traceability.
 - `.private/`: ignored local authentic-media preparation and review. Never deployed implicitly.
 
-Brand/share images can be regenerated with `scripts/brand-images.py`, Pillow, fonttools and brotli. It reads the exact font files installed by npm. Runtime dependencies do not include those authoring tools.
+Brand/share images are rendered in Blender/Cycles; see [the art pipeline](../scripts/art/README.md). `scripts/brand-images.py` is retired and cannot overwrite the new assets. Nevermore README/poster artwork is rendered from pinned approved frames using `scripts/art/nevermore_art.py`; see [media provenance](media/README.md). Authoring tools are not runtime dependencies.

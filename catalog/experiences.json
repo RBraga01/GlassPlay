@@ -5,8 +5,8 @@
       "id": "nevermore", "name": "Nevermore", "theme": "Halloween", "category": "Ambient haunting",
       "summary": "Arm a little darkness. Meet the Midnight Host, summon a raven, and discover what happens when Halloween comes looking for you.",
       "status": "Preview", "directory": "experiences/nevermore", "page": "experiences/nevermore/",
-      "cover": "brand/nevermore-poster.svg",
-      "preview": {"poster": "brand/nevermore-poster.svg", "video": null, "publication": "held"},
+      "cover": "brand/nevermore-poster.webp",
+      "preview": {"poster": "brand/nevermore-poster.webp", "video": null, "publication": "held"},
       "candidate": {"version": "1.0.0-rc.1", "availability": "private_draft_only", "source_commit": "81df295f6825189bfba05288aca76595b4c59437"},
       "targets": [
         {"name": "Windows + Raven Simulator 1.0.6", "validation": "host_validated", "label": "Preview tested"},

@@ -14,7 +14,7 @@ const {teaser=false}=Astro.props;
   </figure>
 ) : (
   <div class="preview-held">
-    <img src={url(nevermore.preview!.poster)} alt="Nevermore title artwork: a midnight crescent above an open doorway." width="1200" height="630" loading="lazy" />
+    <img src={url(nevermore.preview!.poster)} srcset={`${url('brand/nevermore-poster-small.webp')} 800w, ${url(nevermore.preview!.poster)} 1600w`} sizes="(max-width:760px) 90vw, 50vw" alt="Original Nevermore title artwork: a dark feather in cool blue light." width="1600" height="1000" loading="lazy" />
     <div><h3>The encounter is almost here.</h3><p>The gameplay film is being prepared for public release. Explore the experience below.</p><span class="small-label">Title artwork · not gameplay footage</span></div>
   </div>
 )}

@@ -1,9 +1,12 @@
 # Nevermore release readiness
 
-**READY WITH BLOCKERS for public launch.** The refreshed Windows/Simulator
-candidate is built and locally verified. Public application downloads, private
-demonstration media and website publication remain withheld pending the owner's
-decisions below. Technical verification does not grant distribution rights.
+**Website revision awaiting owner visual approval; application release held.**
+The refreshed Windows/Simulator candidate is built and locally verified. The
+owner's PR #1 review at `17ed373` requires revised rendered artwork and renewed
+review of the actual media experience; the earlier visual "ship" assessment
+does not authorize a launch. Public application downloads, private demonstration
+media and website publication remain withheld. Technical verification does not
+grant distribution rights.
 
 The exact candidate, test evidence and original draft are documented in
 [BASELINE.md](BASELINE.md). [INSTALLATION.md](INSTALLATION.md) covers dependencies,
@@ -15,10 +18,12 @@ hashes for all 34 runtime files and every packaged payload.
 
 | Decision | Current state | Required recorded outcome |
 | --- | --- | --- |
-| Public source code license | No license selected | Choose the terms under which the owner's application code may be distributed; proprietary/source-available terms or a chosen open-source license are distinct options |
-| Public artwork, runtime and promotional media terms | No blanket public license selected | Define the permitted distribution of rendered art/audio, demonstrations and website derivatives separately from code; retain third-party notices and original-model exclusions |
-| Raven Framework dependency permissions | Proprietary external dependency, not bundled | Confirm applicable written SDK use/application distribution conditions with Raven Resonance |
-| Public candidate, demonstrations and website launch | Not authorized | Approve the exact reviewed candidate, media scope, destination/visibility and deployment revision |
+| Website launch from private source | Not authorized; owner visual changes requested | Approve the final website, exact revision, working public profile/contact route and hosting destination; keep GlassPlay source private |
+| Specific promotional media | Not authorized | Approve the exact rendered art/audio, demonstrations and website derivatives after applicable rights review, with file hashes and notices; original models stay excluded |
+| Hosting route | Private-repository GitHub Pages eligibility unconfirmed | Confirm personal GitHub Pro, or approve Cloudflare Pages/private Git integration, or a separate public repository containing approved static artifacts only; see [deployment plan](../DEPLOYMENT.md) |
+| Application source code license | No license selected; separate from website launch | Choose distribution terms only if publishing application code; proprietary/source-available terms and a chosen open-source license are distinct options |
+| Application artwork/runtime terms and SDK permissions | Application release held; Raven Framework remains an external proprietary dependency | Resolve the application-specific code/art terms and applicable written SDK conditions before public application distribution |
+| Public candidate ZIP/downloads | Not authorized | Approve the exact candidate and release destination separately; keep application approval false and download URLs absent for the website introduction |
 
 No MIT, CC0, Creative Commons or other license has been imposed on the owner's
 code or artwork. Approval of a private pull request, successful CI or an internal
@@ -30,6 +35,25 @@ Physical Prism testing is a separate validation requirement before making a
 physical-device support claim. It does not prevent preparing a Windows/Simulator
 preview with appropriate rights and accurate labeling. No additional Meshy
 account confirmation is requested.
+
+The site-first path supports the intended Oct 28 Raven introduction without
+publishing application source or the candidate ZIP. Website and exact promotional
+media permissions can be approved independently of the application release.
+They remain `false` in `config/publication.json` today, along with
+`application.approved=false`; the date is not permission to publish. Any SDK
+terms applicable to promotional footage still need to be addressed in that
+media decision. The available public destination is the owner's
+[GitHub profile](https://github.com/RBraga01); visitor navigation must not point
+to private repositories. Source publication or an open-source license is not a
+prerequisite for this website path.
+
+Private review quality must measure `npm run build:review` with
+`node scripts/measure-quality.mjs --review`, including the staged videos. Its
+separate reports record exact output/media hashes and intentional `noindex`
+SEO failure without altering the score or ≥95 target. Navigation measurements
+do not prove playback. Final rendered art, desktop/mobile screenshots, browser
+playback/accessibility evidence, owner visual approval and checks of the approved
+public output remain required. See [deployment verification](../DEPLOYMENT.md).
 
 ## Existing rights evidence and notices
 
@@ -76,12 +100,16 @@ test commands are preserved in the installation guide.
 
 ## Approval handoff
 
-After the owner records the applicable licenses/SDK conditions and publication
-scope, the delivery team can update notices as required, rebuild with the same
-packager if payloads change, verify the final archive and refresh its hashes.
-The exact approved package and privately staged media can then be attached to
-the authorized release destination. The website's publication gate and public
-download state must be changed together in the reviewed launch change.
-Until then, keep both candidate URLs `null` and the site media in its deliberate
-withheld state. This preserves a usable product preview without exposing the
-private demonstrations or making an unsupported hardware claim.
+For the website introduction, record site and exact promotional-media approval,
+the selected private-source hosting route and the final owner visual decision.
+Promote only the approved media through the checked manifest/bundle flow, verify
+the resulting default public build, and publish only to the authorized site
+destination. Keep application approval false and both candidate URLs `null`.
+
+For a later application release, record the code/art terms, applicable SDK
+conditions and package scope separately. Update notices if needed, rebuild with
+the existing packager if payloads change, verify the archive and refresh hashes
+before attaching the exact approved package to its authorized destination. Only
+that separate reviewed release decision enables public download links. Until
+the respective scope is approved, retain the current withheld state and accurate
+Windows/Simulator versus physical-device labels.

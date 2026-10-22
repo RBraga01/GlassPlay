@@ -1,4 +1,4 @@
-![GlassPlay — Interactive experiences for AR smart glasses](docs/assets/glassplay-hero.svg)
+![GlassPlay — Interactive experiences for AR smart glasses](docs/assets/glassplay-hero.webp)
 
 # GlassPlay
 **A little magic, right before your eyes.**
@@ -7,7 +7,7 @@ Discover seasonal, interactive experiences created for **AR smart glasses**.
 
 ## Featured: Nevermore
 
-[![Nevermore — Halloween for AR glasses](experiences/nevermore/cover.svg)](experiences/nevermore/README.md)
+[![Nevermore — Halloween for AR glasses](experiences/nevermore/cover.webp)](experiences/nevermore/README.md)
 
 ### [Nevermore →](experiences/nevermore/README.md)
 **Halloween comes looking for you.**
