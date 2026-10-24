@@ -20,10 +20,10 @@ only in the ignored `.private/media/nevermore/` directory. This document and
 | `CREDITS.txt` | Attribution pointers and current rights status | Plain text |
 | `review-manifest.json` | Private copy of the checked-in manifest | JSON |
 
-The private repository review also includes `docs/assets/nevermore-hero.webp`
+The repository review also includes `docs/assets/nevermore-hero.webp`
 and `experiences/nevermore/cover.webp` at **2400 × 840**. These branded README
-images are the same Blender render. Their presence in the private repository
-does not approve public distribution. Authentic character artwork is never
+images are the same Blender render. Their presence in the repository
+does not approve their reuse (All Rights Reserved). Authentic character artwork is never
 copied to `public/` by the art preparation commands.
 
 Exact sizes and SHA-256 values are in [manifest.json](manifest.json). There are no
@@ -35,7 +35,8 @@ The final nineteen assets are also packaged in
 The machine-readable `assets` array contains `{path, sha256, bytes}` for every
 flat member; `bundle` records the ZIP's local path, SHA-256 and byte size. Its
 fixed timestamps, order and file permissions produce the same archive from
-identical deliverables. The ZIP is ignored by Git and is not published.
+identical deliverables. That working copy is ignored by Git; the approved, pinned bundle is
+committed as `media-bundles/nevermore-web-media.zip` (owner approval 2026-10-22).
 
 ## Editorial decisions
 
@@ -104,14 +105,14 @@ approved Raven Dive SHA-256
 A different source hash stops the build and requires a new media review.
 
 ```powershell
-python scripts/prepare-media.py --source E:/raven/Nevermore-main
+python scripts/prepare-media.py --source <nevermore-checkout>
 ```
 
 Render or revise the replacement art with Blender, then encode all derivatives
 and refresh the exact output and bundle hashes:
 
 ```powershell
-python scripts/art/nevermore_art.py --source E:/raven/Nevermore-main --blender E:/raven/nevermore-review/gate1b/blender-portable/blender-5.2.2-windows-x64/blender.exe
+python scripts/art/nevermore_art.py --source <nevermore-checkout> --blender <path-to-blender>
 ```
 
 `--finalize-only` re-encodes existing Blender PNGs and refreshes delivery hashes
@@ -122,8 +123,7 @@ Its existing video edit continues to use the original end card. Without those
 private renders, the legacy still composition is available for source-only
 rebuilds; run the art command to restore the reviewed art direction.
 
-On the preparation workstation, Python is available at
-`E:/Projectos/raven-framework/.venv/Scripts/python.exe`. The script requires
+Use a Python environment that has the required packages. The script requires
 Pillow, OpenCV, NumPy, and `imageio-ffmpeg`, or an explicit `--ffmpeg` executable.
 It uses system Arial/Georgia on Windows and DejaVu fonts on Linux. Those system
 fonts are rendered into the editorial titles and are never copied. Pixel hashes

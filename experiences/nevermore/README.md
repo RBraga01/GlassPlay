@@ -1,5 +1,7 @@
 ![Nevermore — a Halloween experience for AR glasses](cover.webp)
 
+> **Archived technical preview.** This folder is a source snapshot of Nevermore `1.0.0-rc.2` kept for traceability. It is **not the current release** and is not a runnable package. The current release is Nevermore Halloween 1.1.0 — see the [Nevermore page](https://rbraga01.github.io/GlassPlay/experiences/nevermore/).
+
 # Nevermore
 **A Halloween haunting for AR smart glasses.**
 

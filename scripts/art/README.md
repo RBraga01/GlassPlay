@@ -20,8 +20,7 @@ python scripts/art/prepare-fonts.py
 python scripts/art/export-brand.py
 ```
 
-Set `$blender` to the local Blender executable. On the authoring workstation it is
-`E:/raven/nevermore-review/gate1b/blender-portable/blender-5.2.2-windows-x64/blender.exe`.
+Set `$blender` to the local Blender executable.
 Use `--mode preview` for an initial composition render. Final renders use Cycles,
 192 samples, denoising and OptiX when available; CPU rendering is also supported.
 The fixed random seed preserves procedural detail. GPU and Blender versions can

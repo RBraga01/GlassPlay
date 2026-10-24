@@ -1,6 +1,6 @@
 # Website build and controlled publication
 
-Live GitHub Pages site: `https://rbraga01.github.io/GlassPlay/` (launched 2026-10-22). Astro uses `site: https://rbraga01.github.io` and `base: /GlassPlay`, including internal links, assets and canonical URLs, as described in the [official Astro Pages guide](https://docs.astro.build/en/guides/deploy/github/). The source repository stays **private**. A public website does not require public application source or an application release.
+Live GitHub Pages site: `https://rbraga01.github.io/GlassPlay/` (launched 2026-10-22). Astro uses `site: https://rbraga01.github.io` and `base: /GlassPlay`, including internal links, assets and canonical URLs, as described in the [official Astro Pages guide](https://docs.astro.build/en/guides/deploy/github/). On 2026-10-25 the owner approved making this repository public after a security audit; the Nevermore development repository stays private.
 
 The owner approved the website launch and its media on 2026-10-22; see the launch record below. No workflow changes repository visibility, fetches private Nevermore release assets, or changes Pages settings.
 
@@ -54,7 +54,7 @@ Integrity CI does not have private release ZIPs or the complete Nevermore reposi
 
 ## Private source, public site: owner hosting choice
 
-The repository is personal and private. **Chosen route (2026-10-22): GitHub Pages from this private repository**, after the owner confirmed GitHub Pro. The alternatives below are kept for reference only.
+**Chosen route (2026-10-22): GitHub Pages from this repository**, then private, after the owner confirmed GitHub Pro. The repository became public on the owner's approval of 2026-10-25. The alternatives below are kept for reference only.
 
 | Route | Source and public output | Decision and implementation needed |
 | --- | --- | --- |

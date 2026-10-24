@@ -17,12 +17,13 @@ from pathlib import Path
 import random
 import shutil
 import subprocess
+import os
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / ".private/art-source/nevermore"
 MEDIA = ROOT / ".private/media/nevermore"
-BLENDER_DEFAULT = "E:/raven/nevermore-review/gate1b/blender-portable/blender-5.2.2-windows-x64/blender.exe"
+BLENDER_DEFAULT = os.environ.get("BLENDER", "blender")
 VERSION = "2026-10-22-blender-editorial-v1"
 FRAMES = {"raven": 57, "host": 15, "bride": 39}
 PUBLIC_CHARACTER_CREDIT = "Nevermore's character artwork was developed using 3D assets created with Meshy and animated for this project. Only finished rendered visuals are presented; original source models are not distributed."
@@ -385,7 +386,7 @@ def finalize_manifest(prep, provenance):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--source',type=Path,default=Path('E:/raven/Nevermore-main'))
+    parser.add_argument('--source',type=Path,required=True,help='Nevermore checkout')
     parser.add_argument('--blender',default=BLENDER_DEFAULT)
     parser.add_argument('--finalize-only',action='store_true')
     parser.add_argument('--variant',default='all')

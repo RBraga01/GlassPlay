@@ -32,4 +32,4 @@ Meet the Midnight Host, choose Trick or Treat, hear the raven and discover 20 un
 
 GlassPlay is an independent collection for **augmented-reality glasses**, not a VR store. Device support is verified per experience.
 
-Website: **https://rbraga01.github.io/GlassPlay/** — published from this private repository with the owner-approved Nevermore images and videos. [Implementation and validation](docs/IMPLEMENTATION.md).
+Website: **https://rbraga01.github.io/GlassPlay/** — published from this repository with the owner-approved Nevermore images and videos. Rights: [NOTICE](NOTICE.md). [Implementation and validation](docs/IMPLEMENTATION.md).

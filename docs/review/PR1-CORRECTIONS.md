@@ -24,7 +24,7 @@ The glasses are original conceptual illustration, not a Prism product photograph
 
 ## Full-resolution owner review
 
-These PNGs show the **actual private media review**, not the fallback. They are stored for review in this private repository, outside `public/`, and excluded from website builds. Public distribution still requires separate approval.
+These PNGs show the **actual private media review**, not the fallback. They were stored for review in this repository (then private), outside `public/`, and excluded from website builds. Public distribution still requires separate approval.
 
 | Page | Desktop, 1440 px | Mobile, 390 px |
 | --- | --- | --- |
