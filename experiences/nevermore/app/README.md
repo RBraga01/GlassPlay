@@ -1,5 +1,7 @@
 # Nevermore — curated source preview
 
+> **Archived technical preview.** This folder is a source snapshot of Nevermore `1.0.0-rc.2` kept for traceability. It is **not the current release** and is not a runnable package. The current release is Nevermore Halloween 1.1.0 — see the [Nevermore page](https://rbraga01.github.io/GlassPlay/experiences/nevermore/).
+
 **Synchronized to the Nevermore production release candidate `1.0.0-rc.2` (`b4980cf`).**
 
 This directory holds **23 selected upstream files**: production Python, two original media catalogue manifests, and five test files (four logic suites plus the discovery isolation fixture). The new `assets/production/manifest.json` tracks updated approved video hashes for Shadow and Glitch. Since rc.1 only `nevermore/app.py` changed: the unused procedural sound bank is built lazily.
@@ -22,4 +24,4 @@ These checks don't test audio/video playback, voice capture, the SDK or hardware
 - [Verbatim export inventory](../export-manifest.json) — upstream commit and per-file Git object IDs.
 - [Rights, assets and hardware gates](../ASSETS_PENDING.md).
 - Do not add intermediate renders, archived research, private blobs or credentials.
-- No public source license is implied by this preview.
+- Nevermore code is MIT-licensed (see [`LICENSE`](../LICENSE)). Nevermore artwork and media are All Rights Reserved and are not included here. Raven Framework is not included or relicensed.

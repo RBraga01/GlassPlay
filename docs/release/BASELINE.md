@@ -69,12 +69,8 @@ The updated candidate has **not** replaced the existing private GitHub draft.
 | Original private draft | 54,795,276 | `9b7a2f3547a64740314830eafe97bc2e7ae0587bef1ac930ff8997f2995d97c9` |
 | Refreshed local candidate | 54,795,473 | `d4fecf4cbafcc5c3c0060c4dcc7066434152bd5527466141937f76a17bec5179` |
 
-Maintainer locations on the preparation workstation:
-
-- Original: `E:/raven/releases/public-ready/Nevermore-1.0.0-rc.1.zip`.
-- Updated: `E:/raven/releases/glassplay-ready/Nevermore-1.0.0-rc.1.zip`.
-- Updated extracted application: `E:/raven/releases/glassplay-ready/Nevermore-1.0.0-rc.1/`.
-- Matching `.sha256` files are beside the archives.
+The original and updated archives, the updated extracted application and their matching
+`.sha256` files are kept by the maintainer outside the repository.
 
 These are internal filesystem locations, not download links. No ZIP, original
 model, runtime MP4/WAV, SDK or offline model was added to GlassPlay.

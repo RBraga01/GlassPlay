@@ -19,7 +19,7 @@ Build a **simple, visual collection of interactive experiences for AR smart glas
 4. Never claim physical Prism validation without device test evidence.
 5. No invented install links or release statuses. Update root README, experience page and catalogue together.
 6. No speculative general launcher or complex architecture; add shared components when real second use exists.
-7. The owner approved the public website and its media on 2026-10-22 (GitHub Pro, Pages from this private repository). The repository stays private. Application downloads, code/art licensing and Raven Framework distribution remain unapproved (`application.approved=false`). Any change to approved media needs a new owner approval and manifest hash.
+7. The owner approved the public website and its media on 2026-10-22 (Pages from this repository). On 2026-10-25 the owner approved making this repository public after a security audit; the Nevermore development repository stays private. Application downloads, code/art licensing and Raven Framework distribution remain unapproved (`application.approved=false`). Any change to approved media needs a new owner approval and manifest hash.
 
 ## Website
 

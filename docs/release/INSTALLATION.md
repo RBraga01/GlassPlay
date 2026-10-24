@@ -56,7 +56,7 @@ set, checksum, manifest hash and upstream Git objects without extracting it:
 
 ```powershell
 python scripts/verify-release.py
-python scripts/verify-release.py --source-repo E:/raven/Nevermore-main --archive E:/raven/nevermore-release/Nevermore-1.0.0-rc.2.zip --artifact private_draft
+python scripts/verify-release.py --source-repo <nevermore-checkout> --archive <path>/Nevermore-1.0.0-rc.2.zip --artifact private_draft
 python -m unittest discover -s tests -p test_verify_release.py
 ```
 
@@ -69,7 +69,7 @@ From a clean Nevermore checkout at `b4980cfc7c6c93838892d966c61284bfd0740214`
 with LFS payloads available, write to a new directory outside the checkout:
 
 ```powershell
-python tools/package_public.py E:/raven/nevermore-release/new/Nevermore-1.0.0-rc.2
+python tools/package_public.py <new-folder-outside-the-checkout>/Nevermore-1.0.0-rc.2
 ```
 
 ZIP timestamps and checkout line endings mean a rebuilt archive's checksum can

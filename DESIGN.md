@@ -93,6 +93,6 @@ Content caps at 1328px with 56/32/20/16px responsive gutters. Paired composition
 
 ## Artwork and publication
 
-Render scripts and provenance are in `scripts/art/` and `docs/art/`. Editable Blender scenes remain local under `.private/art-source/`; scripts reproduce them. README banners may contain approved project imagery in this private repository. They are not copied into the deployable public tree. Public source visibility, website publication, promotional derivatives and application release are separate decisions.
+Render scripts and provenance are in `scripts/art/` and `docs/art/`. Editable Blender scenes remain local under `.private/art-source/`; scripts reproduce them. README banners may contain approved project imagery in this repository. They are not copied into the deployable public tree. Public source visibility, website publication, promotional derivatives and application release are separate decisions.
 
 The media review must be measured using `--review`, with its actual MP4s and manifest. Scores from the title-art public fallback cannot be presented as performance evidence for the real media experience. Owner visual approval is still required; technical measurements do not approve the artwork.

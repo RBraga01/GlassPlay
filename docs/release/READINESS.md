@@ -2,7 +2,7 @@
 
 **Website launched; application release held.**
 The GlassPlay website is live at <https://rbraga01.github.io/GlassPlay/>, published
-from this private repository on 2026-10-22 with the owner-approved Nevermore
+from this repository (then private) on 2026-10-22 with the owner-approved Nevermore
 images and videos (PR #2, `533192b`; owner copy corrections in PR #3, `fe6993a`).
 Nevermore `1.0.0-rc.2` (source `b4980cf`) is packaged, independently verified
 and held as a private draft with a Raven engineering handoff. Public application
