@@ -3,14 +3,14 @@
   "experiences": [
     {
       "id": "nevermore", "name": "Nevermore", "theme": "Halloween", "category": "Ambient haunting",
-      "summary": "One application, two modes. Walk through SOFT for magical Halloween surprises, or HAUNTED for a cinematic supernatural haunting.",
+      "summary": "Two ways to be haunted: playful Halloween magic or a darker supernatural night. Meet the Midnight Host, call the raven and see what finds you.",
       "status": "Released", "directory": "experiences/nevermore", "page": "experiences/nevermore/",
       "cover": "brand/nevermore-poster.webp",
       "preview": {"poster": "brand/nevermore-poster.webp", "video": null, "publication": "held"},
       "candidate": {"version": "1.1.0", "availability": "public", "source_commit": "ffeaadd2f251c9dbc1ede18c574fd99e20b06c41"},
       "targets": [
-        {"name": "Windows + Raven Simulator 1.0.6", "validation": "host_validated", "availability": "public_download", "label": "Download available · Verified"},
-        {"name": "Raven Prism", "validation": "device_unverified", "availability": "not_offered", "label": "DEVICE-UNVERIFIED · Not offered"}
+        {"name": "Windows + Raven Simulator 1.0.6", "validation": "host_validated", "availability": "public_download", "label": "Available now"},
+        {"name": "Raven Prism", "validation": "device_unverified", "availability": "not_offered", "label": "Not yet tested on the glasses"}
       ],
       "install_url": "https://github.com/RBraga01/GlassPlay/releases/download/nevermore-v1.1.0/Nevermore-Halloween-1.1.0.zip",
       "release_url": "https://github.com/RBraga01/GlassPlay/releases/tag/nevermore-v1.1.0",
