@@ -3,34 +3,36 @@
   "experiences": [
     {
       "id": "nevermore", "name": "Nevermore", "theme": "Halloween", "category": "Ambient haunting",
-      "summary": "Arm a little darkness. Meet the Midnight Host, summon a raven, and discover what happens when Halloween comes looking for you.",
-      "status": "Release candidate", "directory": "experiences/nevermore", "page": "experiences/nevermore/",
+      "summary": "One application, two modes. Walk through SOFT for magical Halloween surprises, or HAUNTED for a cinematic supernatural haunting.",
+      "status": "Released", "directory": "experiences/nevermore", "page": "experiences/nevermore/",
       "cover": "brand/nevermore-poster.webp",
       "preview": {"poster": "brand/nevermore-poster.webp", "video": null, "publication": "held"},
-      "candidate": {"version": "1.0.0-rc.2", "availability": "private_draft_only", "source_commit": "b4980cfc7c6c93838892d966c61284bfd0740214"},
+      "candidate": {"version": "1.1.0", "availability": "public", "source_commit": "ffeaadd2f251c9dbc1ede18c574fd99e20b06c41"},
       "targets": [
-        {"name": "Windows + Raven Simulator 1.0.6", "validation": "host_validated", "label": "Verified"},
-        {"name": "Raven Prism", "validation": "device_unverified", "label": "Physical testing pending"}
+        {"name": "Windows + Raven Simulator 1.0.6", "validation": "host_validated", "availability": "public_download", "label": "Download available · Verified"},
+        {"name": "Raven Prism", "validation": "device_unverified", "availability": "not_offered", "label": "DEVICE-UNVERIFIED · Not offered"}
       ],
-      "install_url": null, "release_url": null,
+      "install_url": "https://github.com/RBraga01/GlassPlay/releases/download/nevermore-v1.1.0/Nevermore-Halloween-1.1.0.zip",
+      "release_url": "https://github.com/RBraga01/GlassPlay/releases/tag/nevermore-v1.1.0",
+      "download": {"file": "Nevermore-Halloween-1.1.0.zip", "bytes": 65190942, "sha256": "f8b154d0cab073102b3604a01e297a6e4fe2134670f47739d5b3f937e6272937"},
       "attribution": ["credits/#nevermore"], "license_status": "cleared"
     },
     {
       "id": "christmas", "name": "Christmas", "theme": "Winter", "category": "Seasonal concept",
       "summary": "A little wonder for the longest nights.", "status": "Concept", "directory": "experiences/christmas", "page": null,
-      "cover": "brand/season-christmas-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "cover": "brand/season-christmas-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null, "download": null,
       "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     },
     {
       "id": "easter", "name": "Easter", "theme": "Spring", "category": "Seasonal concept",
       "summary": "Something unexpected, just waiting to be found.", "status": "Concept", "directory": "experiences/easter", "page": null,
-      "cover": "brand/season-easter-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "cover": "brand/season-easter-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null, "download": null,
       "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     },
     {
       "id": "st-patricks", "name": "St. Patrick's Day", "theme": "A little luck", "category": "Seasonal concept",
       "summary": "See where a little mischief takes you.", "status": "Concept", "directory": "experiences/st-patricks", "page": null,
-      "cover": "brand/season-st-patricks-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null,
+      "cover": "brand/season-st-patricks-1200.webp", "preview": null, "candidate": null, "targets": [], "install_url": null, "release_url": null, "download": null,
       "attribution": ["credits/#glassplay"], "license_status": "concept_only"
     }
   ]

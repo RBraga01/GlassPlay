@@ -84,9 +84,17 @@ export function assertApplicationApproval(inputs) {
   const { policy, catalogue } = inputs;
   const downloads = catalogue.experiences.filter(row => row.install_url || row.release_url);
   if (policy.application.approved || downloads.length) {
-    requireValue(policy.application.approved === true
-      && ['approval_reference', 'code_license', 'art_license', 'framework_permission'].every(key => reference(policy.application[key])),
-    'Application downloads need their own owner approval, code/art terms and SDK permission reference.');
+    const app = policy.application;
+    requireValue(app.approved === true && ['approval_reference', 'code_license', 'art_license'].every(key => reference(app[key])),
+      'Application downloads need their own owner approval and code/art terms.');
+    // The owner's distribution approval covers the application only. Redistributing the
+    // Raven Framework needs Raven's own permission; a package without it needs a notice.
+    requireValue(typeof app.framework_included === 'boolean',
+      'Application approval must state whether Raven Framework is included.');
+    if (app.framework_included) requireValue(reference(app.framework_permission),
+      'A package that includes Raven Framework needs a Raven permission reference.');
+    else requireValue(reference(app.framework_notice),
+      'A package without Raven Framework needs a notice that users obtain it separately.');
   }
   const urls = new Set();
   for (const row of downloads) {

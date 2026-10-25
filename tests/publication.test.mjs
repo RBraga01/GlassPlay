@@ -8,6 +8,15 @@ import { assertBuildBoundary, assertPublication, publicHttpsUrl } from '../scrip
 
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const catalogue = JSON.parse(readFileSync(new URL('../catalog/experiences.json', import.meta.url), 'utf8'));
+// Fixtures start without any application download; tests add one explicitly.
+const withoutDownloads = doc => {
+  for (const row of doc.experiences.filter(row => row.install_url)) {
+    Object.assign(row, { status: 'Release candidate', install_url: null, release_url: null, download: null });
+    row.candidate.availability = 'private_draft_only';
+    row.targets = row.targets.map(target => ({ ...target, availability: 'not_offered' }));
+  }
+  return doc;
+};
 
 function fixture(t, { review = false, media = false, site = false } = {}) {
   const root = mkdtempSync(path.join(os.tmpdir(), 'glassplay-publication-'));
@@ -17,7 +26,7 @@ function fixture(t, { review = false, media = false, site = false } = {}) {
   const policy = {
     site: { approved: site, approval_reference: site ? 'owner/site' : null, pages_eligibility_confirmed: site },
     media: { approved: media, approval_reference: media ? 'owner/media' : null, manifest_sha256: media ? sha(manifestBytes) : null, bundle_url: media ? 'https://example.com/approved.zip' : null, bundle_sha256: media ? 'b'.repeat(64) : null },
-    application: { approved: false, approval_reference: null, code_license: null, art_license: null, framework_permission: null },
+    application: { approved: false, approval_reference: null, code_license: null, art_license: null, framework_included: false, framework_permission: null, framework_notice: null },
   };
   const mode = review ? 'review' : 'public';
   const directory = review ? '.private/site' : 'dist';
@@ -36,7 +45,7 @@ function fixture(t, { review = false, media = false, site = false } = {}) {
   const marker = { schema_version: 1, review, media_approved: !review && media, media_manifest_sha256: review || media ? sha(manifestBytes) : null };
   put(`${directory}/glassplay-build.json`, JSON.stringify(marker));
   if (review || media) put(`${directory}/media/nevermore/promo.mp4`, payload);
-  return { root, directory, mode, policy, marker, manifestBytes, put, options: { root, policy, catalogue: structuredClone(catalogue), manifestBytes } };
+  return { root, directory, mode, policy, marker, manifestBytes, put, options: { root, policy, catalogue: withoutDownloads(structuredClone(catalogue)), manifestBytes } };
 }
 
 test('safe build can be verified before site launch approval', t => {
@@ -126,14 +135,46 @@ test('manifest path traversal is rejected before reading assets', t => {
   assert.throws(() => assertBuildBoundary(f.directory, f.mode, f.options), /flat filenames/);
 });
 
-test('application download requires its own approval and all rights references', t => {
-  const f = fixture(t, { site: true });
+function withDownload(f) {
   const row = f.options.catalogue.experiences[0];
+  Object.assign(row, { install_url: 'https://example.com/Nevermore.zip', release_url: 'https://example.com/release',
+    download: { file: 'Nevermore.zip', bytes: 1, sha256: 'a'.repeat(64) } });
   row.candidate.availability = 'public'; row.license_status = 'cleared';
-  row.install_url = 'https://example.com/Nevermore.zip'; row.release_url = 'https://example.com/release';
+  return row;
+}
+
+test('application download requires its own approval and code/art terms', t => {
+  const f = fixture(t, { site: true });
+  withDownload(f);
   assert.throws(() => assertPublication(f.directory, f.options), /Application downloads/);
-  Object.assign(f.policy.application, { approved: true, approval_reference: 'owner/release', code_license: 'owner/code', art_license: 'owner/art', framework_permission: 'owner/sdk' });
+  Object.assign(f.policy.application, { approved: true, approval_reference: 'owner/release', code_license: 'owner/code', art_license: 'owner/art', framework_notice: 'users obtain Raven Framework separately' });
   assert.equal(assertPublication(f.directory, f.options).application_links, 2);
+  f.policy.application.art_license = ' ';
+  assert.throws(() => assertPublication(f.directory, f.options), /code\/art terms/);
+});
+
+test('owner distribution approval is not Raven Framework permission', t => {
+  const f = fixture(t, { site: true });
+  withDownload(f);
+  Object.assign(f.policy.application, { approved: true, approval_reference: 'owner/release', code_license: 'owner/code', art_license: 'owner/art' });
+  // A package without the framework needs no Raven permission, but must say users obtain it separately.
+  assert.throws(() => assertPublication(f.directory, f.options), /obtain it separately/);
+  f.policy.application.framework_notice = 'users obtain Raven Framework separately';
+  assert.equal(f.policy.application.framework_permission, null);
+  assert.equal(assertPublication(f.directory, f.options).application_links, 2);
+  // Bundling the framework would need Raven's own permission; the owner's approval does not cover it.
+  f.policy.application.framework_included = true;
+  assert.throws(() => assertPublication(f.directory, f.options), /Raven permission/);
+  delete f.policy.application.framework_included;
+  assert.throws(() => assertPublication(f.directory, f.options), /whether Raven Framework is included/);
+});
+
+test('the real policy offers the download without claiming Raven permission', () => {
+  const policy = JSON.parse(readFileSync(new URL('../config/publication.json', import.meta.url), 'utf8'));
+  assert.equal(policy.application.approved, true);
+  assert.equal(policy.application.framework_included, false);
+  assert.equal(policy.application.framework_permission, null);
+  assert.match(policy.application.framework_notice, /not included/);
 });
 
 test('external private media or unapproved ZIP links cannot hide in HTML', t => {

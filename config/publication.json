@@ -1,22 +1,24 @@
 {
   "site": {
     "approved": true,
-    "approval_reference": "Owner (RBraga01) approval, 2026-10-22: GitHub Pro confirmed; activate Pages; approved site videos and images may be published; repository stays private.",
+    "approval_reference": "Owner (RBraga01) approval, 2026-10-22: GitHub Pro confirmed; activate Pages; approved site videos and images may be published; repository stays private. Superseded on 2026-10-25: the owner approved making this repository public after a security audit.",
     "pages_eligibility_confirmed": true
   },
   "media": {
     "approved": true,
-    "approval_reference": "Owner (RBraga01) approval, 2026-10-22: GitHub Pro confirmed; activate Pages; approved site videos and images may be published; repository stays private.",
+    "approval_reference": "Owner (RBraga01) approval, 2026-10-22: GitHub Pro confirmed; activate Pages; approved site videos and images may be published; repository stays private. Superseded on 2026-10-25: the owner approved making this repository public after a security audit.",
     "manifest_sha256": "2a975ff6c8a7a0c84a3841613c27979c65e179e625583780909a1501fb5b8ebe",
     "bundle_url": null,
     "bundle_path": "media-bundles/nevermore-web-media.zip",
     "bundle_sha256": "850a4fab3d9b5c8b98a80befe52921765ca567c257a808af5a8001739fad7288"
   },
   "application": {
-    "approved": false,
-    "approval_reference": null,
-    "code_license": null,
-    "art_license": null,
-    "framework_permission": null
+    "approved": true,
+    "approval_reference": "Owner (RBraga01) authorization, 2026-10-25: public release of Nevermore Halloween 1.1.0 (SOFT and HAUNTED) through GlassPlay; GitHub Release nevermore-v1.1.0. The private authorization record stays outside the package and this repository; the package states its SHA-256 (AUTHORIZATION.json).",
+    "code_license": "MIT (Nevermore LICENSE)",
+    "art_license": "Nevermore-specific artwork and media: All Rights Reserved (ASSET_LICENSES.md); third-party materials keep their own licenses (THIRD_PARTY_NOTICES.md, CREDITS.json)",
+    "framework_included": false,
+    "framework_permission": null,
+    "framework_notice": "Raven Framework is not included, redistributed or relicensed. Users obtain and use it separately under Raven Resonance's applicable terms (RAVEN_FRAMEWORK.md). No Raven Resonance approval is claimed."
   }
 }

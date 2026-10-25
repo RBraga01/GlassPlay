@@ -12,13 +12,16 @@ Discover seasonal, interactive experiences created for **AR smart glasses**.
 ### [Nevermore →](experiences/nevermore/README.md)
 **Halloween comes looking for you.**
 
-Meet the Midnight Host, choose Trick or Treat, hear the raven and discover 20 unexpected encounters.
+**Nevermore Halloween 1.1.0 — one application, two modes.** Walk through the Threshold into **SOFT** (magical Halloween: the Midnight Host, Trick or Treat and 20 encounters) or **HAUNTED** (a cinematic supernatural haunting).
 
-**20 encounters** · **Offline voice** · **Instant DISARM**
+**Two modes** · **Offline voice** · **Instant DISARM**
 
-**Release candidate:** `1.0.0-rc.2` is verified on Windows / Raven Simulator and packaged as a **private draft**. The public download is held until Raven publishes its third-party deployment process. Physical Raven Prism remains **DEVICE-UNVERIFIED**.
+**[Download Nevermore Halloween 1.1.0](https://github.com/RBraga01/GlassPlay/releases/download/nevermore-v1.1.0/Nevermore-Halloween-1.1.0.zip)** (about 62 MB) · [Release notes and checksum](https://github.com/RBraga01/GlassPlay/releases/tag/nevermore-v1.1.0)
+SHA-256 `f8b154d0cab073102b3604a01e297a6e4fe2134670f47739d5b3f937e6272937`
 
-[Discover Nevermore](experiences/nevermore/README.md) · [Technical source preview](experiences/nevermore/app/README.md)
+Verified on Windows with Raven Simulator and Raven Framework 1.0.6. Requires Python 3.10+ and Raven Framework, which is **not included**: obtain and use it separately under Raven Resonance's terms. Physical Raven Prism is **DEVICE-UNVERIFIED**; this is not an official Prism installation. Code MIT; Nevermore artwork and media All Rights Reserved.
+
+[Nevermore on the website](https://rbraga01.github.io/GlassPlay/experiences/nevermore/) · [Install guide](docs/release/INSTALLATION.md) · [Archived 1.0.0-rc.2 source preview](experiences/nevermore/README.md)
 
 ## Coming later
 

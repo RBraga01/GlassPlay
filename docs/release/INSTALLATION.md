@@ -1,4 +1,48 @@
-# Nevermore Windows / Simulator candidate
+# Install Nevermore Halloween 1.1.0 (Windows / Raven Simulator)
+
+**Download:** [`Nevermore-Halloween-1.1.0.zip`](https://github.com/RBraga01/GlassPlay/releases/download/nevermore-v1.1.0/Nevermore-Halloween-1.1.0.zip) (65,190,942 bytes) from the
+[`nevermore-v1.1.0` release](https://github.com/RBraga01/GlassPlay/releases/tag/nevermore-v1.1.0), not GitHub's automatic source archives.
+SHA-256 `f8b154d0cab073102b3604a01e297a6e4fe2134670f47739d5b3f937e6272937`.
+
+## Requirements
+
+- Windows host with Python 3.10 or newer and audio output.
+- **Raven Framework 1.0.6** (`791afd896cc646636ef906f5bf06c09c8fbb430a`), installed
+  separately with `pip install -e`. It is **not included** or relicensed: obtain and use
+  it under Raven Resonance's applicable terms (see the ZIP's `RAVEN_FRAMEWORK.md`).
+  No SDK, app IDs, keys or credentials are included.
+- A microphone only for the optional spoken "Raven".
+
+## Install and launch
+
+```powershell
+(Get-FileHash -LiteralPath ./Nevermore-Halloween-1.1.0.zip -Algorithm SHA256).Hash.ToLower()
+Expand-Archive ./Nevermore-Halloween-1.1.0.zip -DestinationPath .
+cd Nevermore-Halloween
+python -m venv .venv
+.venv/Scripts/Activate.ps1
+python -m pip install -e <path-to-your-authorized-raven-framework-1.0.6>
+python -m pip install -r requirements.txt
+python main.py
+```
+
+On macOS/Linux shells, `sha256sum -c Nevermore-Halloween-1.1.0.sha256` checks the ZIP.
+`python main.py` opens the Threshold: walk through SOFT or HAUNTED to arm it; DISARM
+or Escape stops everything. After extracting, `python tools/verify_release.py` checks
+every file hash, the 20 SOFT events and every HAUNTED clip.
+
+## Boundaries
+
+Validated on a Windows host with Raven Simulator (Python 3.10 and 3.12, clean installs).
+Physical Raven Prism is **DEVICE-UNVERIFIED**; this is not an official Prism
+installation. Code MIT; Nevermore-specific artwork and media All Rights Reserved;
+third-party materials keep their own licenses.
+
+---
+
+# Archived: Nevermore 1.0.0-rc.2 Windows / Simulator candidate
+
+*Historical record of the private rc.2 candidate; superseded by 1.1.0.*
 
 This guide applies to the privately prepared **1.0.0-rc.2 application package**
 (private draft `v1.0.0-rc.2` in the Nevermore repository). Public download
