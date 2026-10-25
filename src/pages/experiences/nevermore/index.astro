@@ -39,7 +39,7 @@ const moments=[
   </section>
 
   <section class="modes-section wrap" id="modes" aria-labelledby="modes-heading">
-    <div class="section-intro"><h2 id="modes-heading">Two doors.<br /><em>Choose your night.</em></h2><p>Every night begins at two doors. Look at one, or simply click it, and step through. Come back out whenever you like.</p></div>
+    <div class="section-intro"><h2 id="modes-heading">Two doors.<br /><em>Choose your night.</em></h2><p>Inside Nevermore, every night begins at two doors. Look at one, or click it, to step through. Come back out whenever you like.</p></div>
     <div class="modes">{modes.map(mode=><article class={`mode mode-${mode.id}`}><DoorArch mode={mode.id} /><h3>{mode.name}<span class="small-label">{mode.kicker}</span></h3><p>{mode.text}</p></article>)}</div>
   </section>
 
