@@ -9,7 +9,7 @@ const {teaser=false}=Astro.props;
       {!teaser && <track default kind="captions" srclang="en" label="English" src={media('captions.vtt')} />}
       <p>Your browser cannot play this video. Read the description below.</p>
     </video>
-    <figcaption>{teaser ? 'Silent teaser' : 'Production animation + Raven Simulator Room · captured on Windows'}</figcaption>
+    <figcaption>{teaser ? 'Silent teaser' : 'Nevermore animation and scenes recorded in Raven Simulator'}</figcaption>
     <p class="media-error" role="status" hidden>Video could not load. The scene description below is still available. Reload the page to try again.</p>
   </figure>
 ) : (
