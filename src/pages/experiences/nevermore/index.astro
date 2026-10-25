@@ -3,12 +3,13 @@ import Layout from '../../../layouts/Layout.astro';
 import Arrow from '../../../components/Arrow.astro';
 import DisclosureIcon from '../../../components/DisclosureIcon.astro';
 import MediaPlayer from '../../../components/MediaPlayer.astro';
+import DoorArch from '../../../components/DoorArch.astro';
 import {nevermore, hasMedia, url, media} from '../../../lib/catalogue';
 const release = nevermore.candidate!;
 const megabytes = Math.round(nevermore.download!.bytes / 1024 / 1024);
 const modes=[
-  {name:'SOFT', kicker:'Magical Halloween', text:'Playful, a little spooky and full of surprises. Meet the Midnight Host, take your chances with Trick or Treat, and let ravens, ghosts and small wonders find you.'},
-  {name:'HAUNTED', kicker:'Supernatural horror', text:'For when you want the lights off. A darker, cinematic night with rarer encounters that answer your choices. Some things are best left unseen until they find you.'},
+  {id:'soft' as const, name:'SOFT', kicker:'Magical Halloween', text:'Playful, a little spooky and full of surprises. Meet the Midnight Host, take your chances with Trick or Treat, and let ravens, ghosts and small wonders find you.'},
+  {id:'haunted' as const, name:'HAUNTED', kicker:'Supernatural horror', text:'For when you want the lights off. A darker, cinematic night with rarer encounters that answer your choices. Some things are best left unseen until they find you.'},
 ];
 const moments=[
   {image:'host.webp', title:'Meet the Midnight Host.', text:'A figure emerges. A hand invites you closer. “Trick or Treat?” Your choice matters. What happens next is still a surprise.',alt:'The Skull Warden, Nevermore’s Midnight Host, extends an open hand.'},
@@ -38,8 +39,8 @@ const moments=[
   </section>
 
   <section class="modes-section wrap" id="modes" aria-labelledby="modes-heading">
-    <div class="section-intro"><h2 id="modes-heading">Two doors.<br /><em>Choose your night.</em></h2><p>Every night begins at two doors. Look at one, or simply click it, and step through. Come back out whenever you like.</p></div>
-    <div class="modes">{modes.map(mode=><article><h3>{mode.name}<span class="small-label">{mode.kicker}</span></h3><p>{mode.text}</p></article>)}</div>
+    <div class="section-intro"><h2 id="modes-heading">Two doors.<br /><em>Choose your night.</em></h2><p>Inside Nevermore, every night begins at two doors. Look at one, or click it, to step through. Come back out whenever you like.</p></div>
+    <div class="modes">{modes.map(mode=><article class={`mode mode-${mode.id}`}><DoorArch mode={mode.id} /><h3>{mode.name}<span class="small-label">{mode.kicker}</span></h3><p>{mode.text}</p></article>)}</div>
   </section>
 
   <section class="moments wrap" aria-label="Nevermore encounters">
