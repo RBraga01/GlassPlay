@@ -1,0 +1,21 @@
+---
+// Decorative doorway for the Nevermore modes: SOFT is a rounded arch with a moon, HAUNTED a pointed arch with an eye.
+const {mode} = Astro.props as {mode: 'soft' | 'haunted'};
+---
+{mode === 'soft' ? (
+  <svg class="door-arch" width="88" height="118" viewBox="0 0 120 160" fill="none" aria-hidden="true">
+    <path d="M20 156V64a40 40 0 0 1 80 0v92" stroke="currentColor" stroke-width="2" />
+    <path class="door-inner" d="M32 156V66a28 28 0 0 1 56 0v90" stroke="currentColor" stroke-width="1.2" />
+    <path class="door-mark" d="M66 40a11 11 0 1 0 0 20a8.5 8.5 0 1 1 0-20Z" fill="currentColor" />
+    <path class="door-detail" d="M45 30l1.4 3.6L50 35l-3.6 1.4L45 40l-1.4-3.6L40 35l3.6-1.4ZM80 74l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1Z" fill="currentColor" />
+    <circle class="door-detail" cx="78" cy="114" r="2.4" fill="currentColor" />
+  </svg>
+) : (
+  <svg class="door-arch" width="88" height="118" viewBox="0 0 120 160" fill="none" aria-hidden="true">
+    <path d="M20 156V78Q20 40 60 8q40 32 40 70v78" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+    <path class="door-inner" d="M32 156V80q0-30 28-54 28 24 28 54v76" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+    <path class="door-mark" d="M44 66q16-12 32 0-16 12-32 0Z" stroke="currentColor" stroke-width="1.4" />
+    <circle class="door-mark" cx="60" cy="66" r="3.2" fill="currentColor" />
+    <path class="door-detail" d="M45 110V94m0 4 7-4m-7 9 7-4M60 110V94m0 6-5-5m5 5 5-5M74 94l5 8-5 8-5-8Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+  </svg>
+)}
