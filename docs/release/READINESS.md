@@ -1,5 +1,25 @@
 # Nevermore release readiness
 
+## Current state (2026-10-25): released
+
+- **Nevermore Halloween 1.1.0** (SOFT and HAUNTED) is public: [release `nevermore-v1.1.0`](https://github.com/RBraga01/GlassPlay/releases/tag/nevermore-v1.1.0),
+  asset `Nevermore-Halloween-1.1.0.zip`, SHA-256 `f8b154d0cab073102b3604a01e297a6e4fe2134670f47739d5b3f937e6272937`, source commit `ffeaadd` (private
+  RBraga01/Nevermore, tag `v1.1.0`). Record: [`releases/nevermore-1.1.0.json`](../../releases/nevermore-1.1.0.json).
+- Owner authorization of 2026-10-25 covers: GlassPlay public after a security audit, the
+  release, and the website update. It does not cover making Nevermore public, Blender/Meshy
+  sources, or Raven Framework redistribution.
+- Anonymous availability gate passed: release page and asset reachable without
+  authentication, SHA-256 matched, extraction and `verify_release.py` PASS.
+- `config/publication.json`: `application.approved=true`, `framework_included=false`,
+  `framework_permission=null` (no Raven permission is claimed).
+- Physical Prism: **DEVICE-UNVERIFIED**. Raven's official third-party Framework/deployment
+  process remains pending on Raven's side.
+
+The sections below are the historical record before the release.
+
+---
+
+
 **Website launched; application release held.**
 The GlassPlay website is live at <https://rbraga01.github.io/GlassPlay/>, published
 from this repository (then private) on 2026-10-22 with the owner-approved Nevermore

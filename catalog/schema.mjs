@@ -1,6 +1,7 @@
 import { z } from 'zod';
 const localPath = z.string().min(1).refine(v => !v.startsWith('/') && !v.includes('..') && !v.includes('\\') && !v.includes(':'), 'Expected a safe relative site path');
 const httpsUrl = z.url().refine(v => v.startsWith('https://'), 'Use HTTPS');
+const download = z.object({file: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._-]*\.zip$/), bytes: z.number().int().positive(), sha256: z.string().regex(/^[a-f0-9]{64}$/)}).strict();
 const experience = z.object({
   id: z.string().regex(/^[a-z][a-z0-9-]*$/),
   name: z.string().min(1), theme: z.string().min(1), category: z.string().min(1), summary: z.string().min(1),
@@ -8,8 +9,9 @@ const experience = z.object({
   directory: localPath, page: localPath.nullable(), cover: localPath,
   preview: z.object({poster: localPath, video: httpsUrl.nullable(), publication: z.enum(['held','approved'])}).strict().nullable(),
   candidate: z.object({version: z.string().min(1), availability: z.enum(['private_draft_only','public']), source_commit: z.string().regex(/^[a-f0-9]{40}$/)}).strict().nullable(),
-  targets: z.array(z.object({name: z.string().min(1), validation: z.enum(['host_validated','device_unverified','device_validated']), label: z.string().min(1)}).strict()),
-  install_url: httpsUrl.nullable(), release_url: httpsUrl.nullable(),
+  // Availability (can it be downloaded for this target?) is separate from validation (was it tested there?).
+  targets: z.array(z.object({name: z.string().min(1), validation: z.enum(['host_validated','device_unverified','device_validated']), availability: z.enum(['public_download','not_offered']), label: z.string().min(1)}).strict()),
+  install_url: httpsUrl.nullable(), release_url: httpsUrl.nullable(), download: download.nullable(),
   attribution: z.array(localPath).min(1), license_status: z.enum(['owner_decision_pending','cleared','concept_only']),
 }).strict().superRefine((row, ctx) => {
   const fail = (/** @type {string} */ message) => ctx.addIssue({code: 'custom', message});
@@ -18,6 +20,13 @@ const experience = z.object({
   if(row.preview?.publication !== 'approved' && row.preview?.video) fail('Unapproved preview media cannot be published');
   if(row.status === 'Released' && (!row.install_url || !row.release_url || row.license_status !== 'cleared' || row.candidate?.availability !== 'public')) fail('Released needs a public, licensed install and release');
   if(row.install_url && row.license_status !== 'cleared') fail('Installation needs cleared rights');
+  if(Boolean(row.install_url) !== Boolean(row.download)) fail('An install link needs its file name, size and SHA-256, and vice versa');
+  if(row.install_url && row.download && !row.install_url.endsWith(`/${row.download.file}`)) fail('The install link must point at the recorded download file');
+  if(row.install_url && !row.release_url) fail('An install link needs its release page');
+  for(const target of row.targets) {
+    if(target.availability === 'public_download' && target.validation === 'device_unverified') fail(`Unverified device cannot be offered as a download target: ${target.name}`);
+    if(target.availability === 'public_download' && !row.install_url) fail(`Download target without an install link: ${target.name}`);
+  }
 });
 export const catalogueSchema = z.object({schema_version: z.literal(2), experiences: z.array(experience).min(1)}).strict().superRefine((doc, ctx) => {
   if(new Set(doc.experiences.map(row => row.id)).size !== doc.experiences.length) ctx.addIssue({code:'custom',message:'Duplicate experience id'});

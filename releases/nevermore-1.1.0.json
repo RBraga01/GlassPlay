@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "experience": "nevermore",
+  "name": "Nevermore Halloween",
+  "version": "1.1.0",
+  "modes": ["SOFT", "HAUNTED"],
+  "source_commit": "ffeaadd2f251c9dbc1ede18c574fd99e20b06c41",
+  "source_repository_visibility": "private",
+  "release_tag": "nevermore-v1.1.0",
+  "release_url": "https://github.com/RBraga01/GlassPlay/releases/tag/nevermore-v1.1.0",
+  "asset": {
+    "file": "Nevermore-Halloween-1.1.0.zip",
+    "url": "https://github.com/RBraga01/GlassPlay/releases/download/nevermore-v1.1.0/Nevermore-Halloween-1.1.0.zip",
+    "bytes": 65190942,
+    "sha256": "f8b154d0cab073102b3604a01e297a6e4fe2134670f47739d5b3f937e6272937",
+    "checksum_file": "Nevermore-Halloween-1.1.0.sha256"
+  },
+  "authorization_statement": {
+    "date": "2026-10-25",
+    "authorization_record_sha256": "901cabc066f0d40d7c37d7ad3552b09dc429edeab987d6a9cd0ab34d6556a31f",
+    "note": "The owner's private record is not published; AUTHORIZATION.json in the package states its SHA-256."
+  },
+  "validation": {
+    "host": "Windows host with Raven Simulator, Raven Framework 1.0.6 (791afd896cc646636ef906f5bf06c09c8fbb430a)",
+    "python": ["3.10", "3.12"],
+    "clean_install": "verify_release PASS; 346 package tests; main.py 20 s; functional runtime validation PASS",
+    "anonymous_download": "release page and asset reachable without authentication; SHA-256 matched; verify_release PASS",
+    "physical_prism": "DEVICE-UNVERIFIED"
+  },
+  "framework": "Raven Framework is not included or relicensed; users obtain and use it separately under Raven Resonance's terms.",
+  "licenses": {"code": "MIT", "nevermore_assets": "All Rights Reserved", "third_party": "Respective licenses"},
+  "supersedes": "1.0.0-rc.2 (archived technical preview in experiences/nevermore/)"
+}
