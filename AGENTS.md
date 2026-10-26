@@ -16,7 +16,7 @@ Build a **simple, visual collection of interactive experiences for AR smart glas
 - `v1.0.0-rc.2` ZIP, checksum, two demo videos, validation JSON and Raven handoff exist only as a **private draft GitHub Release** in Nevermore.
 - Host/Simulator PASS, real Prism **DEVICE-UNVERIFIED**.
 - Licensing decided: code MIT; Nevermore-specific artwork/media All Rights Reserved; CC0/Apache-2.0 upstream terms kept; Meshy paid-account attestation and Guardian/Bride/Chest Meshy Community CC0 remix links recorded.
-- External, not Nevermore defects: Raven's official public Framework/deployment process, Prism app identity/entitlements, physical Prism validation. Public application download stays held (`application.approved=false`).
+- External, not Nevermore defects: Raven's official public Framework/deployment process, Prism app identity/entitlements, physical Prism validation. At the time of rc.2, public application download was held (`application.approved=false`); this historical status was superseded by the authorized 1.1.0 release on 2026-10-25.
 
 ## Rules
 
@@ -26,7 +26,7 @@ Build a **simple, visual collection of interactive experiences for AR smart glas
 4. Never claim physical Prism validation without device test evidence.
 5. No invented install links or release statuses. Update root README, experience page and catalogue together.
 6. No speculative general launcher or complex architecture; add shared components when real second use exists.
-7. The owner approved the public website and its media on 2026-10-22 (Pages from this repository). On 2026-10-25 the owner approved making this repository public after a security audit; the Nevermore development repository stays private. Application downloads, code/art licensing and Raven Framework distribution remain unapproved (`application.approved=false`). Any change to approved media needs a new owner approval and manifest hash.
+7. The owner approved the public website and its media on 2026-10-22 (Pages from this repository). On 2026-10-25 the owner approved making this repository public after a security audit; the Nevermore development repository stays private. On the same date, the owner authorized the public release of Nevermore Halloween 1.1.0 (SOFT and HAUNTED) through GlassPlay (`application.approved=true` in `config/publication.json`), with code under MIT and Nevermore-specific artwork/media All Rights Reserved; third-party materials retain their own licenses. This authorization covers the release recorded in `releases/nevermore-1.1.0.json`, not additional releases or content. Raven Framework distribution is not approved: it remains a separate dependency, not included or relicensed (`framework_included=false`, `framework_permission=null`). Any change to approved media needs a new owner approval and manifest hash.
 
 ## Website
 
